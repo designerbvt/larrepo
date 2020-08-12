@@ -1,0 +1,67 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.7.0.0">
+  <implementation.generic type="isconfiguration" />
+  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
+    <value>none</value>
+  </property>
+  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
+    <value>none</value>
+  </property>
+  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
+    <value>none</value>
+  </property>
+  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
+    <value>none</value>
+  </property>
+  <buildInfo name="BuildVersion" value="isasset-build-Administrator" />
+  <buildInfo name="BuildTimestamp" value="2020-08-12T20:59:26" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <asset name="Group.testGroup" displayName="testGroup">
+    <implementation.generic type="isgroup" />
+  </asset>
+  <asset name="Parsing.Configuration" displayName="Configuration">
+    <implementation.generic type="isparsing" />
+    <property name="defaultPartitionBytes" displayName="Default Partition Bytes">
+      <value>20k</value>
+    </property>
+    <property name="useCache" displayName="Use Cache">
+      <value>false</value>
+    </property>
+    <property name="maximumHeapBytes" displayName="Maximum Heap Bytes">
+      <value>40%</value>
+    </property>
+    <property name="maximumDocBytes" displayName="Maximum Document Bytes">
+      <value>20%</value>
+    </property>
+    <property name="maximumBigMemoryBytes" displayName="Maximum BigMemory Bytes">
+      <value>200m</value>
+    </property>
+    <property name="useBigMemory" displayName="Use BigMemory">
+      <value>false</value>
+    </property>
+  </asset>
+  <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config">
+    <implementation.generic type="isfileaccesscontrol" />
+    <property name="allowedWritePaths" displayName="Allowed Write Paths">
+      <value />
+    </property>
+    <property name="allowedReadPaths" displayName="Allowed Read Paths">
+      <value />
+    </property>
+    <property name="allowedDeletePaths" displayName="Allowed Delete Paths">
+      <value />
+    </property>
+    <property name="restartRuntimes" displayName="restartRuntimes">
+      <value>true</value>
+    </property>
+  </asset>
+  <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
+    <implementation.generic type="isumalias" />
+    <property name="CLIENTPREFIX" displayName="Client Prefix">
+      <value>J_jRQtEolDEurgAVIwwwADXaZQs_</value>
+    </property>
+    <property name="um_rname" displayName="Realm URL">
+      <value>nsp://localhost:9000</value>
+    </property>
+  </asset>
+</asset_composite>
+
