@@ -1,0 +1,288 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="test_https" runtimeVersion="10.7.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="isasset-build-Administrator" />
+  <buildInfo name="BuildTimestamp" value="2020-08-13T12:18:51" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.test_https" displayName="test_https">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="test_https.ws.c02_normalWS_http_.connectors.p01_normalWS_http_PortType_addInts" displayName="test_https.ws.c02_normalWS_http_.connectors:p01_normalWS_http_PortType_addInts">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.docTypes.p01_normalWS_http_PortType_addInts_Input</dependsOn>
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.docTypes.p01_normalWS_http_PortType_addInts_Output</dependsOn>
+    <dependsOn>IS:test_https.ws.c02_normalWS_http</dependsOn>
+  </asset>
+  <asset name="test_https.ws.c02_normalWS_http_.responseServices.p01_normalWS_http_PortType_addInts_Response" displayName="test_https.ws.c02_normalWS_http_.responseServices:p01_normalWS_http_PortType_addInts_Response">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.docTypes.docTypeRef_tns_addIntsOutput</dependsOn>
+  </asset>
+  <asset name="test_https.ws.c02_normalWS_http_.responseServices.genericFault_Response" displayName="test_https.ws.c02_normalWS_http_.responseServices:genericFault_Response">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.ws.c02_normalWS_http_.docTypes.p01_normalWS_http_PortType_addInts_Output" displayName="test_https.ws.c02_normalWS_http_.docTypes:p01_normalWS_http_PortType_addInts_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.docTypes.docTypeRef_tns_addIntsOutput</dependsOn>
+  </asset>
+  <asset name="test_https.ws.c02_normalWS_http_.docTypes.p01_normalWS_http_PortType_addInts_Input" displayName="test_https.ws.c02_normalWS_http_.docTypes:p01_normalWS_http_PortType_addInts_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.docTypes.docTypeRef_tns_addIntsInput</dependsOn>
+  </asset>
+  <asset name="test_https.ws.c02_normalWS_http_.docTypes.docTypeRef_tns_addIntsOutput" displayName="test_https.ws.c02_normalWS_http_.docTypes:docTypeRef_tns_addIntsOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="test_https.ws.c02_normalWS_http_.docTypes.schema_c02_normalWS_http" displayName="test_https.ws.c02_normalWS_http_.docTypes:schema_c02_normalWS_http">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="test_https.ws.c02_normalWS_http_.docTypes.docTypeRef_tns_addIntsInput" displayName="test_https.ws.c02_normalWS_http_.docTypes:docTypeRef_tns_addIntsInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="test_https.ws.c01_wsLoad_.connectors.p01_wsLoad_PortType_addInts" displayName="test_https.ws.c01_wsLoad_.connectors:p01_wsLoad_PortType_addInts">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.docTypes.p01_wsLoad_PortType_addInts_Input</dependsOn>
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.docTypes.p01_wsLoad_PortType_addInts_Output</dependsOn>
+    <dependsOn>IS:test_https.ws.c01_wsLoad</dependsOn>
+  </asset>
+  <asset name="test_https.ws.c01_wsLoad_.responseServices.genericFault_Response" displayName="test_https.ws.c01_wsLoad_.responseServices:genericFault_Response">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.ws.c01_wsLoad_.responseServices.p01_wsLoad_PortType_addInts_Response" displayName="test_https.ws.c01_wsLoad_.responseServices:p01_wsLoad_PortType_addInts_Response">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.docTypes.docTypeRef_tns_addIntsOutput</dependsOn>
+  </asset>
+  <asset name="test_https.ws.c01_wsLoad_.docTypes.docTypeRef_tns_addIntsInput" displayName="test_https.ws.c01_wsLoad_.docTypes:docTypeRef_tns_addIntsInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="test_https.ws.c01_wsLoad_.docTypes.p01_wsLoad_PortType_addInts_Output" displayName="test_https.ws.c01_wsLoad_.docTypes:p01_wsLoad_PortType_addInts_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.docTypes.docTypeRef_tns_addIntsOutput</dependsOn>
+  </asset>
+  <asset name="test_https.ws.c01_wsLoad_.docTypes.p01_wsLoad_PortType_addInts_Input" displayName="test_https.ws.c01_wsLoad_.docTypes:p01_wsLoad_PortType_addInts_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.docTypes.docTypeRef_tns_addIntsInput</dependsOn>
+  </asset>
+  <asset name="test_https.ws.c01_wsLoad_.docTypes.docTypeRef_tns_addIntsOutput" displayName="test_https.ws.c01_wsLoad_.docTypes:docTypeRef_tns_addIntsOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="test_https.ws.c01_wsLoad_.docTypes.schema_c01_wsLoad" displayName="test_https.ws.c01_wsLoad_.docTypes:schema_c01_wsLoad">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="test_https.ws.p01_normalWS_http" displayName="test_https.ws:p01_normalWS_http">
+    <implementation.generic type="iswsdprovider" />
+  </asset>
+  <asset name="test_https.ws.p01_wsLoad" displayName="test_https.ws:p01_wsLoad">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:WebserviceEndpointAlias.Provider.HTTPS.provider_https</dependsOn>
+  </asset>
+  <asset name="test_https.ws.provider_wsPolicy_https" displayName="test_https.ws:provider_wsPolicy_https">
+    <implementation.generic type="iswsdprovider" />
+  </asset>
+  <asset name="test_https.ws.c02_normalWS_http" displayName="test_https.ws:c02_normalWS_http">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.docTypes.p01_normalWS_http_PortType_addInts_Input</dependsOn>
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.docTypes.p01_normalWS_http_PortType_addInts_Output</dependsOn>
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.connectors.p01_normalWS_http_PortType_addInts</dependsOn>
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.responseServices.p01_normalWS_http_PortType_addInts_Response</dependsOn>
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.responseServices.genericFault_Response</dependsOn>
+  </asset>
+  <asset name="test_https.ws.c01_wsLoad" displayName="test_https.ws:c01_wsLoad">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.docTypes.p01_wsLoad_PortType_addInts_Input</dependsOn>
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.docTypes.p01_wsLoad_PortType_addInts_Output</dependsOn>
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.connectors.p01_wsLoad_PortType_addInts</dependsOn>
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.responseServices.p01_wsLoad_PortType_addInts_Response</dependsOn>
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.responseServices.genericFault_Response</dependsOn>
+    <dependsOn>IS:WebserviceEndpointAlias.Consumer.HTTPS.consumer_https</dependsOn>
+  </asset>
+  <asset name="test_https.utils.startUpsvc.setSettings" displayName="test_https.utils.startUpsvc:setSettings">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.startUpsvc.createKS" displayName="test_https.utils.startUpsvc:createKS">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.startUpsvc.createTS" displayName="test_https.utils.startUpsvc:createTS">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.startUpsvc.setPortAccess" displayName="test_https.utils.startUpsvc:setPortAccess">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.startUpsvc.startUpSvc" displayName="test_https.utils.startUpsvc:startUpSvc">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test_https.utils.startUpsvc.createKS</dependsOn>
+    <dependsOn>IS:test_https.utils.startUpsvc.createTS</dependsOn>
+    <dependsOn>IS:test_https.utils.startUpsvc.setPortAccess</dependsOn>
+    <dependsOn>IS:test_https.utils.startUpsvc.setSettings</dependsOn>
+    <dependsOn>IS:test_https.utils.endPt_82x.Provider.add_Pro_https_endPtAlias</dependsOn>
+    <dependsOn>IS:test_https.utils.endPt_82x.Consumer.add_Con_https_wsEndptAlias</dependsOn>
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Provider.httpProviderEndPoint" displayName="test_https.utils.endPt_82x.Provider:httpProviderEndPoint">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Provider.add_Pro_https_endPtAlias" displayName="test_https.utils.endPt_82x.Provider:add_Pro_https_endPtAlias">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test_https.utils.endPt_82x.Provider.httpsProvidrEndPoint</dependsOn>
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Provider.httpsProvidrEndPoint" displayName="test_https.utils.endPt_82x.Provider:httpsProvidrEndPoint">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Provider.del_prov_endPts" displayName="test_https.utils.endPt_82x.Provider:del_prov_endPts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Provider.del_prov_endPts_1" displayName="test_https.utils.endPt_82x.Provider:del_prov_endPts_1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Provider.add_Pro_http_endPt" displayName="test_https.utils.endPt_82x.Provider:add_Pro_http_endPt">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:testMigration.WSEndPtAlias.endPt_82x.Provider.httpProviderEndPoint</dependsOn>
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Consumer.httpsConsumerEndPoint" displayName="test_https.utils.endPt_82x.Consumer:httpsConsumerEndPoint">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Consumer.httpConsumerEndPoint" displayName="test_https.utils.endPt_82x.Consumer:httpConsumerEndPoint">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Consumer.del_cons_endPts" displayName="test_https.utils.endPt_82x.Consumer:del_cons_endPts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Consumer.edit_Cons_https_endpt" displayName="test_https.utils.endPt_82x.Consumer:edit_Cons_https_endpt">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Consumer.edit_Cons_http_endPt" displayName="test_https.utils.endPt_82x.Consumer:edit_Cons_http_endPt">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Consumer.add_Con_http_endPt" displayName="test_https.utils.endPt_82x.Consumer:add_Con_http_endPt">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:testMigration.WSEndPtAlias.endPt_82x.Consumer.httpConsumerEndPoint</dependsOn>
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Consumer.del_cons_endPts_1" displayName="test_https.utils.endPt_82x.Consumer:del_cons_endPts_1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.endPt_82x.Consumer.add_Con_https_wsEndptAlias" displayName="test_https.utils.endPt_82x.Consumer:add_Con_https_wsEndptAlias">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test_https.utils.endPt_82x.Consumer.httpsConsumerEndPoint</dependsOn>
+  </asset>
+  <asset name="test_https.utils.startUpsvc_jsse.setSettings" displayName="test_https.utils.startUpsvc_jsse:setSettings">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.startUpsvc_jsse.startUpSvc" displayName="test_https.utils.startUpsvc_jsse:startUpSvc">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test_https.utils.startUpsvc_jsse.createKS</dependsOn>
+    <dependsOn>IS:test_https.utils.startUpsvc_jsse.createTS</dependsOn>
+    <dependsOn>IS:test_https.utils.startUpsvc_jsse.setPortAccess</dependsOn>
+    <dependsOn>IS:test_https.utils.startUpsvc_jsse.setSettings</dependsOn>
+    <dependsOn>IS:test_https.utils.endPt_82x.Provider.add_Pro_https_endPtAlias</dependsOn>
+    <dependsOn>IS:test_https.utils.endPt_82x.Consumer.add_Con_https_wsEndptAlias</dependsOn>
+  </asset>
+  <asset name="test_https.utils.startUpsvc_jsse.createKS" displayName="test_https.utils.startUpsvc_jsse:createKS">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.startUpsvc_jsse.setPortAccess" displayName="test_https.utils.startUpsvc_jsse:setPortAccess">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.startUpsvc_jsse.createTS" displayName="test_https.utils.startUpsvc_jsse:createTS">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.shutDnSvc_jsse.cleanUpSvc" displayName="test_https.utils.shutDnSvc_jsse:cleanUpSvc">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test_https.utils.endPt_82x.Consumer.del_cons_endPts</dependsOn>
+    <dependsOn>IS:test_https.utils.endPt_82x.Provider.del_prov_endPts</dependsOn>
+    <dependsOn>IS:test_https.utils.shutDnSvc_jsse.del_ks_ts</dependsOn>
+    <dependsOn>IS:test_https.utils.startUpsvc.setSettings</dependsOn>
+  </asset>
+  <asset name="test_https.utils.shutDnSvc_jsse.del_ks_ts" displayName="test_https.utils.shutDnSvc_jsse:del_ks_ts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.utils.shutDnSvc.cleanUpSvc" displayName="test_https.utils.shutDnSvc:cleanUpSvc">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test_https.utils.endPt_82x.Consumer.del_cons_endPts</dependsOn>
+    <dependsOn>IS:test_https.utils.endPt_82x.Provider.del_prov_endPts</dependsOn>
+    <dependsOn>IS:test_https.utils.shutDnSvc.del_ks_ts</dependsOn>
+    <dependsOn>IS:test_https.utils.startUpsvc.setSettings</dependsOn>
+  </asset>
+  <asset name="test_https.utils.shutDnSvc.del_ks_ts" displayName="test_https.utils.shutDnSvc:del_ks_ts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="test_https.test01_load_noPolicy_http" displayName="test_https:test01_load_noPolicy_http">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test_https.ws.c02_normalWS_http_.connectors.p01_normalWS_http_PortType_addInts</dependsOn>
+  </asset>
+  <asset name="test_https.test02_load_wsPolicy_https" displayName="test_https:test02_load_wsPolicy_https">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test_https.ws.c01_wsLoad_.connectors.p01_wsLoad_PortType_addInts</dependsOn>
+  </asset>
+  <asset name="test_https.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test_https.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test_https.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test_https.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test_https.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test_https.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="test_https.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="test_https.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="test_https.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="test_https.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test_https.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test_https.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test_https.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test_https.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test_https.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
