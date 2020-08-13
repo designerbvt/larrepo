@@ -13,7 +13,7 @@
     <value>none</value>
   </property>
   <buildInfo name="BuildVersion" value="isasset-build-Administrator" />
-  <buildInfo name="BuildTimestamp" value="2020-08-12T21:26:13" />
+  <buildInfo name="BuildTimestamp" value="2020-08-13T09:56:36" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
   <asset name="Group.testGroup" displayName="testGroup">
     <implementation.generic type="isgroup" />
