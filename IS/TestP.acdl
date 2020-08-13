@@ -1,0 +1,130 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="TestP" runtimeVersion="10.7.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="isasset-build-Administrator" />
+  <buildInfo name="BuildTimestamp" value="2020-08-13T13:44:41" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.TestP" displayName="TestP">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="testF.testRAD_.connectors.GET_products_svc1" displayName="testF.testRAD_.connectors:GET_products_svc1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:testF.testRAD_.docTypes.Product</dependsOn>
+  </asset>
+  <asset name="testF.testRAD_.connectors.GET_estimates_svc2" displayName="testF.testRAD_.connectors:GET_estimates_svc2">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:testF.testRAD_.docTypes.Product</dependsOn>
+  </asset>
+  <asset name="testF.testRAD_.connectors.GET_estimates_svc1" displayName="testF.testRAD_.connectors:GET_estimates_svc1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:testF.testRAD_.docTypes.PriceEstimate</dependsOn>
+  </asset>
+  <asset name="testF.testRAD_.connectors.GET_history_svc1" displayName="testF.testRAD_.connectors:GET_history_svc1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:testF.testRAD_.docTypes.Activities</dependsOn>
+  </asset>
+  <asset name="testF.testRAD_.connectors.GET_me_svc1" displayName="testF.testRAD_.connectors:GET_me_svc1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:testF.testRAD_.docTypes.Profile</dependsOn>
+  </asset>
+  <asset name="testF.testRAD_.docTypes.Profile" displayName="testF.testRAD_.docTypes:Profile">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="testF.testRAD_.docTypes.PriceEstimate" displayName="testF.testRAD_.docTypes:PriceEstimate">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="testF.testRAD_.docTypes.Activity" displayName="testF.testRAD_.docTypes:Activity">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="testF.testRAD_.docTypes.Error" displayName="testF.testRAD_.docTypes:Error">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="testF.testRAD_.docTypes.Activities" displayName="testF.testRAD_.docTypes:Activities">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:testF.testRAD_.docTypes.Activity</dependsOn>
+  </asset>
+  <asset name="testF.testRAD_.docTypes.Product" displayName="testF.testRAD_.docTypes:Product">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="testF.fs1" displayName="testF:fs1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="testF.new_json_document" displayName="testF:new_json_document">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="TestP.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestP.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestP.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestP.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestP.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestP.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="TestP.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="TestP.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="TestP.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="TestP.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestP.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestP.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestP.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestP.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestP.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
