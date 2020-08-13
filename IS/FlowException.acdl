@@ -1,0 +1,91 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="FlowException" runtimeVersion="10.7.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="isasset-build-Administrator" />
+  <buildInfo name="BuildTimestamp" value="2020-08-13T12:23:05" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.FlowException" displayName="FlowException">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="folder.emptyServiceNew" displayName="folder:emptyServiceNew">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="folder.emptyService" displayName="folder:emptyService">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowException.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FlowException.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FlowException.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FlowException.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FlowException.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FlowException.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FlowException.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FlowException.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FlowException.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FlowException.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="FlowException.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="FlowException.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="FlowException.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="FlowException.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FlowException.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
