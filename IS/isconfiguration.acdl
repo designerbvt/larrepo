@@ -13,12 +13,12 @@
     <value>none</value>
   </property>
   <buildInfo name="BuildVersion" value="isasset-build-Administrator" />
-  <buildInfo name="BuildTimestamp" value="2020-08-13T11:42:52" />
+  <buildInfo name="BuildTimestamp" value="2020-08-13T11:44:10" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
-  <asset name="GlobalVariable.key1" displayName="Global Variable 'key1'">
+  <asset name="GlobalVariable.mqtt_t1_key" displayName="Global Variable 'mqtt_t1_key'">
     <implementation.generic type="isglobalvariable" />
     <property name="value" displayName="Value">
-      <value>25</value>
+      <value>1244</value>
     </property>
   </asset>
 </asset_composite>
