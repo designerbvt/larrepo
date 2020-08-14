@@ -3,4 +3,13 @@
     <implementation.generic type="UniversalMessaging"/>
     <buildInfo name="build.timestamp"/>
     <buildInfo name="build.version" value="10.7.0.0000-133365"/>
+    <asset name="Channel:num_t2" isDeployable="true">
+        <implementation.generic type="Channel"/>
+    </asset>
+    <asset name="ConnectionFactory:EventFactory" isDeployable="true">
+        <implementation.generic type="ConnectionFactory"/>
+    </asset>
+    <asset name="JNDITopic:num_t2" isDeployable="true">
+        <implementation.generic type="JNDITopic"/>
+    </asset>
 </asset_composite>
