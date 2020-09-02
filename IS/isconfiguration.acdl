@@ -16,31 +16,19 @@
     <value>true</value>
   </property>
   <buildInfo name="BuildVersion" value="10.7.0.0.-813786860" />
-  <buildInfo name="BuildTimestamp" value="2020-09-02T22:42:43" />
+  <buildInfo name="BuildTimestamp" value="2020-09-02T22:43:22" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
-  <asset name="Acl.execACL" displayName="execACL">
-    <implementation.generic type="isacl" />
-    <dependsOn>IS:Group.execGroup</dependsOn>
-  </asset>
-  <asset name="Acl.TrialUserACL" displayName="TrialUserACL">
-    <implementation.generic type="isacl" />
-    <dependsOn>IS:Group.TrialUser</dependsOn>
-  </asset>
-  <asset name="Acl.Cloud01" displayName="Cloud01">
-    <implementation.generic type="isacl" />
-    <dependsOn>IS:Group.CloudGroup01</dependsOn>
-    <dependsOn>IS:Group.TrialUser</dependsOn>
-  </asset>
-  <asset name="Acl.testACL" displayName="testACL">
-    <implementation.generic type="isacl" />
-    <dependsOn>IS:Group.testGroup</dependsOn>
-  </asset>
-  <asset name="Acl.DeployerAdmin" displayName="DeployerAdmin">
-    <implementation.generic type="isacl" />
-  </asset>
-  <asset name="Acl.devACL" displayName="devACL">
-    <implementation.generic type="isacl" />
-    <dependsOn>IS:Group.devGroup</dependsOn>
+  <asset name="CacheManager.SIQACache" displayName="SIQACache">
+    <implementation.generic type="iscachemanager" />
+    <property name="cacheManagerName" displayName="Cache manager name">
+      <value>SIQACache</value>
+    </property>
+    <property name="urls" displayName="URLs">
+      <value />
+    </property>
+    <property name="reload" displayName="Reload">
+      <value>none</value>
+    </property>
   </asset>
 </asset_composite>
 
