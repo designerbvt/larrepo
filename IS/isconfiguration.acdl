@@ -1,4 +1,4 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.7.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.5.0.0">
   <implementation.generic type="isconfiguration" />
   <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
     <value>none</value>
@@ -12,22 +12,114 @@
   <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
     <value>none</value>
   </property>
-  <property name="restartRuntimes" displayName="restartRuntimes">
-    <value>true</value>
-  </property>
-  <buildInfo name="BuildVersion" value="10.7.0.0.-813786860" />
-  <buildInfo name="BuildTimestamp" value="2020-09-02T22:43:22" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
-  <asset name="CacheManager.SIQACache" displayName="SIQACache">
-    <implementation.generic type="iscachemanager" />
-    <property name="cacheManagerName" displayName="Cache manager name">
-      <value>SIQACache</value>
+  <buildInfo name="BuildVersion" value="10.5.0.0.-929141136" />
+  <buildInfo name="BuildTimestamp" value="2020-09-14T17:44:16" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.5.0.0" />
+  <asset name="User.biswa" displayName="biswa">
+    <implementation.generic type="isuser" />
+    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
+      <value>false</value>
     </property>
-    <property name="urls" displayName="URLs">
+  </asset>
+  <asset name="JNDIAlias.cloudUM" displayName="cloudUM">
+    <implementation.generic type="isjndialias" />
+    <property name="providerURL" displayName="Provider URL">
+      <value>nsp://localhost:9000</value>
+    </property>
+    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
       <value />
     </property>
-    <property name="reload" displayName="Reload">
-      <value>none</value>
+    <property name="securityPrincipal" displayName="Security Principal">
+      <value />
+    </property>
+    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
+      <value>{AES}oVI0fdFhkESeMjp7LHkURlSnvdNJ/IfJaYFdUBBcREs=</value>
+    </property>
+  </asset>
+  <asset name="JNDIAlias.demo" displayName="demo">
+    <implementation.generic type="isjndialias" />
+    <property name="providerURL" displayName="Provider URL">
+      <value>nsp://localhost:9000</value>
+    </property>
+    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
+      <value />
+    </property>
+    <property name="securityPrincipal" displayName="Security Principal">
+      <value />
+    </property>
+    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
+      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
+    </property>
+  </asset>
+  <asset name="JMSAlias.cloudJMS" displayName="cloudJMS">
+    <implementation.generic type="isjmsalias" />
+    <property name="clientID" displayName="Connection Client ID">
+      <value />
+    </property>
+    <property name="user" displayName="User">
+      <value />
+    </property>
+    <property name="password" displayName="Password" isSecure="true">
+      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
+    </property>
+    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
+      <value>AnupamToicConnectionFactory</value>
+    </property>
+    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
+      <value>false</value>
+    </property>
+    <dependsOn>IS:JNDIAlias.cloudUM</dependsOn>
+  </asset>
+  <asset name="JMSAlias.demo" displayName="demo">
+    <implementation.generic type="isjmsalias" />
+    <property name="clientID" displayName="Connection Client ID">
+      <value />
+    </property>
+    <property name="user" displayName="User">
+      <value />
+    </property>
+    <property name="password" displayName="Password" isSecure="true">
+      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
+    </property>
+    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
+      <value>AnupamToicConnectionFactory</value>
+    </property>
+    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
+      <value>false</value>
+    </property>
+    <dependsOn>IS:JNDIAlias.demo</dependsOn>
+  </asset>
+  <asset name="Parsing.Configuration" displayName="Configuration">
+    <implementation.generic type="isparsing" />
+    <property name="defaultPartitionBytes" displayName="Default Partition Bytes">
+      <value>20k</value>
+    </property>
+    <property name="useCache" displayName="Use Cache">
+      <value>false</value>
+    </property>
+    <property name="maximumHeapBytes" displayName="Maximum Heap Bytes">
+      <value>40%</value>
+    </property>
+    <property name="maximumDocBytes" displayName="Maximum Document Bytes">
+      <value>20%</value>
+    </property>
+    <property name="maximumBigMemoryBytes" displayName="Maximum BigMemory Bytes">
+      <value>200m</value>
+    </property>
+    <property name="useBigMemory" displayName="Use BigMemory">
+      <value>false</value>
+    </property>
+  </asset>
+  <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config">
+    <implementation.generic type="isfileaccesscontrol" />
+    <property name="allowedWritePaths" displayName="Allowed Write Paths">
+      <value />
+    </property>
+    <property name="allowedReadPaths" displayName="Allowed Read Paths">
+      <value />
+    </property>
+    <property name="allowedDeletePaths" displayName="Allowed Delete Paths">
+      <value />
     </property>
   </asset>
 </asset_composite>
