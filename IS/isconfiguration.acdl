@@ -1,598 +1,598 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.7.0.0">
-  <implementation.generic type="isconfiguration" />
-  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
-    <value>none</value>
-  </property>
-  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
-    <value>none</value>
-  </property>
-  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
-    <value>none</value>
-  </property>
-  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
-    <value>none</value>
-  </property>
-  <property name="restartRuntimes" displayName="restartRuntimes">
-    <value>true</value>
-  </property>
-  <buildInfo name="BuildVersion" value="10.7.0.0.2099528947" />
-  <buildInfo name="BuildTimestamp" value="2021-07-02T12:34:41" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
-  <asset name="User.qa" displayName="qa">
-    <implementation.generic type="isuser" />
-    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
-      <value>false</value>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="isconfiguration" runtimeVersion="10.7.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <implementation.generic type="isconfiguration"/>
+    <buildInfo name="BuildTimestamp" value="2021-07-02T12:34:41"/>
+    <buildInfo name="BuildVersion" value="10.7.0.0.2099528947"/>
+    <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0"/>
+    <asset name="User.qa" displayName="qa" isDeployable="true">
+        <implementation.generic type="isuser"/>
+        <property name="allowDigestAuth" many="false" isSecure="false" displayName="Allow Digest Authentication">
+            <value>false</value>
+        </property>
+    </asset>
+    <asset name="JNDIAlias.BrokerA" displayName="BrokerA" isDeployable="true">
+        <implementation.generic type="isjndialias"/>
+        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
+            <value>${UM_URL}</value>
+        </property>
+        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
+            <value></value>
+        </property>
+        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
+            <value>${UM_PASSWORD}</value>
+        </property>
+    </asset>
+    <asset name="JNDIAlias.BrokerA_XA" displayName="BrokerA_XA" isDeployable="true">
+        <implementation.generic type="isjndialias"/>
+        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
+            <value>${UM_URL}</value>
+        </property>
+        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
+            <value></value>
+        </property>
+        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
+            <value>${UM_PASSWORD}</value>
+        </property>
+    </asset>
+    <asset name="JNDIAlias.BrokerB" displayName="BrokerB" isDeployable="true">
+        <implementation.generic type="isjndialias"/>
+        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
+            <value>${UM_URL}</value>
+        </property>
+        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
+            <value></value>
+        </property>
+        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
+            <value>${UM_PASSWORD}</value>
+        </property>
+    </asset>
+    <asset name="JNDIAlias.BrokerB_XA" displayName="BrokerB_XA" isDeployable="true">
+        <implementation.generic type="isjndialias"/>
+        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
+            <value>${UM_URL}</value>
+        </property>
+        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
+            <value></value>
+        </property>
+        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
+            <value>${UM_PASSWORD}</value>
+        </property>
+    </asset>
+    <asset name="JNDIAlias.NumA" displayName="NumA" isDeployable="true">
+        <implementation.generic type="isjndialias"/>
+        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
+            <value>${UM_URL}</value>
+        </property>
+        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
+            <value></value>
+        </property>
+        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
+            <value>${UM_PASSWORD}</value>
+        </property>
+    </asset>
+    <asset name="JNDIAlias.NumB" displayName="NumB" isDeployable="true">
+        <implementation.generic type="isjndialias"/>
+        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
+            <value>${UM_URL}</value>
+        </property>
+        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
+            <value></value>
+        </property>
+        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
+            <value>${UM_PASSWORD}</value>
+        </property>
+    </asset>
+    <asset name="JNDIAlias.SSL" displayName="SSL" isDeployable="true">
+        <implementation.generic type="isjndialias"/>
+        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
+            <value>${UM_URL}</value>
+        </property>
+        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
+            <value></value>
+        </property>
+        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
+            <value>${UM_PASSWORD}</value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_LT_Q" displayName="BrokerA_LT_Q" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C1</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>QueueConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_LT_Q_1" displayName="BrokerA_LT_Q_1" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C2</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>QueueConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_LT_T" displayName="BrokerA_LT_T" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C3</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>TopicConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_NT_Q" displayName="BrokerA_NT_Q" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C4</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>QueueConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_NT_T" displayName="BrokerA_NT_T" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C5</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>TopicConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_Native_LT_Q" displayName="BrokerA_Native_LT_Q" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C6</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="nwm_brokerHost" many="false" isSecure="false" displayName="Broker Host">
+            <value>dcldevdcc02:6849</value>
+        </property>
+        <property name="nwm_brokerName" many="false" isSecure="false" displayName="Broker Name">
+            <value>BrokerA</value>
+        </property>
+        <property name="nwm_clientGroup" many="false" isSecure="false" displayName="Client Group">
+            <value>JMSClient</value>
+        </property>
+        <property name="nwm_brokerList" many="false" isSecure="false" displayName="Broker List">
+            <value></value>
+        </property>
+        <property name="nwm_keystore" many="false" isSecure="false" displayName="Keystore">
+            <value></value>
+        </property>
+        <property name="nwm_truststore" many="false" isSecure="false" displayName="Truststore">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_Native_LT_T" displayName="BrokerA_Native_LT_T" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C7</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="nwm_brokerHost" many="false" isSecure="false" displayName="Broker Host">
+            <value>dcldevdcc02:6849</value>
+        </property>
+        <property name="nwm_brokerName" many="false" isSecure="false" displayName="Broker Name">
+            <value>BrokerA</value>
+        </property>
+        <property name="nwm_clientGroup" many="false" isSecure="false" displayName="Client Group">
+            <value>JMSClient</value>
+        </property>
+        <property name="nwm_brokerList" many="false" isSecure="false" displayName="Broker List">
+            <value></value>
+        </property>
+        <property name="nwm_keystore" many="false" isSecure="false" displayName="Keystore">
+            <value></value>
+        </property>
+        <property name="nwm_truststore" many="false" isSecure="false" displayName="Truststore">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_Native_NT_Q" displayName="BrokerA_Native_NT_Q" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C8</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="nwm_brokerHost" many="false" isSecure="false" displayName="Broker Host">
+            <value>dcldevdcc02:6849</value>
+        </property>
+        <property name="nwm_brokerName" many="false" isSecure="false" displayName="Broker Name">
+            <value>BrokerA</value>
+        </property>
+        <property name="nwm_clientGroup" many="false" isSecure="false" displayName="Client Group">
+            <value>JMSClient</value>
+        </property>
+        <property name="nwm_brokerList" many="false" isSecure="false" displayName="Broker List">
+            <value></value>
+        </property>
+        <property name="nwm_keystore" many="false" isSecure="false" displayName="Keystore">
+            <value></value>
+        </property>
+        <property name="nwm_truststore" many="false" isSecure="false" displayName="Truststore">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_Native_NT_T" displayName="BrokerA_Native_NT_T" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C9</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="nwm_brokerHost" many="false" isSecure="false" displayName="Broker Host">
+            <value>dcldevdcc02:6849</value>
+        </property>
+        <property name="nwm_brokerName" many="false" isSecure="false" displayName="Broker Name">
+            <value>BrokerA</value>
+        </property>
+        <property name="nwm_clientGroup" many="false" isSecure="false" displayName="Client Group">
+            <value>JMSClient</value>
+        </property>
+        <property name="nwm_brokerList" many="false" isSecure="false" displayName="Broker List">
+            <value></value>
+        </property>
+        <property name="nwm_keystore" many="false" isSecure="false" displayName="Keystore">
+            <value></value>
+        </property>
+        <property name="nwm_truststore" many="false" isSecure="false" displayName="Truststore">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_Native_XA_Q" displayName="BrokerA_Native_XA_Q" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C10</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="nwm_brokerHost" many="false" isSecure="false" displayName="Broker Host">
+            <value>dcldevdcc02:6849</value>
+        </property>
+        <property name="nwm_brokerName" many="false" isSecure="false" displayName="Broker Name">
+            <value>BrokerA</value>
+        </property>
+        <property name="nwm_clientGroup" many="false" isSecure="false" displayName="Client Group">
+            <value>JMSClient</value>
+        </property>
+        <property name="nwm_brokerList" many="false" isSecure="false" displayName="Broker List">
+            <value></value>
+        </property>
+        <property name="nwm_keystore" many="false" isSecure="false" displayName="Keystore">
+            <value></value>
+        </property>
+        <property name="nwm_truststore" many="false" isSecure="false" displayName="Truststore">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_Native_XA_T" displayName="BrokerA_Native_XA_T" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C11</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="nwm_brokerHost" many="false" isSecure="false" displayName="Broker Host">
+            <value>dcldevdcc02:6849</value>
+        </property>
+        <property name="nwm_brokerName" many="false" isSecure="false" displayName="Broker Name">
+            <value>BrokerA</value>
+        </property>
+        <property name="nwm_clientGroup" many="false" isSecure="false" displayName="Client Group">
+            <value>JMSClient</value>
+        </property>
+        <property name="nwm_brokerList" many="false" isSecure="false" displayName="Broker List">
+            <value></value>
+        </property>
+        <property name="nwm_keystore" many="false" isSecure="false" displayName="Keystore">
+            <value></value>
+        </property>
+        <property name="nwm_truststore" many="false" isSecure="false" displayName="Truststore">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_XA_Q1" displayName="BrokerA_XA_Q1" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerA_XA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C12</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>XAQueueConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_XA_Q2" displayName="BrokerA_XA_Q2" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerA_XA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C13</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>XAQueueConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_XA_T1" displayName="BrokerA_XA_T1" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerA_XA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C14</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>XATopicConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerA_XA_T2" displayName="BrokerA_XA_T2" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerA_XA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C15</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>XATopicConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerB_XA_Q1" displayName="BrokerB_XA_Q1" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerB_XA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C16</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>XAQueueConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.BrokerB_XA_Q2" displayName="BrokerB_XA_Q2" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerB_XA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>C17</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>XAQueueConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.testSSL" displayName="testSSL" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>SSL</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>QueueConnectionFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value></value>
+        </property>
+    </asset>
+    <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE" isDeployable="true">
+        <implementation.generic type="istruststorealias"/>
+        <property name="useSourceTruststore" many="false" isSecure="false" displayName="Use Source Truststore">
+            <value>true</value>
+        </property>
+        <property name="ksPassword" many="false" isSecure="true" displayName="Password">
+            <value>{AES}z/+xVlzI9T/Dfo7Su4lrCQ==</value>
+        </property>
+        <property name="ksLocation" many="false" isSecure="false" displayName="Location">
+            <value>../../../jvm/jvm/jre/lib/security/cacerts</value>
+        </property>
+    </asset>
+    <asset name="Parsing.Configuration" displayName="Configuration" isDeployable="true">
+        <implementation.generic type="isparsing"/>
+        <property name="defaultPartitionBytes" many="false" isSecure="false" displayName="Default Partition Bytes">
+            <value>20k</value>
+        </property>
+        <property name="useCache" many="false" isSecure="false" displayName="Use Cache">
+            <value>false</value>
+        </property>
+        <property name="maximumHeapBytes" many="false" isSecure="false" displayName="Maximum Heap Bytes">
+            <value>40%</value>
+        </property>
+        <property name="maximumDocBytes" many="false" isSecure="false" displayName="Maximum Document Bytes">
+            <value>20%</value>
+        </property>
+        <property name="maximumBigMemoryBytes" many="false" isSecure="false" displayName="Maximum BigMemory Bytes">
+            <value>200m</value>
+        </property>
+        <property name="useBigMemory" many="false" isSecure="false" displayName="Use BigMemory">
+            <value>false</value>
+        </property>
+    </asset>
+    <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config" isDeployable="true">
+        <implementation.generic type="isfileaccesscontrol"/>
+        <property name="allowedWritePaths" many="false" isSecure="false" displayName="Allowed Write Paths">
+            <value></value>
+        </property>
+        <property name="allowedReadPaths" many="false" isSecure="false" displayName="Allowed Read Paths">
+            <value></value>
+        </property>
+        <property name="allowedDeletePaths" many="false" isSecure="false" displayName="Allowed Delete Paths">
+            <value></value>
+        </property>
+        <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
+            <value>true</value>
+        </property>
+    </asset>
+    <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION" isDeployable="true">
+        <implementation.generic type="isumalias"/>
+        <property name="CLIENTPREFIX" many="false" isSecure="false" displayName="Client Prefix">
+            <value>J_jRQtEolDEurgAVIwwwADXaZQs_</value>
+        </property>
+        <property name="um_rname" many="false" isSecure="false" displayName="Realm URL">
+            <value>${UM_URL}</value>
+        </property>
+    </asset>
+    <property name="suspendTasksDuringDeploy" many="false" isSecure="false" displayName="Suspend Tasks During Deployment">
+        <value>none</value>
+    </property>
+    <property name="activateTasksAfterDeploy" many="false" isSecure="false" displayName="Activate Tasks After Deployment">
+        <value>none</value>
+    </property>
+    <property name="enablePortsAfterDeploy" many="false" isSecure="false" displayName="Enable Ports After Deployment">
+        <value>none</value>
+    </property>
+    <property name="reloadCacheManagersAfterDeployment" many="false" isSecure="false" displayName="Reload Cache Managers After Deployment">
+        <value>none</value>
+    </property>
+    <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
+        <value>true</value>
     </property>
-  </asset>
-  <asset name="JNDIAlias.BrokerA" displayName="BrokerA">
-    <implementation.generic type="isjndialias" />
-    <property name="providerURL" displayName="Provider URL">
-      <value>wmjmsnaming://BrokerA@dcldevdcc02:6849</value>
-    </property>
-    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
-      <value />
-    </property>
-    <property name="securityPrincipal" displayName="Security Principal">
-      <value />
-    </property>
-    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-  </asset>
-  <asset name="JNDIAlias.BrokerA_XA" displayName="BrokerA_XA">
-    <implementation.generic type="isjndialias" />
-    <property name="providerURL" displayName="Provider URL">
-      <value>wmjmsnaming://BrokerA@dcldevdcc02:6849</value>
-    </property>
-    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
-      <value />
-    </property>
-    <property name="securityPrincipal" displayName="Security Principal">
-      <value />
-    </property>
-    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-  </asset>
-  <asset name="JNDIAlias.BrokerB" displayName="BrokerB">
-    <implementation.generic type="isjndialias" />
-    <property name="providerURL" displayName="Provider URL">
-      <value>wmjmsnaming://BrokerB@dcldevdcc02:6849</value>
-    </property>
-    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
-      <value />
-    </property>
-    <property name="securityPrincipal" displayName="Security Principal">
-      <value />
-    </property>
-    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-  </asset>
-  <asset name="JNDIAlias.BrokerB_XA" displayName="BrokerB_XA">
-    <implementation.generic type="isjndialias" />
-    <property name="providerURL" displayName="Provider URL">
-      <value>wmjmsnaming://BrokerB@dcldevdcc02:6849</value>
-    </property>
-    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
-      <value />
-    </property>
-    <property name="securityPrincipal" displayName="Security Principal">
-      <value />
-    </property>
-    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-  </asset>
-  <asset name="JNDIAlias.NumA" displayName="NumA">
-    <implementation.generic type="isjndialias" />
-    <property name="providerURL" displayName="Provider URL">
-      <value>nhp://dcldevdcc02:9000/</value>
-    </property>
-    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
-      <value />
-    </property>
-    <property name="securityPrincipal" displayName="Security Principal">
-      <value />
-    </property>
-    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-  </asset>
-  <asset name="JNDIAlias.NumB" displayName="NumB">
-    <implementation.generic type="isjndialias" />
-    <property name="providerURL" displayName="Provider URL">
-      <value>nsp://dcldevdcc02:9000/</value>
-    </property>
-    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
-      <value />
-    </property>
-    <property name="securityPrincipal" displayName="Security Principal">
-      <value />
-    </property>
-    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-  </asset>
-  <asset name="JNDIAlias.SSL" displayName="SSL">
-    <implementation.generic type="isjndialias" />
-    <property name="providerURL" displayName="Provider URL">
-      <value>wmjmsnaming://BrokerA@cpai-d620:2050</value>
-    </property>
-    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
-      <value />
-    </property>
-    <property name="securityPrincipal" displayName="Security Principal">
-      <value>EMAILADDRESS=esebasti@webmethods.com, CN=B_BrokerUser1, OU=BrokerQA, O=webMethods, L=BayArea, ST=CA, C=US</value>
-    </property>
-    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
-      <value>{AES}0HoAPBxQw9NqPNi95Du1Yg==</value>
-    </property>
-  </asset>
-  <asset name="JMSAlias.BrokerA_LT_Q" displayName="BrokerA_LT_Q">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C1</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>QueueConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.BrokerA_LT_Q_1" displayName="BrokerA_LT_Q_1">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C2</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>QueueConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.BrokerA_LT_T" displayName="BrokerA_LT_T">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C3</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>TopicConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.BrokerA_NT_Q" displayName="BrokerA_NT_Q">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C4</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>QueueConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.BrokerA_NT_T" displayName="BrokerA_NT_T">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C5</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>TopicConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.BrokerA_Native_LT_Q" displayName="BrokerA_Native_LT_Q">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C6</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="nwm_brokerHost" displayName="Broker Host">
-      <value>dcldevdcc02:6849</value>
-    </property>
-    <property name="nwm_brokerName" displayName="Broker Name">
-      <value>BrokerA</value>
-    </property>
-    <property name="nwm_clientGroup" displayName="Client Group">
-      <value>JMSClient</value>
-    </property>
-    <property name="nwm_brokerList" displayName="Broker List">
-      <value />
-    </property>
-    <property name="nwm_keystore" displayName="Keystore">
-      <value />
-    </property>
-    <property name="nwm_truststore" displayName="Truststore">
-      <value />
-    </property>
-  </asset>
-  <asset name="JMSAlias.BrokerA_Native_LT_T" displayName="BrokerA_Native_LT_T">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C7</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="nwm_brokerHost" displayName="Broker Host">
-      <value>dcldevdcc02:6849</value>
-    </property>
-    <property name="nwm_brokerName" displayName="Broker Name">
-      <value>BrokerA</value>
-    </property>
-    <property name="nwm_clientGroup" displayName="Client Group">
-      <value>JMSClient</value>
-    </property>
-    <property name="nwm_brokerList" displayName="Broker List">
-      <value />
-    </property>
-    <property name="nwm_keystore" displayName="Keystore">
-      <value />
-    </property>
-    <property name="nwm_truststore" displayName="Truststore">
-      <value />
-    </property>
-  </asset>
-  <asset name="JMSAlias.BrokerA_Native_NT_Q" displayName="BrokerA_Native_NT_Q">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C8</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="nwm_brokerHost" displayName="Broker Host">
-      <value>dcldevdcc02:6849</value>
-    </property>
-    <property name="nwm_brokerName" displayName="Broker Name">
-      <value>BrokerA</value>
-    </property>
-    <property name="nwm_clientGroup" displayName="Client Group">
-      <value>JMSClient</value>
-    </property>
-    <property name="nwm_brokerList" displayName="Broker List">
-      <value />
-    </property>
-    <property name="nwm_keystore" displayName="Keystore">
-      <value />
-    </property>
-    <property name="nwm_truststore" displayName="Truststore">
-      <value />
-    </property>
-  </asset>
-  <asset name="JMSAlias.BrokerA_Native_NT_T" displayName="BrokerA_Native_NT_T">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C9</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="nwm_brokerHost" displayName="Broker Host">
-      <value>dcldevdcc02:6849</value>
-    </property>
-    <property name="nwm_brokerName" displayName="Broker Name">
-      <value>BrokerA</value>
-    </property>
-    <property name="nwm_clientGroup" displayName="Client Group">
-      <value>JMSClient</value>
-    </property>
-    <property name="nwm_brokerList" displayName="Broker List">
-      <value />
-    </property>
-    <property name="nwm_keystore" displayName="Keystore">
-      <value />
-    </property>
-    <property name="nwm_truststore" displayName="Truststore">
-      <value />
-    </property>
-  </asset>
-  <asset name="JMSAlias.BrokerA_Native_XA_Q" displayName="BrokerA_Native_XA_Q">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C10</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="nwm_brokerHost" displayName="Broker Host">
-      <value>dcldevdcc02:6849</value>
-    </property>
-    <property name="nwm_brokerName" displayName="Broker Name">
-      <value>BrokerA</value>
-    </property>
-    <property name="nwm_clientGroup" displayName="Client Group">
-      <value>JMSClient</value>
-    </property>
-    <property name="nwm_brokerList" displayName="Broker List">
-      <value />
-    </property>
-    <property name="nwm_keystore" displayName="Keystore">
-      <value />
-    </property>
-    <property name="nwm_truststore" displayName="Truststore">
-      <value />
-    </property>
-  </asset>
-  <asset name="JMSAlias.BrokerA_Native_XA_T" displayName="BrokerA_Native_XA_T">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C11</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="nwm_brokerHost" displayName="Broker Host">
-      <value>dcldevdcc02:6849</value>
-    </property>
-    <property name="nwm_brokerName" displayName="Broker Name">
-      <value>BrokerA</value>
-    </property>
-    <property name="nwm_clientGroup" displayName="Client Group">
-      <value>JMSClient</value>
-    </property>
-    <property name="nwm_brokerList" displayName="Broker List">
-      <value />
-    </property>
-    <property name="nwm_keystore" displayName="Keystore">
-      <value />
-    </property>
-    <property name="nwm_truststore" displayName="Truststore">
-      <value />
-    </property>
-  </asset>
-  <asset name="JMSAlias.BrokerA_XA_Q1" displayName="BrokerA_XA_Q1">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C12</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>XAQueueConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerA_XA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.BrokerA_XA_Q2" displayName="BrokerA_XA_Q2">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C13</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>XAQueueConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerA_XA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.BrokerA_XA_T1" displayName="BrokerA_XA_T1">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C14</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>XATopicConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerA_XA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.BrokerA_XA_T2" displayName="BrokerA_XA_T2">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C15</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>XATopicConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerA_XA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.BrokerB_XA_Q1" displayName="BrokerB_XA_Q1">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C16</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>XAQueueConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerB_XA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.BrokerB_XA_Q2" displayName="BrokerB_XA_Q2">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>C17</value>
-    </property>
-    <property name="user" displayName="User">
-      <value />
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>XAQueueConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerB_XA</dependsOn>
-  </asset>
-  <asset name="JMSAlias.testSSL" displayName="testSSL">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>SSL</value>
-    </property>
-    <property name="user" displayName="User">
-      <value>D:/SSLKeyStore/Certificates/Truststore/b.jks</value>
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>QueueConnectionFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value />
-    </property>
-    <dependsOn>IS:JNDIAlias.BrokerA</dependsOn>
-  </asset>
-  <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE">
-    <implementation.generic type="istruststorealias" />
-    <property name="useSourceTruststore" displayName="Use Source Truststore">
-      <value>true</value>
-    </property>
-    <property name="ksPassword" displayName="Password" isSecure="true">
-      <value>{AES}z/+xVlzI9T/Dfo7Su4lrCQ==</value>
-    </property>
-    <property name="ksLocation" displayName="Location">
-      <value>../../../jvm/jvm/jre/lib/security/cacerts</value>
-    </property>
-  </asset>
-  <asset name="Parsing.Configuration" displayName="Configuration">
-    <implementation.generic type="isparsing" />
-    <property name="defaultPartitionBytes" displayName="Default Partition Bytes">
-      <value>20k</value>
-    </property>
-    <property name="useCache" displayName="Use Cache">
-      <value>false</value>
-    </property>
-    <property name="maximumHeapBytes" displayName="Maximum Heap Bytes">
-      <value>40%</value>
-    </property>
-    <property name="maximumDocBytes" displayName="Maximum Document Bytes">
-      <value>20%</value>
-    </property>
-    <property name="maximumBigMemoryBytes" displayName="Maximum BigMemory Bytes">
-      <value>200m</value>
-    </property>
-    <property name="useBigMemory" displayName="Use BigMemory">
-      <value>false</value>
-    </property>
-  </asset>
-  <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config">
-    <implementation.generic type="isfileaccesscontrol" />
-    <property name="allowedWritePaths" displayName="Allowed Write Paths">
-      <value />
-    </property>
-    <property name="allowedReadPaths" displayName="Allowed Read Paths">
-      <value />
-    </property>
-    <property name="allowedDeletePaths" displayName="Allowed Delete Paths">
-      <value />
-    </property>
-    <property name="restartRuntimes" displayName="restartRuntimes">
-      <value>true</value>
-    </property>
-  </asset>
-  <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
-    <implementation.generic type="isumalias" />
-    <property name="CLIENTPREFIX" displayName="Client Prefix">
-      <value>J_jRQtEolDEurgAVIwwwADXaZQs_</value>
-    </property>
-    <property name="um_rname" displayName="Realm URL">
-      <value>nsp://localhost:9000</value>
-    </property>
-  </asset>
 </asset_composite>
-
