@@ -15,9 +15,12 @@
   <property name="restartRuntimes" displayName="restartRuntimes">
     <value>true</value>
   </property>
-  <buildInfo name="BuildVersion" value="10.7.0.0.2099528947" />
-  <buildInfo name="BuildTimestamp" value="2021-07-02T12:36:55" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.-47392554" />
+  <buildInfo name="BuildTimestamp" value="2021-07-05T09:23:04" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <asset name="Group.QA1" displayName="QA1">
+    <implementation.generic type="isgroup" />
+  </asset>
   <asset name="User.dev" displayName="dev">
     <implementation.generic type="isuser" />
     <property name="allowDigestAuth" displayName="Allow Digest Authentication">
