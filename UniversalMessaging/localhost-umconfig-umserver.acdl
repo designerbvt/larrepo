@@ -9,6 +9,9 @@
     <asset name="ConnectionFactory:CF1" isDeployable="true">
         <implementation.generic type="ConnectionFactory"/>
     </asset>
+    <asset name="QueueConnectionFactory:QCF1" isDeployable="true">
+        <implementation.generic type="QueueConnectionFactory"/>
+    </asset>
     <asset name="JNDIQueue:Q1" isDeployable="true">
         <implementation.generic type="JNDIQueue"/>
     </asset>
