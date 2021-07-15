@@ -1,73 +1,73 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.11.0.0">
-  <implementation.generic type="isconfiguration" />
-  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
-    <value>none</value>
-  </property>
-  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
-    <value>none</value>
-  </property>
-  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
-    <value>none</value>
-  </property>
-  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
-    <value>none</value>
-  </property>
-  <property name="restartRuntimes" displayName="restartRuntimes">
-    <value>true</value>
-  </property>
-  <buildInfo name="BuildVersion" value="10.11.0.0.-1072357028" />
-  <buildInfo name="BuildTimestamp" value="2021-07-15T12:31:26" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
-  <asset name="Acl.DEVACL" displayName="DEVACL">
-    <implementation.generic type="isacl" />
-  </asset>
-  <asset name="Acl.QAACL" displayName="QAACL">
-    <implementation.generic type="isacl" />
-  </asset>
-  <asset name="User.DevUser" displayName="DevUser">
-    <implementation.generic type="isuser" />
-    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
-      <value>false</value>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="isconfiguration" runtimeVersion="10.11.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <implementation.generic type="isconfiguration"/>
+    <buildInfo name="BuildTimestamp" value="2021-07-15T12:31:26"/>
+    <buildInfo name="BuildVersion" value="10.11.0.0.-1072357028"/>
+    <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0"/>
+    <asset name="Acl.DEVACL" displayName="DEVACL" isDeployable="true">
+        <implementation.generic type="isacl"/>
+    </asset>
+    <asset name="Acl.QAACL" displayName="QAACL" isDeployable="true">
+        <implementation.generic type="isacl"/>
+    </asset>
+    <asset name="User.DevUser" displayName="DevUser" isDeployable="true">
+        <implementation.generic type="isuser"/>
+        <property name="allowDigestAuth" many="false" isSecure="false" displayName="Allow Digest Authentication">
+            <value>false</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>{AES}0wKRHJqGk6SP0AykGe4QOqvQen05HREqfujnW0O0NovlIuUgyPhHpBqQacfec3xhaiyxF1+SYdoLVoEA0JEDWudH2TGmXpHarEnrpMMaVEE=</value>
+        </property>
+        <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
+            <value>false</value>
+        </property>
+    </asset>
+    <asset name="User.QAUser" displayName="QAUser" isDeployable="true">
+        <implementation.generic type="isuser"/>
+        <property name="allowDigestAuth" many="false" isSecure="false" displayName="Allow Digest Authentication">
+            <value>false</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>{AES}gLRSOC4wRtY2HN0wgRw5AfquPOqa5h+vAr4BXU9dKuLuzIvKMKnnqNUjauu5zhEXhHQvxsZ7ysPFn34+CkUCO+8ZdmXlP9NzNj/d4xtr70E=</value>
+        </property>
+        <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
+            <value>false</value>
+        </property>
+    </asset>
+    <asset name="GlobalVariable.GlobalVar" displayName="Global Variable 'GlobalVar'" isDeployable="true">
+        <implementation.generic type="isglobalvariable"/>
+        <property name="value" many="false" isSecure="false" displayName="Value">
+            <value>12345</value>
+        </property>
+    </asset>
+    <asset name="GlobalVariable.GlobalPass" displayName="Global Variable 'GlobalPass'" isDeployable="true">
+        <implementation.generic type="isglobalvariable"/>
+        <property name="value" many="false" isSecure="true" displayName="Value">
+            <value>{AES}WQ6KKAlj+st1IYDAt385Xw==</value>
+        </property>
+    </asset>
+    <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION" isDeployable="true">
+        <implementation.generic type="isumalias"/>
+        <property name="CLIENTPREFIX" many="false" isSecure="false" displayName="Client Prefix">
+            <value>J_jRQtEolDEurgAVIwwwADXaZQs_</value>
+        </property>
+        <property name="um_rname" many="false" isSecure="false" displayName="Realm URL">
+            <value>nsp://localhost:9000</value>
+        </property>
+    </asset>
+    <property name="suspendTasksDuringDeploy" many="false" isSecure="false" displayName="Suspend Tasks During Deployment">
+        <value>none</value>
     </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}0wKRHJqGk6SP0AykGe4QOqvQen05HREqfujnW0O0NovlIuUgyPhHpBqQacfec3xhaiyxF1+SYdoLVoEA0JEDWudH2TGmXpHarEnrpMMaVEE=</value>
+    <property name="activateTasksAfterDeploy" many="false" isSecure="false" displayName="Activate Tasks After Deployment">
+        <value>none</value>
     </property>
-    <property name="restartRuntimes" displayName="restartRuntimes">
-      <value>false</value>
+    <property name="enablePortsAfterDeploy" many="false" isSecure="false" displayName="Enable Ports After Deployment">
+        <value>none</value>
     </property>
-  </asset>
-  <asset name="User.QAUser" displayName="QAUser">
-    <implementation.generic type="isuser" />
-    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
-      <value>false</value>
+    <property name="reloadCacheManagersAfterDeployment" many="false" isSecure="false" displayName="Reload Cache Managers After Deployment">
+        <value>none</value>
     </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}gLRSOC4wRtY2HN0wgRw5AfquPOqa5h+vAr4BXU9dKuLuzIvKMKnnqNUjauu5zhEXhHQvxsZ7ysPFn34+CkUCO+8ZdmXlP9NzNj/d4xtr70E=</value>
+    <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
+        <value>false</value>
     </property>
-    <property name="restartRuntimes" displayName="restartRuntimes">
-      <value>false</value>
-    </property>
-  </asset>
-  <asset name="GlobalVariable.GlobalVar" displayName="Global Variable 'GlobalVar'">
-    <implementation.generic type="isglobalvariable" />
-    <property name="value" displayName="Value">
-      <value>12345</value>
-    </property>
-  </asset>
-  <asset name="GlobalVariable.GlobalPass" displayName="Global Variable 'GlobalPass'">
-    <implementation.generic type="isglobalvariable" />
-    <property name="value" displayName="Value" isSecure="true">
-      <value>{AES}WQ6KKAlj+st1IYDAt385Xw==</value>
-    </property>
-  </asset>
-  <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
-    <implementation.generic type="isumalias" />
-    <property name="CLIENTPREFIX" displayName="Client Prefix">
-      <value>J_jRQtEolDEurgAVIwwwADXaZQs_</value>
-    </property>
-    <property name="um_rname" displayName="Realm URL">
-      <value>nsp://localhost:9000</value>
-    </property>
-  </asset>
 </asset_composite>
-
