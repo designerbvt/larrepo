@@ -16,8 +16,29 @@
     <value>true</value>
   </property>
   <buildInfo name="BuildVersion" value="10.11.0.0.-1072357028" />
-  <buildInfo name="BuildTimestamp" value="2021-07-15T12:21:02" />
+  <buildInfo name="BuildTimestamp" value="2021-07-15T12:29:00" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <asset name="Acl.DEVACL" displayName="DEVACL">
+    <implementation.generic type="isacl" />
+  </asset>
+  <asset name="User.QAUser" displayName="QAUser">
+    <implementation.generic type="isuser" />
+    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
+      <value>false</value>
+    </property>
+    <property name="password" displayName="Password" isSecure="true">
+      <value>{AES}gLRSOC4wRtY2HN0wgRw5AfquPOqa5h+vAr4BXU9dKuLuzIvKMKnnqNUjauu5zhEXhHQvxsZ7ysPFn34+CkUCO+8ZdmXlP9NzNj/d4xtr70E=</value>
+    </property>
+    <property name="restartRuntimes" displayName="restartRuntimes">
+      <value>false</value>
+    </property>
+  </asset>
+  <asset name="GlobalVariable.GlobalPass" displayName="Global Variable 'GlobalPass'">
+    <implementation.generic type="isglobalvariable" />
+    <property name="value" displayName="Value" isSecure="true">
+      <value>{AES}WQ6KKAlj+st1IYDAt385Xw==</value>
+    </property>
+  </asset>
   <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
     <implementation.generic type="isumalias" />
     <property name="CLIENTPREFIX" displayName="Client Prefix">
