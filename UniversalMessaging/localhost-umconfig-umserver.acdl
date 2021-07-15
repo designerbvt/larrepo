@@ -3,7 +3,7 @@
     <implementation.generic type="UniversalMessaging"/>
     <buildInfo name="build.timestamp"/>
     <buildInfo name="build.version" value="10.11.0.0000-0446"/>
-    <asset name="TopicConnectionFactory:TCF1" isDeployable="true">
-        <implementation.generic type="TopicConnectionFactory"/>
+    <asset name="XAConnectionFactory:XCF1" isDeployable="true">
+        <implementation.generic type="XAConnectionFactory"/>
     </asset>
 </asset_composite>
