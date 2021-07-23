@@ -6,7 +6,25 @@
     <asset name="Channel:T1" isDeployable="true">
         <implementation.generic type="Channel"/>
     </asset>
+    <asset name="UMQueue:Q1" isDeployable="true">
+        <implementation.generic type="UMQueue"/>
+    </asset>
+    <asset name="ConnectionFactory:CF1" isDeployable="true">
+        <implementation.generic type="ConnectionFactory"/>
+    </asset>
+    <asset name="TopicConnectionFactory:TCF1" isDeployable="true">
+        <implementation.generic type="TopicConnectionFactory"/>
+    </asset>
+    <asset name="QueueConnectionFactory:QCF1" isDeployable="true">
+        <implementation.generic type="QueueConnectionFactory"/>
+    </asset>
+    <asset name="XAConnectionFactory:XCF1" isDeployable="true">
+        <implementation.generic type="XAConnectionFactory"/>
+    </asset>
     <asset name="JNDITopic:T1" isDeployable="true">
         <implementation.generic type="JNDITopic"/>
+    </asset>
+    <asset name="JNDIQueue:Q1" isDeployable="true">
+        <implementation.generic type="JNDIQueue"/>
     </asset>
 </asset_composite>
