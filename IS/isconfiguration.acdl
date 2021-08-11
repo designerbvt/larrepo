@@ -15,9 +15,69 @@
   <property name="restartRuntimes" displayName="restartRuntimes">
     <value>true</value>
   </property>
-  <buildInfo name="BuildVersion" value="10.11.0.0.-1375944896" />
-  <buildInfo name="BuildTimestamp" value="2021-07-20T20:23:38" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.-1100319897" />
+  <buildInfo name="BuildTimestamp" value="2021-08-11T18:53:41" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <asset name="User.dev" displayName="dev">
+    <implementation.generic type="isuser" />
+    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
+      <value>false</value>
+    </property>
+    <property name="password" displayName="Password" isSecure="true">
+      <value>{AES}WPNWXmi/+2ARi24m2J+pz69EEWmheTL6Ov5CptU4mVbnK5B/pVK7OlwP/fe48EvK8O5vDMNlp7QCl6JRfbNgaBOtXm7VyDVFX/TDB34yqTw=</value>
+    </property>
+    <property name="restartRuntimes" displayName="restartRuntimes">
+      <value>false</value>
+    </property>
+  </asset>
+  <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE">
+    <implementation.generic type="istruststorealias" />
+    <property name="useSourceTruststore" displayName="Use Source Truststore">
+      <value>true</value>
+    </property>
+    <property name="ksPassword" displayName="Password" isSecure="true">
+      <value>{AES}z/+xVlzI9T/Dfo7Su4lrCQ==</value>
+    </property>
+    <property name="ksLocation" displayName="Location">
+      <value>..\..\..\jvm\jvm\lib\security\cacerts</value>
+    </property>
+  </asset>
+  <asset name="Parsing.Configuration" displayName="Configuration">
+    <implementation.generic type="isparsing" />
+    <property name="defaultPartitionBytes" displayName="Default Partition Bytes">
+      <value>20k</value>
+    </property>
+    <property name="useCache" displayName="Use Cache">
+      <value>false</value>
+    </property>
+    <property name="maximumHeapBytes" displayName="Maximum Heap Bytes">
+      <value>40%</value>
+    </property>
+    <property name="maximumDocBytes" displayName="Maximum Document Bytes">
+      <value>20%</value>
+    </property>
+    <property name="maximumBigMemoryBytes" displayName="Maximum BigMemory Bytes">
+      <value>200m</value>
+    </property>
+    <property name="useBigMemory" displayName="Use BigMemory">
+      <value>false</value>
+    </property>
+  </asset>
+  <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config">
+    <implementation.generic type="isfileaccesscontrol" />
+    <property name="allowedWritePaths" displayName="Allowed Write Paths">
+      <value />
+    </property>
+    <property name="allowedReadPaths" displayName="Allowed Read Paths">
+      <value />
+    </property>
+    <property name="allowedDeletePaths" displayName="Allowed Delete Paths">
+      <value />
+    </property>
+    <property name="restartRuntimes" displayName="restartRuntimes">
+      <value>true</value>
+    </property>
+  </asset>
   <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
     <implementation.generic type="isumalias" />
     <property name="CLIENTPREFIX" displayName="Client Prefix">
