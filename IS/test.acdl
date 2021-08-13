@@ -1,8 +1,8 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="test" runtimeVersion="10.11.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="test" runtimeVersion="10.7.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.11.0.0.-893830327" />
-  <buildInfo name="BuildTimestamp" value="2021-07-21T12:19:00" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.6332002" />
+  <buildInfo name="BuildTimestamp" value="2021-08-13T16:27:01" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
   </property>
@@ -36,6 +36,9 @@
   <asset name="ISPackage.test" displayName="test">
     <implementation.generic type="ispackage" />
   </asset>
+  <asset name="cf1.fs1" displayName="cf1:fs1">
+    <implementation.generic type="isflowservice" />
+  </asset>
   <asset name="test.code" displayName="code">
     <implementation.generic type="isfolder" />
   </asset>
@@ -50,6 +53,18 @@
   </asset>
   <asset name="test.config" displayName="config">
     <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="test.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="test.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="test.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
   </asset>
   <asset name="test.doc" displayName="doc">
     <implementation.generic type="isfolder" />
