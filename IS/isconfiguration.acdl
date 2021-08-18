@@ -1,91 +1,79 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<asset_composite name="isconfiguration" runtimeVersion="10.11.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <implementation.generic type="isconfiguration"/>
-    <buildInfo name="BuildTimestamp" value="2021-08-11T18:53:41"/>
-    <buildInfo name="BuildVersion" value="10.11.0.0.-1100319897"/>
-    <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0"/>
-    <asset name="User.dev" displayName="dev" isDeployable="true">
-        <implementation.generic type="isuser"/>
-        <property name="allowDigestAuth" many="false" isSecure="false" displayName="Allow Digest Authentication">
-            <value>false</value>
-        </property>
-        <property name="password" many="false" isSecure="true" displayName="Password">
-            <value>{AES}WPNWXmi/+2ARi24m2J+pz69EEWmheTL6Ov5CptU4mVbnK5B/pVK7OlwP/fe48EvK8O5vDMNlp7QCl6JRfbNgaBOtXm7VyDVFX/TDB34yqTw=</value>
-        </property>
-        <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
-            <value>false</value>
-        </property>
-    </asset>
-    <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE" isDeployable="true">
-        <implementation.generic type="istruststorealias"/>
-        <property name="useSourceTruststore" many="false" isSecure="false" displayName="Use Source Truststore">
-            <value>true</value>
-        </property>
-        <property name="ksPassword" many="false" isSecure="true" displayName="Password">
-            <value>{AES}z/+xVlzI9T/Dfo7Su4lrCQ==</value>
-        </property>
-        <property name="ksLocation" many="false" isSecure="false" displayName="Location">
-            <value>..\..\..\jvm\jvm\lib\security\cacerts</value>
-        </property>
-    </asset>
-    <asset name="Parsing.Configuration" displayName="Configuration" isDeployable="true">
-        <implementation.generic type="isparsing"/>
-        <property name="defaultPartitionBytes" many="false" isSecure="false" displayName="Default Partition Bytes">
-            <value>20k</value>
-        </property>
-        <property name="useCache" many="false" isSecure="false" displayName="Use Cache">
-            <value>false</value>
-        </property>
-        <property name="maximumHeapBytes" many="false" isSecure="false" displayName="Maximum Heap Bytes">
-            <value>40%</value>
-        </property>
-        <property name="maximumDocBytes" many="false" isSecure="false" displayName="Maximum Document Bytes">
-            <value>20%</value>
-        </property>
-        <property name="maximumBigMemoryBytes" many="false" isSecure="false" displayName="Maximum BigMemory Bytes">
-            <value>200m</value>
-        </property>
-        <property name="useBigMemory" many="false" isSecure="false" displayName="Use BigMemory">
-            <value>false</value>
-        </property>
-    </asset>
-    <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config" isDeployable="true">
-        <implementation.generic type="isfileaccesscontrol"/>
-        <property name="allowedWritePaths" many="false" isSecure="false" displayName="Allowed Write Paths">
-            <value></value>
-        </property>
-        <property name="allowedReadPaths" many="false" isSecure="false" displayName="Allowed Read Paths">
-            <value></value>
-        </property>
-        <property name="allowedDeletePaths" many="false" isSecure="false" displayName="Allowed Delete Paths">
-            <value></value>
-        </property>
-        <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
-            <value>true</value>
-        </property>
-    </asset>
-    <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION" isDeployable="true">
-        <implementation.generic type="isumalias"/>
-        <property name="CLIENTPREFIX" many="false" isSecure="false" displayName="Client Prefix">
-            <value>J_jRQtEolDEurgAVIwwwADXaZQs_</value>
-        </property>
-        <property name="um_rname" many="false" isSecure="false" displayName="Realm URL">
-            <value>nsp://localhost:9000</value>
-        </property>
-    </asset>
-    <property name="suspendTasksDuringDeploy" many="false" isSecure="false" displayName="Suspend Tasks During Deployment">
-        <value>none</value>
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.7.0.0">
+  <implementation.generic type="isconfiguration" />
+  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
+    <value>none</value>
+  </property>
+  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
+    <value>none</value>
+  </property>
+  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
+    <value>none</value>
+  </property>
+  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
+    <value>none</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>true</value>
+  </property>
+  <buildInfo name="BuildVersion" value="10.7.0.0.1036790698" />
+  <buildInfo name="BuildTimestamp" value="2021-08-18T19:36:10" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE">
+    <implementation.generic type="istruststorealias" />
+    <property name="useSourceTruststore" displayName="Use Source Truststore">
+      <value>true</value>
     </property>
-    <property name="activateTasksAfterDeploy" many="false" isSecure="false" displayName="Activate Tasks After Deployment">
-        <value>none</value>
+    <property name="ksPassword" displayName="Password" isSecure="true">
+      <value>{AES}z/+xVlzI9T/Dfo7Su4lrCQ==</value>
     </property>
-    <property name="enablePortsAfterDeploy" many="false" isSecure="false" displayName="Enable Ports After Deployment">
-        <value>none</value>
+    <property name="ksLocation" displayName="Location">
+      <value>..\..\..\jvm\jvm\jre\lib\security\cacerts</value>
     </property>
-    <property name="reloadCacheManagersAfterDeployment" many="false" isSecure="false" displayName="Reload Cache Managers After Deployment">
-        <value>none</value>
+  </asset>
+  <asset name="Parsing.Configuration" displayName="Configuration">
+    <implementation.generic type="isparsing" />
+    <property name="defaultPartitionBytes" displayName="Default Partition Bytes">
+      <value>20k</value>
     </property>
-    <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
-        <value>false</value>
+    <property name="useCache" displayName="Use Cache">
+      <value>false</value>
     </property>
+    <property name="maximumHeapBytes" displayName="Maximum Heap Bytes">
+      <value>40%</value>
+    </property>
+    <property name="maximumDocBytes" displayName="Maximum Document Bytes">
+      <value>20%</value>
+    </property>
+    <property name="maximumBigMemoryBytes" displayName="Maximum BigMemory Bytes">
+      <value>200m</value>
+    </property>
+    <property name="useBigMemory" displayName="Use BigMemory">
+      <value>false</value>
+    </property>
+  </asset>
+  <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config">
+    <implementation.generic type="isfileaccesscontrol" />
+    <property name="allowedWritePaths" displayName="Allowed Write Paths">
+      <value />
+    </property>
+    <property name="allowedReadPaths" displayName="Allowed Read Paths">
+      <value />
+    </property>
+    <property name="allowedDeletePaths" displayName="Allowed Delete Paths">
+      <value />
+    </property>
+    <property name="restartRuntimes" displayName="restartRuntimes">
+      <value>true</value>
+    </property>
+  </asset>
+  <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
+    <implementation.generic type="isumalias" />
+    <property name="CLIENTPREFIX" displayName="Client Prefix">
+      <value>J_jRQtEolDEurgAVIwwwADXaZQs_</value>
+    </property>
+    <property name="um_rname" displayName="Realm URL">
+      <value>nsp://localhost:9000</value>
+    </property>
+  </asset>
 </asset_composite>
+
