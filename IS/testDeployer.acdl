@@ -1,0 +1,107 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="testDeployer" runtimeVersion="10.7.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.-559077430" />
+  <buildInfo name="BuildTimestamp" value="2021-09-09T16:02:02" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.testDeployer" displayName="testDeployer">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="abc.xyz.lmn.lmn" displayName="abc.xyz.lmn:lmn">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:testDeployer.code.source.abc.xyz.lmn.java</dependsOn>
+    <dependsOn>IS:testDeployer.code.classes.abc.xyz.lmn.class</dependsOn>
+  </asset>
+  <asset name="abc.xyz.xyz" displayName="abc.xyz:xyz">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:testDeployer.code.source.abc.xyz.java</dependsOn>
+    <dependsOn>IS:testDeployer.code.classes.abc.xyz.class</dependsOn>
+  </asset>
+  <asset name="testDeployer.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="testDeployer.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="testDeployer.code.classes.abc.xyz.lmn.class" displayName="code/classes/abc/xyz/lmn.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="testDeployer.code.classes.abc.xyz.class" displayName="code/classes/abc/xyz.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="testDeployer.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="testDeployer.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="testDeployer.code.source.abc.xyz.lmn.java" displayName="code/source/abc/xyz/lmn.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="testDeployer.code.source.abc.xyz.java" displayName="code/source/abc/xyz.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="testDeployer.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="testDeployer.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="testDeployer.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="testDeployer.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="testDeployer.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="testDeployer.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="testDeployer.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="testDeployer.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="testDeployer.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="testDeployer.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="testDeployer.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
