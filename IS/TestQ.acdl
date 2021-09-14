@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="TestQ" runtimeVersion="10.11.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.11.0.0.803930161" />
-  <buildInfo name="BuildTimestamp" value="2021-09-14T15:22:16" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.-1896930289" />
+  <buildInfo name="BuildTimestamp" value="2021-09-14T15:26:44" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
