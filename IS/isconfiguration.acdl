@@ -15,8 +15,8 @@
   <property name="restartRuntimes" displayName="restartRuntimes">
     <value>true</value>
   </property>
-  <buildInfo name="BuildVersion" value="10.11.0.0.-725014104" />
-  <buildInfo name="BuildTimestamp" value="2021-09-14T12:53:51" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.1969151621" />
+  <buildInfo name="BuildTimestamp" value="2021-09-14T12:59:19" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
   <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
     <implementation.generic type="isumalias" />
