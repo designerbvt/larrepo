@@ -16,7 +16,7 @@
     <value>true</value>
   </property>
   <buildInfo name="BuildVersion" value="10.7.0.0.1352717105" />
-  <buildInfo name="BuildTimestamp" value="2021-09-20T15:32:45" />
+  <buildInfo name="BuildTimestamp" value="2021-09-20T15:33:36" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
   <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE">
     <implementation.generic type="istruststorealias" />
@@ -28,12 +28,6 @@
     </property>
     <property name="ksLocation" displayName="Location">
       <value>..\..\..\Program Files\Zulu\zulu-11\lib\security\cacerts</value>
-    </property>
-  </asset>
-  <asset name="GlobalVariable.k1" displayName="Global Variable 'k1'">
-    <implementation.generic type="isglobalvariable" />
-    <property name="value" displayName="Value">
-      <value>v1</value>
     </property>
   </asset>
   <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
