@@ -10,12 +10,12 @@
         <value>true</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-t1.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-t1.autocreatedest">
-        <value>'false'</value>
+        <value>true</value>
     </property>
     <property name="dsl.version" many="false" isSecure="false" displayName="dsl.version">
         <value>'1.2'</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-q1.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-q1.autocreatedest">
-        <value>'false'</value>
+        <value>true</value>
     </property>
 </asset_composite>
