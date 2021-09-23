@@ -1,0 +1,1386 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="EXTINV810" runtimeVersion="10.11.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.150890985" />
+  <buildInfo name="BuildTimestamp" value="2021-09-23T15:29:37" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.EXTINV810" displayName="EXTINV810">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToPID" displayName="outbound.ABL.ABLMapping:ufMapToPID">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToST" displayName="outbound.ABL.ABLMapping:ufMapToST">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToBIG" displayName="outbound.ABL.ABLMapping:ufMapToBIG">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToSAC" displayName="outbound.ABL.ABLMapping:ufMapToSAC">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToDTM" displayName="outbound.ABL.ABLMapping:ufMapToDTM">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.DTM</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToCAD" displayName="outbound.ABL.ABLMapping:ufMapToCAD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CAD</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToTXICopy1" displayName="outbound.ABL.ABLMapping:ufMapToTXICopy1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToREF" displayName="outbound.ABL.ABLMapping:ufMapToREF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToREF_LinNO" displayName="outbound.ABL.ABLMapping:ufMapToREF_LinNO">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF_1</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToTDS" displayName="outbound.ABL.ABLMapping:ufMapToTDS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToN1" displayName="outbound.ABL.ABLMapping:ufMapToN1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToCUR" displayName="outbound.ABL.ABLMapping:ufMapToCUR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToITD" displayName="outbound.ABL.ABLMapping:ufMapToITD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ITD</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToIT1" displayName="outbound.ABL.ABLMapping:ufMapToIT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.ABL.ABLMapping.ufMapToTXI" displayName="outbound.ABL.ABLMapping:ufMapToTXI">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.ABL.ufCompleteFlow_810_ABL" displayName="outbound.ABL:ufCompleteFlow_810_ABL">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToCAD</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToREF_LinNO</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.ABL.ABLMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToN1" displayName="outbound.CAT.CATMapping:ufMapToN1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToPID" displayName="outbound.CAT.CATMapping:ufMapToPID">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToBIG" displayName="outbound.CAT.CATMapping:ufMapToBIG">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToSAC" displayName="outbound.CAT.CATMapping:ufMapToSAC">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToDTM" displayName="outbound.CAT.CATMapping:ufMapToDTM">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.DTM</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToCAD" displayName="outbound.CAT.CATMapping:ufMapToCAD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CAD</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToREF" displayName="outbound.CAT.CATMapping:ufMapToREF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToTDS" displayName="outbound.CAT.CATMapping:ufMapToTDS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToST" displayName="outbound.CAT.CATMapping:ufMapToST">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToCUR" displayName="outbound.CAT.CATMapping:ufMapToCUR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToITD" displayName="outbound.CAT.CATMapping:ufMapToITD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ITD</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToIT1" displayName="outbound.CAT.CATMapping:ufMapToIT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToTXI" displayName="outbound.CAT.CATMapping:ufMapToTXI">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.CAT.CATMapping.ufMapToIT1_beforeBPChange" displayName="outbound.CAT.CATMapping:ufMapToIT1_beforeBPChange">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.CAT.ufCompleteFlow_810_CAT" displayName="outbound.CAT:ufCompleteFlow_810_CAT">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToCAD</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.CAT.CATMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToCUR" displayName="outbound.DLL.segmentMapping:ufMapToCUR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToST" displayName="outbound.DLL.segmentMapping:ufMapToST">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToITD" displayName="outbound.DLL.segmentMapping:ufMapToITD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ITD</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToIT1" displayName="outbound.DLL.segmentMapping:ufMapToIT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToREF_PID</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToTXI" displayName="outbound.DLL.segmentMapping:ufMapToTXI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TXI</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToREF_PID" displayName="outbound.DLL.segmentMapping:ufMapToREF_PID">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+    <dependsOn>IS:adapterServices.selectSerialNumber</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToPID" displayName="outbound.DLL.segmentMapping:ufMapToPID">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToBIG" displayName="outbound.DLL.segmentMapping:ufMapToBIG">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToSAC" displayName="outbound.DLL.segmentMapping:ufMapToSAC">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToN1_1" displayName="outbound.DLL.segmentMapping:ufMapToN1_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+    <dependsOn>IS:adapterServices.selectExtrVAT</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToREF_N4</dependsOn>
+    <dependsOn>IS:adapterServices.selectVAT</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToN1" displayName="outbound.DLL.segmentMapping:ufMapToN1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+    <dependsOn>IS:adapterServices.selectExtrVAT</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToREF_N4</dependsOn>
+    <dependsOn>IS:adapterServices.selectVAT</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToDTM" displayName="outbound.DLL.segmentMapping:ufMapToDTM">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.DTM</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToREF_N4" displayName="outbound.DLL.segmentMapping:ufMapToREF_N4">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToAMT" displayName="outbound.DLL.segmentMapping:ufMapToAMT">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.AMT</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToREF" displayName="outbound.DLL.segmentMapping:ufMapToREF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToTDS" displayName="outbound.DLL.segmentMapping:ufMapToTDS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToIT1_1" displayName="outbound.DLL.segmentMapping:ufMapToIT1_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.segmentMapping.ufMapToTXI_TP" displayName="outbound.DLL.segmentMapping:ufMapToTXI_TP">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TXI</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.ufCompleteFlow_810_DLL_1" displayName="outbound.DLL:ufCompleteFlow_810_DLL_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToTXI_TP</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToAMT</dependsOn>
+    <dependsOn>IS:adapterServices.itemPrice_filter</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.DLL.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.nfEDIConversionProcess" displayName="outbound.DLL:nfEDIConversionProcess">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:util.adapterServices.insertCustomerEDILog</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:outbound.nfSetEDIConstants</dependsOn>
+    <dependsOn>IS:outbound.nfMapToISA</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGS</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGE</dependsOn>
+    <dependsOn>IS:outbound.nfAddGroupEnvelope</dependsOn>
+    <dependsOn>IS:outbound.addICEnvelope</dependsOn>
+  </asset>
+  <asset name="outbound.DLL.ufCompleteFlow_810_DLL" displayName="outbound.DLL:ufCompleteFlow_810_DLL">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToTXI_TP</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToAMT</dependsOn>
+    <dependsOn>IS:adapterServices.itemPrice_filter</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.DLL.segmentMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.DLL.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToAMT" displayName="outbound.SegmentMapping:ufMapToAMT">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToTDS" displayName="outbound.SegmentMapping:ufMapToTDS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToCUR" displayName="outbound.SegmentMapping:ufMapToCUR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToITD" displayName="outbound.SegmentMapping:ufMapToITD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ITD</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToN1" displayName="outbound.SegmentMapping:ufMapToN1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+    <dependsOn>IS:outbound.SegmentMapping.ufMapToREF_N4</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToIT1" displayName="outbound.SegmentMapping:ufMapToIT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToTXI" displayName="outbound.SegmentMapping:ufMapToTXI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TXI</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToIT1_SSU" displayName="outbound.SegmentMapping:ufMapToIT1_SSU">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToREF_SSU" displayName="outbound.SegmentMapping:ufMapToREF_SSU">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+    <dependsOn>IS:adapterServices.selectExtrVAT</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToBIG_SSU" displayName="outbound.SegmentMapping:ufMapToBIG_SSU">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToCUR_SSU" displayName="outbound.SegmentMapping:ufMapToCUR_SSU">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToN1_SSUX" displayName="outbound.SegmentMapping:ufMapToN1_SSUX">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+    <dependsOn>IS:outbound.SegmentMapping.ufMapToREF_N4</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToPID" displayName="outbound.SegmentMapping:ufMapToPID">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToBIG" displayName="outbound.SegmentMapping:ufMapToBIG">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToREF_N4" displayName="outbound.SegmentMapping:ufMapToREF_N4">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+    <dependsOn>IS:adapterServices.selectVAT</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToSAC" displayName="outbound.SegmentMapping:ufMapToSAC">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToDTM" displayName="outbound.SegmentMapping:ufMapToDTM">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.DTM</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToST" displayName="outbound.SegmentMapping:ufMapToST">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="outbound.SegmentMapping.ufMapToREF_PID" displayName="outbound.SegmentMapping:ufMapToREF_PID">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:adapterServices.selectSerialNumber</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToREF_PID_1" displayName="outbound.TCD.TCDMapping:ufMapToREF_PID_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:adapterServices.selectSerialNumber</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToBIG" displayName="outbound.TCD.TCDMapping:ufMapToBIG">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToSAC" displayName="outbound.TCD.TCDMapping:ufMapToSAC">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToDTM" displayName="outbound.TCD.TCDMapping:ufMapToDTM">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.DTM</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToIT1Copy1" displayName="outbound.TCD.TCDMapping:ufMapToIT1Copy1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToCAD" displayName="outbound.TCD.TCDMapping:ufMapToCAD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:INVSegments.CAD</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToREF" displayName="outbound.TCD.TCDMapping:ufMapToREF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToST" displayName="outbound.TCD.TCDMapping:ufMapToST">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToTDS" displayName="outbound.TCD.TCDMapping:ufMapToTDS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToREF_PID" displayName="outbound.TCD.TCDMapping:ufMapToREF_PID">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToREF_PID_011015" displayName="outbound.TCD.TCDMapping:ufMapToREF_PID_011015">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:adapterServices.selectSerialNumber</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToN1Copy1" displayName="outbound.TCD.TCDMapping:ufMapToN1Copy1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToCUR" displayName="outbound.TCD.TCDMapping:ufMapToCUR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToITD" displayName="outbound.TCD.TCDMapping:ufMapToITD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ITD</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToIT1" displayName="outbound.TCD.TCDMapping:ufMapToIT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToTXI" displayName="outbound.TCD.TCDMapping:ufMapToTXI">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToTDS_old" displayName="outbound.TCD.TCDMapping:ufMapToTDS_old">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToREFDetail" displayName="outbound.TCD.TCDMapping:ufMapToREFDetail">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToN1" displayName="outbound.TCD.TCDMapping:ufMapToN1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToN1_1" displayName="outbound.TCD.TCDMapping:ufMapToN1_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.TCDMapping.ufMapToPID" displayName="outbound.TCD.TCDMapping:ufMapToPID">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.TCD.ufCompleteFlow_810_TCD" displayName="outbound.TCD:ufCompleteFlow_810_TCD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToREF_PID</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.TCD.nfEDIConversionProcess</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.ufCompleteFlow_810_TCD_1" displayName="outbound.TCD:ufCompleteFlow_810_TCD_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToCAD</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToREFDetail</dependsOn>
+    <dependsOn>IS:adapterServices.itemPrice_filter</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToREF_PID</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.TCD.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.nfEDIConversionProcess" displayName="outbound.TCD:nfEDIConversionProcess">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:outbound.nfSetEDIConstants</dependsOn>
+    <dependsOn>IS:outbound.nfMapToISA</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGS</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGE</dependsOn>
+    <dependsOn>IS:outbound.nfAddGroupEnvelope</dependsOn>
+    <dependsOn>IS:outbound.addICEnvelope</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.ufCompleteFlow_810_TCD_30June2021" displayName="outbound.TCD:ufCompleteFlow_810_TCD_30June2021">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:adapterServices.itemPrice_filter</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToREF_PID</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.TCD.nfEDIConversionProcess</dependsOn>
+  </asset>
+  <asset name="outbound.TCD.ufCompleteFlow_810_TCD_16thJune2021" displayName="outbound.TCD:ufCompleteFlow_810_TCD_16thJune2021">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:adapterServices.itemPrice_filter</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToREF_PID</dependsOn>
+    <dependsOn>IS:outbound.TCD.TCDMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.TCD.nfEDIConversionProcess</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToREF_PID_04232021" displayName="outbound.AVN.AVNMapping:ufMapToREF_PID_04232021">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+    <dependsOn>IS:adapterServices.selectLicense</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:adapterServices.selectSerialNumber</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToPID" displayName="outbound.AVN.AVNMapping:ufMapToPID">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.PID</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToREF_PID" displayName="outbound.AVN.AVNMapping:ufMapToREF_PID">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToBIG" displayName="outbound.AVN.AVNMapping:ufMapToBIG">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToSAC" displayName="outbound.AVN.AVNMapping:ufMapToSAC">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToDTM" displayName="outbound.AVN.AVNMapping:ufMapToDTM">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.DTM</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToST" displayName="outbound.AVN.AVNMapping:ufMapToST">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToCAD" displayName="outbound.AVN.AVNMapping:ufMapToCAD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CAD</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToREF" displayName="outbound.AVN.AVNMapping:ufMapToREF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToREF_N4" displayName="outbound.AVN.AVNMapping:ufMapToREF_N4">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToTDS" displayName="outbound.AVN.AVNMapping:ufMapToTDS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToCAD_2" displayName="outbound.AVN.AVNMapping:ufMapToCAD_2">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CAD</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToCUR" displayName="outbound.AVN.AVNMapping:ufMapToCUR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToITD" displayName="outbound.AVN.AVNMapping:ufMapToITD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ITD</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToREF_PID_2" displayName="outbound.AVN.AVNMapping:ufMapToREF_PID_2">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+    <dependsOn>IS:adapterServices.selectLicense</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:adapterServices.selectSerialNumber</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToREF_PID_1" displayName="outbound.AVN.AVNMapping:ufMapToREF_PID_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+    <dependsOn>IS:adapterServices.selectLicense</dependsOn>
+    <dependsOn>IS:adapterServices.selectSerialNumber</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToN1" displayName="outbound.AVN.AVNMapping:ufMapToN1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToREF_N4</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToIT1" displayName="outbound.AVN.AVNMapping:ufMapToIT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToREF_PID</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.AVNMapping.ufMapToTXI" displayName="outbound.AVN.AVNMapping:ufMapToTXI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TXI</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.ufCompleteFlow_810_AVN" displayName="outbound.AVN:ufCompleteFlow_810_AVN">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformationEDILocCode</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToCAD</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.AVN.AVNMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.AVN.nfEDIConversionProcess</dependsOn>
+  </asset>
+  <asset name="outbound.AVN.nfEDIConversionProcess" displayName="outbound.AVN:nfEDIConversionProcess">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:outbound.nfSetEDIConstants</dependsOn>
+    <dependsOn>IS:outbound.nfMapToISA</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGS</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGE</dependsOn>
+    <dependsOn>IS:outbound.nfAddGroupEnvelope</dependsOn>
+    <dependsOn>IS:outbound.addICEnvelope</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToBIG" displayName="outbound.SSU.segmentMapping:ufMapToBIG">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToSAC" displayName="outbound.SSU.segmentMapping:ufMapToSAC">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToST" displayName="outbound.SSU.segmentMapping:ufMapToST">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToDTM" displayName="outbound.SSU.segmentMapping:ufMapToDTM">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.DTM</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToIT1_1" displayName="outbound.SSU.segmentMapping:ufMapToIT1_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToTXI_TP" displayName="outbound.SSU.segmentMapping:ufMapToTXI_TP">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TXI</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToAMT" displayName="outbound.SSU.segmentMapping:ufMapToAMT">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.AMT</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToREF" displayName="outbound.SSU.segmentMapping:ufMapToREF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToTDS" displayName="outbound.SSU.segmentMapping:ufMapToTDS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToN1_1" displayName="outbound.SSU.segmentMapping:ufMapToN1_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+    <dependsOn>IS:adapterServices.selectExtrVAT</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToREF_N4</dependsOn>
+    <dependsOn>IS:adapterServices.selectVAT</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToTXI_12092020" displayName="outbound.SSU.segmentMapping:ufMapToTXI_12092020">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TXI</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToCUR" displayName="outbound.SSU.segmentMapping:ufMapToCUR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToN1" displayName="outbound.SSU.segmentMapping:ufMapToN1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToREF_N4</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToITD" displayName="outbound.SSU.segmentMapping:ufMapToITD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ITD</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToIT1" displayName="outbound.SSU.segmentMapping:ufMapToIT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToREF_PID</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToTXI" displayName="outbound.SSU.segmentMapping:ufMapToTXI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TXI</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToREF_PID" displayName="outbound.SSU.segmentMapping:ufMapToREF_PID">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+    <dependsOn>IS:adapterServices.selectSerialNumber</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToPID" displayName="outbound.SSU.segmentMapping:ufMapToPID">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.SSU.segmentMapping.ufMapToREF_N4" displayName="outbound.SSU.segmentMapping:ufMapToREF_N4">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.ufCompleteFlow_810_SSU_06302021" displayName="outbound.SSU:ufCompleteFlow_810_SSU_06302021">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToTXI_TP</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToAMT</dependsOn>
+    <dependsOn>IS:adapterServices.itemPrice_filter</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.SSU.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.ufCompleteFlow_810_SSU" displayName="outbound.SSU:ufCompleteFlow_810_SSU">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToTXI_TP</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToAMT</dependsOn>
+    <dependsOn>IS:outbound.SSU.segmentMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.SSU.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+  </asset>
+  <asset name="outbound.SSU.nfEDIConversionProcess" displayName="outbound.SSU:nfEDIConversionProcess">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:outbound.nfSetEDIConstants</dependsOn>
+    <dependsOn>IS:outbound.nfMapToISA</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGS</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGE</dependsOn>
+    <dependsOn>IS:outbound.nfAddGroupEnvelope</dependsOn>
+    <dependsOn>IS:outbound.addICEnvelope</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToPID_1" displayName="outbound.WCE.segmentMapping:ufMapToPID_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.PID</dependsOn>
+    <dependsOn>IS:adapterServices.selectTangibleIntangibleFlag</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToST" displayName="outbound.WCE.segmentMapping:ufMapToST">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToCUR" displayName="outbound.WCE.segmentMapping:ufMapToCUR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToIT1" displayName="outbound.WCE.segmentMapping:ufMapToIT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToTXI" displayName="outbound.WCE.segmentMapping:ufMapToTXI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TXI</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToREF_IT1" displayName="outbound.WCE.segmentMapping:ufMapToREF_IT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToTXI_S_1" displayName="outbound.WCE.segmentMapping:ufMapToTXI_S_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TXI</dependsOn>
+    <dependsOn>IS:adapterServices.selectVAT</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToTXI_S" displayName="outbound.WCE.segmentMapping:ufMapToTXI_S">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TXI</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToPID" displayName="outbound.WCE.segmentMapping:ufMapToPID">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.PID</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToN1" displayName="outbound.WCE.segmentMapping:ufMapToN1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToBIG" displayName="outbound.WCE.segmentMapping:ufMapToBIG">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToREF" displayName="outbound.WCE.segmentMapping:ufMapToREF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.segmentMapping.ufMapToTDS" displayName="outbound.WCE.segmentMapping:ufMapToTDS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.nfEDIConversionProcess" displayName="outbound.WCE:nfEDIConversionProcess">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:outbound.nfSetEDIConstants</dependsOn>
+    <dependsOn>IS:outbound.nfMapToISA</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGS</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGE</dependsOn>
+    <dependsOn>IS:outbound.nfAddGroupEnvelope</dependsOn>
+    <dependsOn>IS:outbound.addICEnvelope</dependsOn>
+  </asset>
+  <asset name="outbound.WCE.ufCompleteFlow_810_WCE" displayName="outbound.WCE:ufCompleteFlow_810_WCE">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToREF_IT1</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.WCE.segmentMapping.ufMapToTXI_S</dependsOn>
+    <dependsOn>IS:outbound.WCE.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToTDS" displayName="outbound.SYN.SYNMapping:ufMapToTDS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToST" displayName="outbound.SYN.SYNMapping:ufMapToST">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToCUR" displayName="outbound.SYN.SYNMapping:ufMapToCUR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToITD" displayName="outbound.SYN.SYNMapping:ufMapToITD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ITD</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToN1Copy1" displayName="outbound.SYN.SYNMapping:ufMapToN1Copy1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToIT1" displayName="outbound.SYN.SYNMapping:ufMapToIT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToREFDetail" displayName="outbound.SYN.SYNMapping:ufMapToREFDetail">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToTXI" displayName="outbound.SYN.SYNMapping:ufMapToTXI">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToIT1Copy1" displayName="outbound.SYN.SYNMapping:ufMapToIT1Copy1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToTDS_old" displayName="outbound.SYN.SYNMapping:ufMapToTDS_old">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToN1" displayName="outbound.SYN.SYNMapping:ufMapToN1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToPID" displayName="outbound.SYN.SYNMapping:ufMapToPID">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToBIG" displayName="outbound.SYN.SYNMapping:ufMapToBIG">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToSAC" displayName="outbound.SYN.SYNMapping:ufMapToSAC">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToDTM" displayName="outbound.SYN.SYNMapping:ufMapToDTM">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.DTM</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToCAD" displayName="outbound.SYN.SYNMapping:ufMapToCAD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:INVSegments.CAD</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.SYNMapping.ufMapToREF" displayName="outbound.SYN.SYNMapping:ufMapToREF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.ufCompleteFlow_810_SYN" displayName="outbound.SYN:ufCompleteFlow_810_SYN">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToCAD</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToREFDetail</dependsOn>
+    <dependsOn>IS:adapterServices.itemPrice_filter</dependsOn>
+    <dependsOn>IS:outbound.SYN.SYNMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.SYN.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+  </asset>
+  <asset name="outbound.SYN.nfEDIConversionProcess" displayName="outbound.SYN:nfEDIConversionProcess">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:outbound.nfSetEDIConstants</dependsOn>
+    <dependsOn>IS:outbound.nfMapToISA</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGS</dependsOn>
+    <dependsOn>IS:outbound.nfMapToGE</dependsOn>
+    <dependsOn>IS:outbound.nfAddGroupEnvelope</dependsOn>
+    <dependsOn>IS:outbound.addICEnvelope</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.ufCompleteFlow_810_JNE_06302021" displayName="outbound.JNE:ufCompleteFlow_810_JNE_06302021">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToCAD</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:adapterServices.itemPrice_filter</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToREFDetail</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.ufCompleteFlow_810_JNE_1" displayName="outbound.JNE:ufCompleteFlow_810_JNE_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToCAD</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:adapterServices.itemPrice_filter</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToREFDetail</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToCUR" displayName="outbound.JNE.JNEMapping:ufMapToCUR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.CUR</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToITD" displayName="outbound.JNE.JNEMapping:ufMapToITD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ITD</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToIT1" displayName="outbound.JNE.JNEMapping:ufMapToIT1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToTXI" displayName="outbound.JNE.JNEMapping:ufMapToTXI">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToN1" displayName="outbound.JNE.JNEMapping:ufMapToN1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToPID" displayName="outbound.JNE.JNEMapping:ufMapToPID">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToBIG" displayName="outbound.JNE.JNEMapping:ufMapToBIG">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToSAC" displayName="outbound.JNE.JNEMapping:ufMapToSAC">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToREFDetail" displayName="outbound.JNE.JNEMapping:ufMapToREFDetail">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToDTM" displayName="outbound.JNE.JNEMapping:ufMapToDTM">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.DTM</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToCAD" displayName="outbound.JNE.JNEMapping:ufMapToCAD">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:INVSegments.CAD</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToREF" displayName="outbound.JNE.JNEMapping:ufMapToREF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:records.ERROR_REC</dependsOn>
+    <dependsOn>IS:INVSegments.REF</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToTDS" displayName="outbound.JNE.JNEMapping:ufMapToTDS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+    <dependsOn>IS:util.transformers.njConvertFloatToString</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.JNEMapping.ufMapToST" displayName="outbound.JNE.JNEMapping:ufMapToST">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="outbound.JNE.ufCompleteFlow_810_JNE" displayName="outbound.JNE:ufCompleteFlow_810_JNE">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+    <dependsOn>IS:util.adapterSvcCall</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToST</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToBIG</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToCUR</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToN1</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToITD</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToTDS</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToSAC</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToCAD</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToDTM</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToREF</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToIT1</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToPID</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToREFDetail</dependsOn>
+    <dependsOn>IS:outbound.JNE.JNEMapping.ufMapToTXI</dependsOn>
+    <dependsOn>IS:outbound.nfEDIConversionProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+  </asset>
+  <asset name="INVSegments.PO4" displayName="INVSegments:PO4">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.CUR" displayName="INVSegments:CUR">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.ITD" displayName="INVSegments:ITD">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.ISS" displayName="INVSegments:ISS">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.IT1" displayName="INVSegments:IT1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.TXI" displayName="INVSegments:TXI">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.ST" displayName="INVSegments:ST">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.PID" displayName="INVSegments:PID">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.BIG" displayName="INVSegments:BIG">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.DTM" displayName="INVSegments:DTM">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.CAD" displayName="INVSegments:CAD">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.AMT" displayName="INVSegments:AMT">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.REF" displayName="INVSegments:REF">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.TDS" displayName="INVSegments:TDS">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.REF_1" displayName="INVSegments:REF_1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.N4" displayName="INVSegments:N4">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.N3" displayName="INVSegments:N3">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="INVSegments.N1" displayName="INVSegments:N1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="records.INVO_Rec_1" displayName="records:INVO_Rec_1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="records.INVO_Rec" displayName="records:INVO_Rec">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="records.Inv_Inbound_Rec" displayName="records:Inv_Inbound_Rec">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="adapterServices.selectExtrVAT" displayName="adapterServices:selectExtrVAT">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:Connections.Wmb2b</dependsOn>
+  </asset>
+  <asset name="adapterServices.selectSerialNumber" displayName="adapterServices:selectSerialNumber">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:Connections.Wmb2b</dependsOn>
+  </asset>
+  <asset name="adapterServices.itemPrice_filter" displayName="adapterServices:itemPrice_filter">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:Connections.Wmb2b</dependsOn>
+  </asset>
+  <asset name="adapterServices.selectVAT" displayName="adapterServices:selectVAT">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:Connections.Wmb2b</dependsOn>
+  </asset>
+  <asset name="adapterServices.selectTangibleIntangibleFlag" displayName="adapterServices:selectTangibleIntangibleFlag">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:Connections.Wmb2b</dependsOn>
+  </asset>
+  <asset name="adapterServices.selectLicense" displayName="adapterServices:selectLicense">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:Connections.Wmb2b</dependsOn>
+  </asset>
+  <asset name="adapterServices.buyerPart" displayName="adapterServices:buyerPart">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:Connections.Wmb2b</dependsOn>
+  </asset>
+  <asset name="EDIFFSchema.X12.Ver4010.Dic" displayName="EDIFFSchema.X12.Ver4010:Dic">
+    <implementation.generic type="ffdictionary" />
+    <dependsOn>IS:EDIFFSchema.X12.Ver4010.Dic</dependsOn>
+  </asset>
+  <asset name="EDIFFSchema.X12.Ver4010.Dic810" displayName="EDIFFSchema.X12.Ver4010:Dic810">
+    <implementation.generic type="ffdictionary" />
+  </asset>
+  <asset name="EDIFFSchema.X12.V4010.EDI_810SchDT" displayName="EDIFFSchema.X12.V4010:EDI_810SchDT">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="EDIFFSchema.X12.V4010.DAT_IN_810SchDT" displayName="EDIFFSchema.X12.V4010:DAT_IN_810SchDT">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="EDIFFSchema.X12.V4010.Schema_810" displayName="EDIFFSchema.X12.V4010:Schema_810">
+    <implementation.generic type="ffschema" />
+    <dependsOn>IS:EDIFFSchema.X12.Ver4010.Dic810</dependsOn>
+  </asset>
+  <asset name="EDIFFSchema.X12.V4010.EDI_810Sch" displayName="EDIFFSchema.X12.V4010:EDI_810Sch">
+    <implementation.generic type="ffschema" />
+    <dependsOn>IS:EDIFFSchema.X12.V4010.EDI_810Dic</dependsOn>
+  </asset>
+  <asset name="EDIFFSchema.X12.V4010.EDI_810Dic" displayName="EDIFFSchema.X12.V4010:EDI_810Dic">
+    <implementation.generic type="ffdictionary" />
+    <dependsOn>IS:EDIFFSchema.X12.V4010.EDI_810Dic</dependsOn>
+  </asset>
+  <asset name="EDIFFSchema.X12.V4010.EDI810Schema" displayName="EDIFFSchema.X12.V4010:EDI810Schema">
+    <implementation.generic type="ffschema" />
+    <dependsOn>IS:Ravi.EDI810Dict</dependsOn>
+  </asset>
+  <asset name="EDIFFSchema.X12.V4010.DAT_IN_810Sch" displayName="EDIFFSchema.X12.V4010:DAT_IN_810Sch">
+    <implementation.generic type="ffschema" />
+    <dependsOn>IS:EDIFFSchema.X12.V4010.DAT_IN_810Dic</dependsOn>
+  </asset>
+  <asset name="EDIFFSchema.X12.V4010.DAT_IN_810Dic" displayName="EDIFFSchema.X12.V4010:DAT_IN_810Dic">
+    <implementation.generic type="ffdictionary" />
+  </asset>
+  <asset name="inbound.SegmentMapping.mapFromPID_810" displayName="inbound.SegmentMapping:mapFromPID_810">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.PID</dependsOn>
+  </asset>
+  <asset name="inbound.SegmentMapping.mapFromN1_810" displayName="inbound.SegmentMapping:mapFromN1_810">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N1</dependsOn>
+  </asset>
+  <asset name="inbound.SegmentMapping.mapFromN4_810" displayName="inbound.SegmentMapping:mapFromN4_810">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N4</dependsOn>
+  </asset>
+  <asset name="inbound.SegmentMapping.mapFromIT1_810" displayName="inbound.SegmentMapping:mapFromIT1_810">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.IT1</dependsOn>
+  </asset>
+  <asset name="inbound.SegmentMapping.mapFromREF_810" displayName="inbound.SegmentMapping:mapFromREF_810">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="inbound.SegmentMapping.mapFromTDS_810" displayName="inbound.SegmentMapping:mapFromTDS_810">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.TDS</dependsOn>
+  </asset>
+  <asset name="inbound.SegmentMapping.mapFromST_810" displayName="inbound.SegmentMapping:mapFromST_810">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.ST</dependsOn>
+  </asset>
+  <asset name="inbound.SegmentMapping.mapFromN3_810" displayName="inbound.SegmentMapping:mapFromN3_810">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.N3</dependsOn>
+  </asset>
+  <asset name="inbound.SegmentMapping.mapFromBIG_810" displayName="inbound.SegmentMapping:mapFromBIG_810">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:INVSegments.BIG</dependsOn>
+  </asset>
+  <asset name="inbound.SegmentMapping.mapFromCUR_810" displayName="inbound.SegmentMapping:mapFromCUR_810">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="inbound.parse810Record" displayName="inbound:parse810Record">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:X12810.EDI810</dependsOn>
+    <dependsOn>IS:EXTPO850_1.POSegments.ST</dependsOn>
+    <dependsOn>IS:records.Inv_Inbound_Rec</dependsOn>
+    <dependsOn>IS:EXTPO850_1.inbound.SegmentMapping.mapFromST_850</dependsOn>
+    <dependsOn>IS:inbound.SegmentMapping.mapFromBIG_810</dependsOn>
+    <dependsOn>IS:inbound.SegmentMapping.mapFromCUR_810</dependsOn>
+    <dependsOn>IS:inbound.SegmentMapping.mapFromTDS_810</dependsOn>
+    <dependsOn>IS:inbound.SegmentMapping.mapFromN1_810</dependsOn>
+    <dependsOn>IS:inbound.SegmentMapping.mapFromN3_810</dependsOn>
+    <dependsOn>IS:inbound.SegmentMapping.mapFromN4_810</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:inbound.SegmentMapping.mapFromIT1_810</dependsOn>
+    <dependsOn>IS:inbound.SegmentMapping.mapFromPID_810</dependsOn>
+    <dependsOn>IS:inbound.SegmentMapping.mapFromREF_810</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+  </asset>
+  <asset name="inbound.ufCompleteFlow_810_EXT" displayName="inbound:ufCompleteFlow_810_EXT">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:inbound.nfEnvelopeEDIDocumentProcess</dependsOn>
+    <dependsOn>IS:inbound.nfEnvelopeEDIPOSDocumentProcess</dependsOn>
+    <dependsOn>IS:util.nfGetTradingPartnerInformation</dependsOn>
+    <dependsOn>IS:inbound.parse810Record</dependsOn>
+    <dependsOn>IS:util.nfFTPInboundFile</dependsOn>
+    <dependsOn>IS:util.nfNotifyInbound</dependsOn>
+    <dependsOn>IS:util.nfSendMail</dependsOn>
+  </asset>
+  <asset name="EXTINV810.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EXTINV810.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EXTINV810.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="EXTINV810.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="EXTINV810.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="EXTINV810.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="EXTINV810.config.ReplaceHardcodeValues.xml" displayName="config/ReplaceHardcodeValues.xml">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="EXTINV810.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EXTINV810.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EXTINV810.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EXTINV810.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EXTINV810.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EXTINV810.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
