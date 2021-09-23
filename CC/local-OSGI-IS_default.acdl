@@ -13,7 +13,7 @@
         <value>JKS</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{lAC5jXWZWtxoEtHkWuKT7yckNYnRJWtYCy3CSMQVXD4=}{HgN5RLckUbJghLaqg4tAAg==}iJDEZopnlXGkmuPV3aeQQg=='</value>
+        <value></value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
         <value>'{AES/CBC/PKCS5Padding}{xYpa+NT4lAAbu75mWFw6hhYyEa084V+EU5yldR/lU2w=}{749VKmAXKnr5Bf2UqcDTDg==}SuG5XCCsK3F33UE6Kmh52Q=='</value>
@@ -40,7 +40,7 @@
         <value>local_Everybody</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{hHsg5urVbwu3vdoDFVxFiSnHn1VpMJ21LJlZ8z0tzEM=}{3ZF/2NxFwKsIa883ulLMew==}6vgdvD7BE//uSYCVZcIUgg=='</value>
+        <value></value>
     </property>
     <property name="integrationserver-default.is-groups-local_replicators.members.user[1]" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_replicators.members.user[1]">
         <value>Replicator</value>
