@@ -10,13 +10,13 @@
         <value>true</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-t1.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-t1.autocreatedest">
-        <value>'false'</value>
+        <value>true</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-administrator.password" data_type="string" many="false" isSecure="true" displayName="universal-messaging-umserver.common-local-users-administrator.password">
         <value>''</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-q1.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-q1.autocreatedest">
-        <value>'false'</value>
+        <value>true</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-user1.password" data_type="string" many="false" isSecure="true" displayName="universal-messaging-umserver.common-local-users-user1.password">
         <value>''</value>
