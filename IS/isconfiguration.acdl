@@ -16,8 +16,20 @@
     <value>true</value>
   </property>
   <buildInfo name="BuildVersion" value="10.11.0.0.-1265655252" />
-  <buildInfo name="BuildTimestamp" value="2021-09-23T13:13:27" />
+  <buildInfo name="BuildTimestamp" value="2021-09-23T13:14:27" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE">
+    <implementation.generic type="istruststorealias" />
+    <property name="useSourceTruststore" displayName="Use Source Truststore">
+      <value>true</value>
+    </property>
+    <property name="ksPassword" displayName="Password" isSecure="true">
+      <value>{AES}z/+xVlzI9T/Dfo7Su4lrCQ==</value>
+    </property>
+    <property name="ksLocation" displayName="Location">
+      <value>../../../jvm/jvm/lib/security/cacerts</value>
+    </property>
+  </asset>
   <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
     <implementation.generic type="isumalias" />
     <property name="CLIENTPREFIX" displayName="Client Prefix">
