@@ -19,7 +19,7 @@
         <value>'true'</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{5ArivdD2RhzOYc34QiUwArZXuNEhQBNM4hkVEo054LQ=}{bQxjD3PzOGTXGplO1VKXgg==}rg9bbkGKB+PWrFi4VSurPQ=='</value>
+        <value></value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
         <value>'{AES/CBC/PKCS5Padding}{6gKzK2PYrA7agDjPhICKupTsVqTwk0VK7nHNtpSEu4s=}{WB55uzE/Rcsdk6H3jcMamQ==}BbsC86/xE+KpiafvsmH6cw=='</value>
@@ -40,7 +40,7 @@
         <value>15</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{AnHXAcYZ/s2wc6oxvlr9pLrj8679BCtFaXu3GmSvzZ4=}{/tNx2oz7Db9jNJ9sVAP6+g==}v2rVh+oRzhYdydfL6i1Vbw=='</value>
+        <value></value>
     </property>
     <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.type">
         <value>JKS</value>
