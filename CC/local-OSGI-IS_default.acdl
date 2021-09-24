@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="local-OSGI-IS_default" displayName="local-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <buildInfo name="BuildVersion" value="1"/>
-    <buildInfo name="build.timestamp" value="2021-09-23T20:54:25"/>
+    <buildInfo name="build.timestamp" value="2021-09-24T11:04:53"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="rollbackConfigurations" data_type="boolean" many="false" isSecure="false" displayName="rollbackConfigurations">
         <value>false</value>
@@ -9,121 +9,7 @@
     <property name="restartRuntimes" data_type="boolean" many="false" isSecure="false" displayName="restartRuntimes">
         <value>true</value>
     </property>
-    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.type">
-        <value>JKS</value>
-    </property>
-    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value></value>
-    </property>
-    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
-        <value>'{AES/CBC/PKCS5Padding}{xYpa+NT4lAAbu75mWFw6hhYyEa084V+EU5yldR/lU2w=}{749VKmAXKnr5Bf2UqcDTDg==}SuG5XCCsK3F33UE6Kmh52Q=='</value>
-    </property>
-    <property name="integrationserver-default.common-vars-k1.variable.$" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-vars-k1.variable.$">
-        <value>V1</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_everybody.members.user[0]" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_everybody.members.user[0]">
-        <value>Administrator</value>
-    </property>
-    <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.location" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.location">
-        <value>..\..\..\jvm\jvm\lib\security\cacerts</value>
-    </property>
-    <property name="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads">
-        <value>75</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_developers.members.user" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_developers.members.user">
-        <value>Developer</value>
-    </property>
-    <property name="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold">
-        <value>15</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_everybody.@name" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_everybody.@name">
-        <value>local_Everybody</value>
-    </property>
-    <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password">
-        <value></value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_replicators.members.user[1]" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_replicators.members.user[1]">
-        <value>Replicator</value>
-    </property>
-    <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.type">
-        <value>JKS</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_developers.@name" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_developers.@name">
-        <value>local_Developers</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_everybody.members.user[3]" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_everybody.members.user[3]">
-        <value>Replicator</value>
-    </property>
-    <property name="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.scheduletype.repeating.interval" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.scheduletype.repeating.interval">
-        <value>300</value>
-    </property>
-    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
-        <value>'{AES/CBC/PKCS5Padding}{Wez1ACxfrA2NN9OJ9HL0aBREDj72MrXtUzFCXsr3kfc=}{Xl8IppTLDP9TJQvqaFIwDQ==}IOIxxktb+5JuOUFi9RITgg=='</value>
-    </property>
     <property name="dsl.version" many="false" isSecure="false" displayName="dsl.version">
         <value>'1.2'</value>
-    </property>
-    <property name="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.scheduletype.repeating.starttime" data_type="datetime" many="false" isSecure="false" displayName="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.scheduletype.repeating.starttime" format="HH:MM:SS">
-        <value>'20:36:36'</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_administrators.@name" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_administrators.@name">
-        <value>local_Administrators</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_administrators.members.user" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_administrators.members.user">
-        <value>Administrator</value>
-    </property>
-    <property name="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit" data_type="boolean" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit">
-        <value>'true'</value>
-    </property>
-    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.location" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.location">
-        <value>..\..\..\common\conf\keystore.jks</value>
-    </property>
-    <property name="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle">
-        <value>75</value>
-    </property>
-    <property name="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold">
-        <value>25</value>
-    </property>
-    <property name="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads">
-        <value>10</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_replicators.members.user[0]" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_replicators.members.user[0]">
-        <value>Administrator</value>
-    </property>
-    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.type">
-        <value>JKS</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_everybody.members.user[2]" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_everybody.members.user[2]">
-        <value>Developer</value>
-    </property>
-    <property name="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.status" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.status">
-        <value>active</value>
-    </property>
-    <property name="integrationserver-default.is-resources.resources.session.sessiontimeout" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.sessiontimeout">
-        <value>10</value>
-    </property>
-    <property name="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.scheduletype.repeating.startdate" data_type="datetime" many="false" isSecure="false" displayName="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.scheduletype.repeating.startdate" format="YYYY/MM/DD">
-        <value>2021/09/23</value>
-    </property>
-    <property name="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.scheduletype.repeating.donotoverlap" data_type="boolean" many="false" isSecure="false" displayName="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.scheduletype.repeating.donotoverlap">
-        <value>'true'</value>
-    </property>
-    <property name="integrationserver-default.is-resources.resources.session.maximumstatefulsessions" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.maximumstatefulsessions">
-        <value>2147483647</value>
-    </property>
-    <property name="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.serviceinfo.user" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.serviceinfo.user">
-        <value>Administrator</value>
-    </property>
-    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.location" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.location">
-        <value>..\..\..\common\conf\platform_truststore.jks</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_everybody.members.user[1]" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_everybody.members.user[1]">
-        <value>Default</value>
-    </property>
-    <property name="integrationserver-default.is-groups-local_replicators.@name" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-groups-local_replicators.@name">
-        <value>local_Replicators</value>
-    </property>
-    <property name="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.serviceinfo.targetnode" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-scheduled-tasks-d8fdf8b0-1c7f-11ec-8f04-000000000000.serviceinfo.targetnode">
-        <value>3b01c83e-d24b-45fc-a7aa-e06c51e20287.mshome.net</value>
     </property>
 </asset_composite>
