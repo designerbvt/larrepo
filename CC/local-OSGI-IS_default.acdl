@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="local-OSGI-IS_default" displayName="local-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <buildInfo name="BuildVersion" value="1"/>
-    <buildInfo name="build.timestamp" value="2021-09-24T14:46:44"/>
+    <buildInfo name="build.timestamp" value="2021-09-24T14:51:41"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="rollbackConfigurations" data_type="boolean" many="false" isSecure="false" displayName="rollbackConfigurations">
         <value>false</value>
@@ -19,10 +19,10 @@
         <value>'true'</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value></value>
+        <value>'{AES/CBC/PKCS5Padding}{X0nWv0B1fsG5nFypze8Za5xufJxdRroZL/2sfDlVzdk=}{OSBCteh+dz1VL2IQA04cCA==}NUZFHXWKNKwyEuqdsDy38Q=='</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
-        <value>'{AES/CBC/PKCS5Padding}{6gKzK2PYrA7agDjPhICKupTsVqTwk0VK7nHNtpSEu4s=}{WB55uzE/Rcsdk6H3jcMamQ==}BbsC86/xE+KpiafvsmH6cw=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{DB9wV0bfABEjU+rQkNoCCC/cXLp9IF8r+DgxquJSsTQ=}{rONfwXRjZQlJrVVk1aBoTQ==}nfzMidO8L8neGCBDbMN4HA=='</value>
     </property>
     <property name="integrationserver-default.common-vars-key1.variable.$" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-vars-key1.variable.$">
         <value>25</value>
@@ -40,13 +40,13 @@
         <value>15</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password">
-        <value></value>
+        <value>'{AES/CBC/PKCS5Padding}{+DZIjraF33t6zhmdAgagOxvZo3pJXiwJ2hFgrBuunu8=}{x2FOHnZDXSuK90ie2Hu9Kg==}FP5m8w1S9VUSFjG2uwm5Hw=='</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.type">
         <value>JKS</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
-        <value>'{AES/CBC/PKCS5Padding}{/oJBaFdic7LjKy7V1YMfY8qwLTT4yUQxZtSHYhYjqhI=}{5pvI87d2Jr5Qy5EXlHg3pg==}yiC/k4RQfYzjM/F4voqJjQ=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{hQ42moepdBa7xnNkLfMjJmN2hU8NiOIF1GlHvaeBZB8=}{gIuSOKEO7bolQq+GyE3PNg==}GQ4yw63X2qYQ/ISnv7KixA=='</value>
     </property>
     <property name="integrationserver-default.is-scheduled-tasks-c1e4b0a0-0970-11ec-9878-000000000000.scheduletype.repeating.startdate" data_type="datetime" many="false" isSecure="false" displayName="integrationserver-default.is-scheduled-tasks-c1e4b0a0-0970-11ec-9878-000000000000.scheduletype.repeating.startdate" format="YYYY/MM/DD">
         <value>2021/08/30</value>
