@@ -16,7 +16,7 @@
         <value>Administrator</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{w4EVZufE/5bi5kmKOemY4HhD9NCeLKqd5aadJwF/6wE=}{18fWH3lU/90SsT06DP4Ycw==}VEYmqVNAtvEb7XuszRcdhg=='</value>
+        <value></value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
         <value>'{AES/CBC/PKCS5Padding}{2XOqB3ynFWQ5iW8l0Fwl4luCYMxDI0x82E3tpC5ob3M=}{HLao1vbQ1ffiz0mf0kc7bw==}QBJjgKTtPrCosgzFNkCfRw=='</value>
@@ -37,7 +37,7 @@
         <value>2021/09/24</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{KzX4iRroRLlsAL6nsfgBhauC7BR4iUiMshw9kyPk6b8=}{ORzsJxSSESzKgdV+2imyBg==}j/CqVHb4UFzHrchglR9fwA=='</value>
+        <value></value>
     </property>
     <property name="integrationserver-default.is-scheduled-tasks-1dab0c30-1cff-11ec-abcb-000000000000.serviceinfo.targetnode" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-scheduled-tasks-1dab0c30-1cff-11ec-abcb-000000000000.serviceinfo.targetnode">
         <value>SAG-D9QT9Y2</value>
