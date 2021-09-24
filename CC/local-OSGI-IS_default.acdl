@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="local-OSGI-IS_default" displayName="local-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <buildInfo name="BuildVersion" value="1"/>
-    <buildInfo name="build.timestamp" value="2021-09-24T12:12:28"/>
+    <buildInfo name="build.timestamp" value="2021-09-24T12:39:33"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="rollbackConfigurations" data_type="boolean" many="false" isSecure="false" displayName="rollbackConfigurations">
         <value>false</value>
@@ -16,10 +16,10 @@
         <value>Administrator</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value></value>
+        <value>'{AES/CBC/PKCS5Padding}{w4EVZufE/5bi5kmKOemY4HhD9NCeLKqd5aadJwF/6wE=}{18fWH3lU/90SsT06DP4Ycw==}VEYmqVNAtvEb7XuszRcdhg=='</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
-        <value>'{AES/CBC/PKCS5Padding}{lUN93gCUNSbO5aWlFR1LsN+OfKsgOJBjQqPDGZhByVE=}{wuuvrY99wztYZ/lOoHvWjA==}VHh8QJ8yMHQjElF3eAjdFg=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{2XOqB3ynFWQ5iW8l0Fwl4luCYMxDI0x82E3tpC5ob3M=}{HLao1vbQ1ffiz0mf0kc7bw==}QBJjgKTtPrCosgzFNkCfRw=='</value>
     </property>
     <property name="integrationserver-default.common-vars-k1.variable.$" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-vars-k1.variable.$">
         <value>V1</value>
@@ -37,13 +37,13 @@
         <value>2021/09/24</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.password">
-        <value></value>
+        <value>'{AES/CBC/PKCS5Padding}{KzX4iRroRLlsAL6nsfgBhauC7BR4iUiMshw9kyPk6b8=}{ORzsJxSSESzKgdV+2imyBg==}j/CqVHb4UFzHrchglR9fwA=='</value>
     </property>
     <property name="integrationserver-default.is-scheduled-tasks-1dab0c30-1cff-11ec-abcb-000000000000.serviceinfo.targetnode" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.is-scheduled-tasks-1dab0c30-1cff-11ec-abcb-000000000000.serviceinfo.targetnode">
         <value>SAG-D9QT9Y2</value>
     </property>
     <property name="integrationserver-default.common-vars-k3.variable.$" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-vars-k3.variable.$">
-        <value>'{AES/CBC/PKCS5Padding}{p2Ys/gDrrmdiwmnq4r9KajZCEPM8OCLlWtovnLsln9w=}{5f3mKPtWeb3NAieU34XvGg==}ROAdylit65+ERKsbhuRobg=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{HutKtlGJKal+CYVCkMvPdsa4fitW8RASxGSPhbFEn5Q=}{p57rVWM/hljRsKASb+P8gA==}tG0a1rjXhUdoZX6hnYdZbg=='</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_jvm_truststore.truststore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_jvm_truststore.truststore.type">
         <value>JKS</value>
@@ -52,7 +52,7 @@
         <value>'true'</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
-        <value>'{AES/CBC/PKCS5Padding}{jhYwvr071oUAiHIanlyqBqHd6umlT3/jNQxDdkA4cYQ=}{Z2+eR3yHcEHq7AyDKpZEPA==}X3m3PVRbIx0QrN/c8kcSgQ=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{WEm2F85vJ7NMePo2RNHND5CYrv19GK/nvnL1EIVH/js=}{5PRPKdCy8CHEu0V5Kx4ojw==}wZ9jl+N/JbGQfEsVdUMsHg=='</value>
     </property>
     <property name="dsl.version" many="false" isSecure="false" displayName="dsl.version">
         <value>'1.2'</value>
