@@ -1,4 +1,4 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.11.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.7.0.0">
   <implementation.generic type="isconfiguration" />
   <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
     <value>none</value>
@@ -15,9 +15,79 @@
   <property name="restartRuntimes" displayName="restartRuntimes">
     <value>true</value>
   </property>
-  <buildInfo name="BuildVersion" value="10.11.0.0.-701191822" />
-  <buildInfo name="BuildTimestamp" value="2021-09-24T15:35:38" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.-926585662" />
+  <buildInfo name="BuildTimestamp" value="2021-09-21T16:06:55" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <asset name="ISProperty.watt.server.log.refreshInterval" displayName="watt.server.log.refreshInterval">
+    <implementation.generic type="isproperty" />
+    <property name="restartRuntimes" displayName="restartRuntimes">
+      <value>false</value>
+    </property>
+    <property name="watt.server.log.refreshInterval">
+      <value>90</value>
+    </property>
+  </asset>
+  <asset name="User.UMuser" displayName="UMuser">
+    <implementation.generic type="isuser" />
+    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
+      <value>true</value>
+    </property>
+    <property name="password" displayName="Password" isSecure="true">
+      <value>{AES}Y5IgMqjfvkgbg7p5VUZztw==</value>
+    </property>
+    <property name="restartRuntimes" displayName="restartRuntimes">
+      <value>false</value>
+    </property>
+  </asset>
+  <asset name="Task.43bed080-a03d-11eb-8da4-000000000000" displayName="pub.flow:debugLog">
+    <implementation.generic type="istask" />
+    <property name="runAsUser" displayName="Run As User">
+      <value>Administrator</value>
+    </property>
+    <property name="target" displayName="Cluster Target Node">
+      <value />
+    </property>
+    <property name="suspendDuringDeploy" displayName="Suspend During Deployment">
+      <value>none</value>
+    </property>
+    <property name="activateAfterDeploy" displayName="Activate After Deployment">
+      <value>false</value>
+    </property>
+  </asset>
+  <asset name="JNDIAlias.MASSJNDI" displayName="MASSJNDI">
+    <implementation.generic type="isjndialias" />
+    <property name="providerURL" displayName="Provider URL">
+      <value>nhps://cscdemo2.container.webmethodscloud.de:4443//UM/DailyTest/1561627938/</value>
+    </property>
+    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
+      <value />
+    </property>
+    <property name="securityPrincipal" displayName="Security Principal">
+      <value>rajka@softwareag.com</value>
+    </property>
+    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
+      <value>{AES}lcvfzeIy2IS+R/ohJsU4gQ==</value>
+    </property>
+  </asset>
+  <asset name="JMSAlias.Rajka" displayName="Rajka">
+    <implementation.generic type="isjmsalias" />
+    <property name="clientID" displayName="Connection Client ID">
+      <value />
+    </property>
+    <property name="user" displayName="User">
+      <value>rajka@softwareag.com</value>
+    </property>
+    <property name="password" displayName="Password" isSecure="true">
+      <value>{AES}lcvfzeIy2IS+R/ohJsU4gQ==</value>
+    </property>
+    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
+      <value>EventFactory</value>
+    </property>
+    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
+      <value>false</value>
+    </property>
+    <dependsOn>IS:JNDIAlias.MASSJNDI</dependsOn>
+  </asset>
   <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE">
     <implementation.generic type="istruststorealias" />
     <property name="useSourceTruststore" displayName="Use Source Truststore">
@@ -27,7 +97,70 @@
       <value>{AES}z/+xVlzI9T/Dfo7Su4lrCQ==</value>
     </property>
     <property name="ksLocation" displayName="Location">
-      <value>../../../jvm/jvm/lib/security/cacerts</value>
+      <value>..\..\..\jvm\jvm\jre\lib\security\cacerts</value>
+    </property>
+  </asset>
+  <asset name="CacheManager.Testecachemanager" displayName="Testecachemanager">
+    <implementation.generic type="iscachemanager" />
+    <property name="cacheManagerName" displayName="Cache manager name">
+      <value>Testecachemanager</value>
+    </property>
+    <property name="urls" displayName="URLs">
+      <value />
+    </property>
+    <property name="reload" displayName="Reload">
+      <value>none</value>
+    </property>
+  </asset>
+  <asset name="CacheManager.tested" displayName="tested">
+    <implementation.generic type="iscachemanager" />
+    <property name="cacheManagerName" displayName="Cache manager name">
+      <value>tested</value>
+    </property>
+    <property name="urls" displayName="URLs">
+      <value />
+    </property>
+    <property name="reload" displayName="Reload">
+      <value>none</value>
+    </property>
+  </asset>
+  <asset name="Parsing.Configuration" displayName="Configuration">
+    <implementation.generic type="isparsing" />
+    <property name="defaultPartitionBytes" displayName="Default Partition Bytes">
+      <value>20k</value>
+    </property>
+    <property name="useCache" displayName="Use Cache">
+      <value>false</value>
+    </property>
+    <property name="maximumHeapBytes" displayName="Maximum Heap Bytes">
+      <value>40%</value>
+    </property>
+    <property name="maximumDocBytes" displayName="Maximum Document Bytes">
+      <value>20%</value>
+    </property>
+    <property name="maximumBigMemoryBytes" displayName="Maximum BigMemory Bytes">
+      <value>200m</value>
+    </property>
+    <property name="useBigMemory" displayName="Use BigMemory">
+      <value>false</value>
+    </property>
+  </asset>
+  <asset name="GlobalVariable.Test" displayName="Global Variable 'Test'">
+    <implementation.generic type="isglobalvariable" />
+    <property name="value" displayName="Value" isSecure="true">
+      <value>{AES}WGSd0MRu0EtDRThNWs/Idw==</value>
+    </property>
+  </asset>
+  <asset name="GlobalVariable.tesdet" displayName="Global Variable 'tesdet'">
+    <implementation.generic type="isglobalvariable" />
+    <property name="value" displayName="Value" isSecure="true">
+      <value>{AES}SQldTOaASHXAuS9Oz9B7Tg==</value>
+    </property>
+  </asset>
+  <asset name="GlobalVariable.user1" displayName="Global Variable 'user1'">
+    <implementation.generic type="isglobalvariable" />
+    <property name="value" displayName="Value">
+      <value>Test@1234567</value>
     </property>
   </asset>
   <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config">
@@ -53,6 +186,18 @@
     <property name="um_rname" displayName="Realm URL">
       <value>nsp://localhost:9000</value>
     </property>
+  </asset>
+  <asset name="CloudStreams.Administration.General.LargeFileConfig" displayName="LargeFileConfig">
+    <implementation.generic type="iscloudstreamslargefileconfig" />
+    <property name="wst.largedata.binaryStreamEnabled" displayName="Handle Binary Streams">
+      <value>false</value>
+    </property>
+    <property name="wst.largedata.threshold" displayName="Large Data Threshold Size">
+      <value>5242880</value>
+    </property>
+    <dependsOn>IS:ISProperty.watt.server.tspace.location</dependsOn>
+    <dependsOn>IS:ISProperty.watt.server.tspace.max</dependsOn>
+    <dependsOn>IS:ISProperty.watt.server.tspace.timeToLive</dependsOn>
   </asset>
 </asset_composite>
 

@@ -1,0 +1,300 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="SupportedAssets" runtimeVersion="10.7.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.-926585662" />
+  <buildInfo name="BuildTimestamp" value="2021-09-21T16:06:53" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.SupportedAssets" displayName="SupportedAssets">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="RESTResource.RESTResourceAddInts_.docTypes.RESTResourceAddInts" displayName="RESTResource.RESTResourceAddInts_.docTypes:RESTResourceAddInts">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="RESTResource.JavaServiceHelloWorld.RESTResourceJavaHelloWorld_.docTypes.RESTResourceJavaHelloWorld" displayName="RESTResource.JavaServiceHelloWorld.RESTResourceJavaHelloWorld_.docTypes:RESTResourceJavaHelloWorld">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="RESTResource.JavaServiceHelloWorld.RESTResourceJavaHelloWorld" displayName="RESTResource.JavaServiceHelloWorld:RESTResourceJavaHelloWorld">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:JavaService.HelloWorld_javaService</dependsOn>
+  </asset>
+  <asset name="RESTResource.AddInts" displayName="RESTResource:AddInts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="RESTResource.RESTResourceAddInts" displayName="RESTResource:RESTResourceAddInts">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:RESTResource.AddInts</dependsOn>
+  </asset>
+  <asset name="DocumentType.TempDocumentType" displayName="DocumentType:TempDocumentType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DocumentType.TestDocumentType" displayName="DocumentType:TestDocumentType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="XSLTService.xsltServiceTest" displayName="XSLTService:xsltServiceTest">
+    <implementation.generic type="isxsltservice" />
+  </asset>
+  <asset name="MapService.MapServiceTestConcat" displayName="MapService:MapServiceTestConcat">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:MapService.Concat</dependsOn>
+  </asset>
+  <asset name="MapService.NewConcat" displayName="MapService:NewConcat">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:MapService.DocInputStrings</dependsOn>
+  </asset>
+  <asset name="MapService.Concat" displayName="MapService:Concat">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:MapService.DocInputStrings</dependsOn>
+  </asset>
+  <asset name="MapService.DocInputStrings" displayName="MapService:DocInputStrings">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="WSDL.wsdl_test_.connectors.helloPortType_Hello" displayName="WSDL.wsdl_test_.connectors:helloPortType_Hello">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:WSDL.wsdl_test_.docTypes.helloPortType_Hello_Input</dependsOn>
+    <dependsOn>IS:WSDL.wsdl_test_.docTypes.helloPortType_Hello_Output</dependsOn>
+    <dependsOn>IS:WSDL.wsdl_test</dependsOn>
+  </asset>
+  <asset name="WSDL.wsdl_test_.responseServices.helloPortType_Hello_Response" displayName="WSDL.wsdl_test_.responseServices:helloPortType_Hello_Response">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WSDL.wsdl_test_.responseServices.genericFault_Response" displayName="WSDL.wsdl_test_.responseServices:genericFault_Response">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WSDL.wsdl_test_.docTypes.schema_wsdl_test" displayName="WSDL.wsdl_test_.docTypes:schema_wsdl_test">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="WSDL.wsdl_test_.docTypes.helloPortType_Hello_Output" displayName="WSDL.wsdl_test_.docTypes:helloPortType_Hello_Output">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="WSDL.wsdl_test_.docTypes.helloPortType_Hello_Input" displayName="WSDL.wsdl_test_.docTypes:helloPortType_Hello_Input">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="WSDL.Provider.HelloWorld_javaService" displayName="WSDL.Provider:HelloWorld_javaService">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:SupportedAssets.code.source.WSDL.Provider.java</dependsOn>
+    <dependsOn>IS:SupportedAssets.code.classes.WSDL.Provider.class</dependsOn>
+  </asset>
+  <asset name="WSDL.Provider.WSD_HelloWorld" displayName="WSDL.Provider:WSD_HelloWorld">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:WSDL.Provider.HelloWorld_javaService</dependsOn>
+  </asset>
+  <asset name="WSDL.wsdl_test" displayName="WSDL:wsdl_test">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:WSDL.wsdl_test_.docTypes.helloPortType_Hello_Input</dependsOn>
+    <dependsOn>IS:WSDL.wsdl_test_.docTypes.helloPortType_Hello_Output</dependsOn>
+    <dependsOn>IS:WSDL.wsdl_test_.connectors.helloPortType_Hello</dependsOn>
+    <dependsOn>IS:WSDL.wsdl_test_.responseServices.helloPortType_Hello_Response</dependsOn>
+    <dependsOn>IS:WSDL.wsdl_test_.responseServices.genericFault_Response</dependsOn>
+  </asset>
+  <asset name="WebSocketEndpoint.server_websocketendpoint.onBinary" displayName="WebSocketEndpoint.server_websocketendpoint:onBinary">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WebSocketEndpoint.server_websocketendpoint.onClose" displayName="WebSocketEndpoint.server_websocketendpoint:onClose">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WebSocketEndpoint.server_websocketendpoint.onText" displayName="WebSocketEndpoint.server_websocketendpoint:onText">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WebSocketEndpoint.server_websocketendpoint.onConnect" displayName="WebSocketEndpoint.server_websocketendpoint:onConnect">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:JavaService.HelloWorld_javaService</dependsOn>
+  </asset>
+  <asset name="WebSocketEndpoint.server_websocketendpoint.onError" displayName="WebSocketEndpoint.server_websocketendpoint:onError">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WebSocketEndpoint.client_websocketendpoint.onText" displayName="WebSocketEndpoint.client_websocketendpoint:onText">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WebSocketEndpoint.client_websocketendpoint.onClose" displayName="WebSocketEndpoint.client_websocketendpoint:onClose">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WebSocketEndpoint.client_websocketendpoint.onBinary" displayName="WebSocketEndpoint.client_websocketendpoint:onBinary">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WebSocketEndpoint.client_websocketendpoint.onError" displayName="WebSocketEndpoint.client_websocketendpoint:onError">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WebSocketEndpoint.client_websocketendpoint.onConnect" displayName="WebSocketEndpoint.client_websocketendpoint:onConnect">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WebSocketEndpoint.SocketInvoke_flowservice" displayName="WebSocketEndpoint:SocketInvoke_flowservice">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WebSocketEndpoint.server_websocketendpoint" displayName="WebSocketEndpoint:server_websocketendpoint">
+    <implementation.generic type="iswebsocketendpoint" />
+    <dependsOn>IS:WebSocketEndpoint.server_websocketendpoint.onConnect</dependsOn>
+    <dependsOn>IS:WebSocketEndpoint.server_websocketendpoint.onText</dependsOn>
+    <dependsOn>IS:WebSocketEndpoint.server_websocketendpoint.onBinary</dependsOn>
+    <dependsOn>IS:WebSocketEndpoint.server_websocketendpoint.onClose</dependsOn>
+    <dependsOn>IS:WebSocketEndpoint.server_websocketendpoint.onError</dependsOn>
+  </asset>
+  <asset name="WebSocketEndpoint.client_websocketendpoint" displayName="WebSocketEndpoint:client_websocketendpoint">
+    <implementation.generic type="iswebsocketendpoint" />
+    <dependsOn>IS:WebSocketEndpoint.client_websocketendpoint.onConnect</dependsOn>
+    <dependsOn>IS:WebSocketEndpoint.client_websocketendpoint.onText</dependsOn>
+    <dependsOn>IS:WebSocketEndpoint.client_websocketendpoint.onBinary</dependsOn>
+    <dependsOn>IS:WebSocketEndpoint.client_websocketendpoint.onClose</dependsOn>
+    <dependsOn>IS:WebSocketEndpoint.client_websocketendpoint.onError</dependsOn>
+  </asset>
+  <asset name="FlatFileDictionary.flatfiledictionaryTest" displayName="FlatFileDictionary:flatfiledictionaryTest">
+    <implementation.generic type="ffdictionary" />
+    <dependsOn>IS:FlatFileDictionary.flatfiledictionaryTest</dependsOn>
+  </asset>
+  <asset name="FlatFileSchema.flatfileschemaTest" displayName="FlatFileSchema:flatfileschemaTest">
+    <implementation.generic type="ffschema" />
+    <dependsOn>IS:FlatFileSchema.flatfileschemaTest_dictionary</dependsOn>
+  </asset>
+  <asset name="FlatFileSchema.flatfileschemaTest_dictionary" displayName="FlatFileSchema:flatfileschemaTest_dictionary">
+    <implementation.generic type="ffdictionary" />
+  </asset>
+  <asset name="Schema.XML_Schema_Internal_DTD" displayName="Schema:XML_Schema_Internal_DTD">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="JavaService.HelloWorld_javaService" displayName="JavaService:HelloWorld_javaService">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:SupportedAssets.code.source.JavaService.java</dependsOn>
+    <dependsOn>IS:SupportedAssets.code.classes.JavaService.class</dependsOn>
+    <dependsOn>IS:JavaService.JavaService</dependsOn>
+  </asset>
+  <asset name="JavaService.WSD_HelloWorld" displayName="JavaService:WSD_HelloWorld">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:JavaService.HelloWorld_javaService</dependsOn>
+  </asset>
+  <asset name="Specification.ReferredSpecification" displayName="Specification:ReferredSpecification">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:Specification.AddIntsInput</dependsOn>
+    <dependsOn>IS:Specification.AddIntsOutput</dependsOn>
+  </asset>
+  <asset name="Specification.AddIntsOutput" displayName="Specification:AddIntsOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="Specification.ReferringSpecification" displayName="Specification:ReferringSpecification">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:Specification.ReferredSpecification</dependsOn>
+  </asset>
+  <asset name="Specification.AddIntsInput" displayName="Specification:AddIntsInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="Specification.AddIntNew" displayName="Specification:AddIntNew">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Specification.ReferringSpecification</dependsOn>
+  </asset>
+  <asset name="cService.specification" displayName="cService:specification">
+    <implementation.generic type="isspecification" />
+  </asset>
+  <asset name="cService.cService" displayName="cService:cService">
+    <implementation.generic type="iscservice" />
+    <dependsOn>IS:cService.specification</dependsOn>
+    <dependsOn>IS:SupportedAssets.code.source.cService.java</dependsOn>
+    <dependsOn>IS:SupportedAssets.code.classes.cService.class</dependsOn>
+  </asset>
+  <asset name="XMLDocumentType.noNamespace.elements.address" displayName="XMLDocumentType.noNamespace.elements:address">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="XMLDocumentType.noNamespace.schema" displayName="XMLDocumentType.noNamespace:schema">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="XMLDocumentType.noNamespace.address" displayName="XMLDocumentType.noNamespace:address">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:XMLDocumentType.noNamespace.elements.address</dependsOn>
+  </asset>
+  <asset name="FlowService.Flowservice1" displayName="FlowService:Flowservice1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowService.AddInts" displayName="FlowService:AddInts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SupportedAssets.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SupportedAssets.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SupportedAssets.code.classes.cService.class" displayName="code/classes/cService.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SupportedAssets.code.classes.JavaService.class" displayName="code/classes/JavaService.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SupportedAssets.code.classes.WSDL.Provider.class" displayName="code/classes/WSDL/Provider.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SupportedAssets.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SupportedAssets.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SupportedAssets.code.source.cService.java" displayName="code/source/cService.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SupportedAssets.code.source.JavaService.java" displayName="code/source/JavaService.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SupportedAssets.code.source.WSDL.Provider.java" displayName="code/source/WSDL/Provider.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SupportedAssets.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SupportedAssets.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SupportedAssets.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SupportedAssets.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SupportedAssets.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SupportedAssets.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SupportedAssets.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SupportedAssets.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SupportedAssets.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SupportedAssets.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SupportedAssets.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
