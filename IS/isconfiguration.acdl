@@ -1,4 +1,4 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.7.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.11.0.0">
   <implementation.generic type="isconfiguration" />
   <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
     <value>none</value>
@@ -15,30 +15,9 @@
   <property name="restartRuntimes" displayName="restartRuntimes">
     <value>true</value>
   </property>
-  <buildInfo name="BuildVersion" value="10.7.0.0.-926585662" />
-  <buildInfo name="BuildTimestamp" value="2021-09-21T16:06:55" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
-  <asset name="ISProperty.watt.server.log.refreshInterval" displayName="watt.server.log.refreshInterval">
-    <implementation.generic type="isproperty" />
-    <property name="restartRuntimes" displayName="restartRuntimes">
-      <value>false</value>
-    </property>
-    <property name="watt.server.log.refreshInterval">
-      <value>90</value>
-    </property>
-  </asset>
-  <asset name="User.UMuser" displayName="UMuser">
-    <implementation.generic type="isuser" />
-    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
-      <value>true</value>
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}Y5IgMqjfvkgbg7p5VUZztw==</value>
-    </property>
-    <property name="restartRuntimes" displayName="restartRuntimes">
-      <value>false</value>
-    </property>
-  </asset>
+  <buildInfo name="BuildVersion" value="10.11.0.0.-288135770" />
+  <buildInfo name="BuildTimestamp" value="2021-09-27T14:41:00" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
   <asset name="Task.43bed080-a03d-11eb-8da4-000000000000" displayName="pub.flow:debugLog">
     <implementation.generic type="istask" />
     <property name="runAsUser" displayName="Run As User">
@@ -186,18 +165,6 @@
     <property name="um_rname" displayName="Realm URL">
       <value>nsp://localhost:9000</value>
     </property>
-  </asset>
-  <asset name="CloudStreams.Administration.General.LargeFileConfig" displayName="LargeFileConfig">
-    <implementation.generic type="iscloudstreamslargefileconfig" />
-    <property name="wst.largedata.binaryStreamEnabled" displayName="Handle Binary Streams">
-      <value>false</value>
-    </property>
-    <property name="wst.largedata.threshold" displayName="Large Data Threshold Size">
-      <value>5242880</value>
-    </property>
-    <dependsOn>IS:ISProperty.watt.server.tspace.location</dependsOn>
-    <dependsOn>IS:ISProperty.watt.server.tspace.max</dependsOn>
-    <dependsOn>IS:ISProperty.watt.server.tspace.timeToLive</dependsOn>
   </asset>
 </asset_composite>
 

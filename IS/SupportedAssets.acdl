@@ -1,8 +1,8 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="SupportedAssets" runtimeVersion="10.7.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="SupportedAssets" runtimeVersion="10.11.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.7.0.0.-926585662" />
-  <buildInfo name="BuildTimestamp" value="2021-09-21T16:06:53" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.-288135770" />
+  <buildInfo name="BuildTimestamp" value="2021-09-27T14:40:59" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
   </property>
@@ -183,7 +183,6 @@
     <implementation.generic type="isjavaservice" />
     <dependsOn>IS:SupportedAssets.code.source.JavaService.java</dependsOn>
     <dependsOn>IS:SupportedAssets.code.classes.JavaService.class</dependsOn>
-    <dependsOn>IS:JavaService.JavaService</dependsOn>
   </asset>
   <asset name="JavaService.WSD_HelloWorld" displayName="JavaService:WSD_HelloWorld">
     <implementation.generic type="iswsdprovider" />
