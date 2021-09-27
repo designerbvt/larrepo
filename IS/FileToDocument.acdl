@@ -1,6 +1,6 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="FileToDocument" runtimeVersion="10.11.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.11.0.0.-701191822" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.-701191823" />
   <buildInfo name="BuildTimestamp" value="2021-09-24T15:35:38" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
