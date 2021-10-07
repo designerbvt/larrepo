@@ -1,8 +1,8 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="JohnAclTest" runtimeVersion="10.11.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="JohnAclTest" runtimeVersion="10.15.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.11.0.0.932819777" />
-  <buildInfo name="BuildTimestamp" value="2021-09-24T15:45:29" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <buildInfo name="BuildVersion" value="10.15.0.0.1734575217" />
+  <buildInfo name="BuildTimestamp" value="2021-10-07T12:49:13" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
   </property>
@@ -75,6 +75,11 @@
   <asset name="WED6914.ffschema" displayName="WED6914:ffschema">
     <implementation.generic type="ffschema" />
   </asset>
+  <asset name="jsTestData.js1" displayName="jsTestData:js1">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JohnAclTest.code.source.jsTestData.java</dependsOn>
+    <dependsOn>IS:JohnAclTest.code.classes.jsTestData.class</dependsOn>
+  </asset>
   <asset name="WED4729.getProperties" displayName="WED4729:getProperties">
     <implementation.generic type="isjavaservice" />
     <dependsOn>IS:JohnAclTest.code.source.WED4729.java</dependsOn>
@@ -121,6 +126,15 @@
   <asset name="WED5082.testDoc" displayName="WED5082:testDoc">
     <implementation.generic type="isdocumenttype" />
   </asset>
+  <asset name="AutomationFolder.PWSDWithEmptyEndpointAlias" displayName="AutomationFolder:PWSDWithEmptyEndpointAlias">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:Test.testService</dependsOn>
+  </asset>
+  <asset name="AutomationFolder.PWSDWithEmptyEndpointAliasHttps" displayName="AutomationFolder:PWSDWithEmptyEndpointAliasHttps">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:Test.testService</dependsOn>
+    <dependsOn>IS:WebserviceEndpointAlias.Provider.HTTPS.ChangedDummyHttpsProviderEndpont</dependsOn>
+  </asset>
   <asset name="WED5593.FS" displayName="WED5593:FS">
     <implementation.generic type="isflowservice" />
   </asset>
@@ -161,6 +175,33 @@
   <asset name="WED7039.new_flowservice" displayName="WED7039:new_flowservice">
     <implementation.generic type="isflowservice" />
   </asset>
+  <asset name="JohnAclTest.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JohnAclTest.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JohnAclTest.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JohnAclTest.code.classes.jsTestData.class" displayName="code/classes/jsTestData.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JohnAclTest.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JohnAclTest.code.source.WED4729.java" displayName="code/source/WED4729.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JohnAclTest.code.source.jsTestData.java" displayName="code/source/jsTestData.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JohnAclTest.code.source.Test.java" displayName="code/source/Test.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JohnAclTest.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
   <asset name="JohnAclTest.doc" displayName="doc">
     <implementation.generic type="isfolder" />
   </asset>
@@ -188,29 +229,8 @@
   <asset name="JohnAclTest.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
     <implementation.generic type="isfile" />
   </asset>
-  <asset name="JohnAclTest.pub" displayName="pub">
-    <implementation.generic type="isfolder" />
-  </asset>
   <asset name="JohnAclTest.resources" displayName="resources">
     <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="JohnAclTest.code" displayName="code">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="JohnAclTest.code.jars" displayName="code/jars">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="JohnAclTest.code.classes" displayName="code/classes">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="JohnAclTest.code.source" displayName="code/source">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="JohnAclTest.code.source.WED4729.java" displayName="code/source/WED4729.java">
-    <implementation.generic type="isfile" />
-  </asset>
-  <asset name="JohnAclTest.code.source.Test.java" displayName="code/source/Test.java">
-    <implementation.generic type="isfile" />
   </asset>
 </asset_composite>
 
