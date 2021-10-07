@@ -1,8 +1,8 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="TransformUsingForEach" runtimeVersion="10.11.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="TransformUsingForEach" runtimeVersion="10.15.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.11.0.0.932819777" />
-  <buildInfo name="BuildTimestamp" value="2021-09-24T15:47:57" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <buildInfo name="BuildVersion" value="10.15.0.0.1559522654" />
+  <buildInfo name="BuildTimestamp" value="2021-10-07T13:04:35" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
   </property>
@@ -48,16 +48,16 @@
   <asset name="WmrTransformUsingForEach.services.manyToOneMapping" displayName="WmrTransformUsingForEach.services:manyToOneMapping">
     <implementation.generic type="isflowservice" />
   </asset>
-  <asset name="TransformUsingForEach.doc" displayName="doc">
+  <asset name="TransformUsingForEach.code" displayName="code">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="TransformUsingForEach.templates" displayName="templates">
+  <asset name="TransformUsingForEach.code.classes" displayName="code/classes">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="TransformUsingForEach.web" displayName="web">
+  <asset name="TransformUsingForEach.code.jars" displayName="code/jars">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="TransformUsingForEach.lib" displayName="lib">
+  <asset name="TransformUsingForEach.code.source" displayName="code/source">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="TransformUsingForEach.config" displayName="config">
@@ -75,22 +75,22 @@
   <asset name="TransformUsingForEach.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
     <implementation.generic type="isfile" />
   </asset>
+  <asset name="TransformUsingForEach.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TransformUsingForEach.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
   <asset name="TransformUsingForEach.pub" displayName="pub">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="TransformUsingForEach.resources" displayName="resources">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="TransformUsingForEach.code" displayName="code">
+  <asset name="TransformUsingForEach.templates" displayName="templates">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="TransformUsingForEach.code.jars" displayName="code/jars">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="TransformUsingForEach.code.classes" displayName="code/classes">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="TransformUsingForEach.code.source" displayName="code/source">
+  <asset name="TransformUsingForEach.web" displayName="web">
     <implementation.generic type="isfolder" />
   </asset>
 </asset_composite>
