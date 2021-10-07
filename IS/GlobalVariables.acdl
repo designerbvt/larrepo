@@ -1,0 +1,352 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="GlobalVariables" runtimeVersion="10.15.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.15.0.0.815005921" />
+  <buildInfo name="BuildTimestamp" value="2021-10-07T14:51:23" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.GlobalVariables" displayName="GlobalVariables">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="docs.doc" displayName="docs:doc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wsdPolicy.installpackage951" displayName="wsdPolicy:installpackage951">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wsdPolicy.installPackage823" displayName="wsdPolicy:installPackage823">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="XJ.YJ.bjsvc" displayName="XJ.YJ:bjsvc">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:GlobalVariables.code.source.XJ.YJ.java</dependsOn>
+    <dependsOn>IS:GlobalVariables.code.classes.XJ.YJ.class</dependsOn>
+    <dependsOn>IS:XJ.YJ.ajsvc</dependsOn>
+  </asset>
+  <asset name="XJ.YJ.ajsvc" displayName="XJ.YJ:ajsvc">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:GlobalVariables.code.source.XJ.YJ.java</dependsOn>
+    <dependsOn>IS:GlobalVariables.code.classes.XJ.YJ.class</dependsOn>
+    <dependsOn>IS:XJ.YJ.bjsvc</dependsOn>
+  </asset>
+  <asset name="RunInBrowser.flwsvc1" displayName="RunInBrowser:flwsvc1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="RunInBrowser.javsvc" displayName="RunInBrowser:javsvc">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:GlobalVariables.code.source.RunInBrowser.java</dependsOn>
+    <dependsOn>IS:GlobalVariables.code.classes.RunInBrowser.class</dependsOn>
+  </asset>
+  <asset name="RunInBrowser.flwsvc" displayName="RunInBrowser:flwsvc">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED6957.CreateSQLConnection" displayName="WED6957:CreateSQLConnection">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED7500.TCF_Flow_2" displayName="WED7500:TCF_Flow_2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED7500.TCF_Flow_1" displayName="WED7500:TCF_Flow_1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED7959.FLOW2" displayName="WED7959:FLOW2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED7959.FLOW1" displayName="WED7959:FLOW1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="highComplexDoc.deletePackage" displayName="highComplexDoc:deletePackage">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="highComplexDoc.installpackage" displayName="highComplexDoc:installpackage">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED6654.FlowService" displayName="WED6654:FlowService">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED7357.prepareDataForDecalog" displayName="WED7357:prepareDataForDecalog">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:RcmAnteilscheine.DbFondAviso.doc.FondsAvisoDb</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.DbSegmentAviso.doc.SegmentAvisoList</dependsOn>
+    <dependsOn>IS:RcmDocuments.doc.header</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.Anteilscheine.doc.AnteilscheinForDecalogList</dependsOn>
+    <dependsOn>IS:PSUtilities.misc.deepCopy</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.Anteilscheine.flows.map.mapDisponummer</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.Anteilscheine.flows.map.mapAusfnummer</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.Anteilscheine.flows.map.mapVipId</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.Anteilscheine.flows.map.mapBetrag</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.Anteilscheine.flows.map.mapKassatag</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.Anteilscheine.flows.map.mapAvisoSchlusstag</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.Anteilscheine.flows.map.mapEffektivSchlusstag</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.Anteilscheine.flows.map.mapEffektivBetrag</dependsOn>
+    <dependsOn>IS:RcmAnteilscheine.log.debug</dependsOn>
+  </asset>
+  <asset name="IncludeEmptyStringNamespace.pubDoc1" displayName="IncludeEmptyStringNamespace:pubDoc1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="IncludeEmptyStringNamespace.f1" displayName="IncludeEmptyStringNamespace:f1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:AutomationFolder.p1</dependsOn>
+  </asset>
+  <asset name="IncludeEmptyStringNamespace.IESflowsvc1" displayName="IncludeEmptyStringNamespace:IESflowsvc1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:IncludeEmptyStringNamespace.IESDoc</dependsOn>
+  </asset>
+  <asset name="IncludeEmptyStringNamespace.p1" displayName="IncludeEmptyStringNamespace:p1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="IncludeEmptyStringNamespace.IESflowsvc" displayName="IncludeEmptyStringNamespace:IESflowsvc">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="IncludeEmptyStringNamespace.IESDoc" displayName="IncludeEmptyStringNamespace:IESDoc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="IncludeEmptyStringNamespace.BT" displayName="IncludeEmptyStringNamespace:BT">
+    <implementation.generic type="istrigger" />
+    <dependsOn>IS:IncludeEmptyStringNamespace.f1</dependsOn>
+    <dependsOn>IS:IncludeEmptyStringNamespace.p1</dependsOn>
+  </asset>
+  <asset name="wsdNamespace.installPackagecommonTest" displayName="wsdNamespace:installPackagecommonTest">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wsdNamespace.iP_Lidcbx" displayName="wsdNamespace:iP_Lidcbx">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wsdNamespace.iP_Lidcbx_testFlow" displayName="wsdNamespace:iP_Lidcbx_testFlow">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:com.lidl.eu.cbx.doc.item.cbxItem</dependsOn>
+    <dependsOn>IS:com.lidl.eu.cbx.impl.testException</dependsOn>
+  </asset>
+  <asset name="ForEach.ForEachDoc2" displayName="ForEach:ForEachDoc2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="ForEach.ForEachDoc1" displayName="ForEach:ForEachDoc1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="ForEach.ForEachSvc2" displayName="ForEach:ForEachSvc2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="ForEach.ForEachSvc1" displayName="ForEach:ForEachSvc1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:ForEach.ForEachDoc1</dependsOn>
+    <dependsOn>IS:ForEach.ForEachDoc2</dependsOn>
+  </asset>
+  <asset name="tempVariableInBranch.flowBranch" displayName="tempVariableInBranch:flowBranch">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="DigitalEventService.doc6" displayName="DigitalEventService:doc6">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DigitalEventService.doc5" displayName="DigitalEventService:doc5">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DigitalEventService.doc4" displayName="DigitalEventService:doc4">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DigitalEventService.doc3" displayName="DigitalEventService:doc3">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DigitalEventService.doc1" displayName="DigitalEventService:doc1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="flowstep_reorder.css1" displayName="flowstep_reorder:css1">
+    <implementation.generic type="iscservice" />
+    <dependsOn>IS:FlowEditor.specs.spec1</dependsOn>
+    <dependsOn>IS:GlobalVariables.code.source.flowstep_reorder.java</dependsOn>
+    <dependsOn>IS:GlobalVariables.code.classes.flowstep_reorder.class</dependsOn>
+    <dependsOn>IS:GlobalVariables.code.source.css1.mak</dependsOn>
+    <dependsOn>IS:GlobalVariables.code.source.css1.c</dependsOn>
+    <dependsOn>IS:flowstep_reorder.javass1</dependsOn>
+  </asset>
+  <asset name="flowstep_reorder.fstep2" displayName="flowstep_reorder:fstep2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="flowstep_reorder.fstep1" displayName="flowstep_reorder:fstep1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="flowstep_reorder.javass1" displayName="flowstep_reorder:javass1">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:GlobalVariables.code.source.flowstep_reorder.java</dependsOn>
+    <dependsOn>IS:GlobalVariables.code.classes.flowstep_reorder.class</dependsOn>
+  </asset>
+  <asset name="flowstep_reorder.xslts" displayName="flowstep_reorder:xslts">
+    <implementation.generic type="isxsltservice" />
+  </asset>
+  <asset name="flowstep_reorder.docc2" displayName="flowstep_reorder:docc2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="flowstep_reorder.docc1" displayName="flowstep_reorder:docc1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="flowstep_reorder.adss1" displayName="flowstep_reorder:adss1">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:acmeSupport.adapters.acmeAdapter</dependsOn>
+  </asset>
+  <asset name="flowstep_reorder.btss1" displayName="flowstep_reorder:btss1">
+    <implementation.generic type="istrigger" />
+  </asset>
+  <asset name="flowstep_reorder.ffss1" displayName="flowstep_reorder:ffss1">
+    <implementation.generic type="ffschema" />
+  </asset>
+  <asset name="flowstep_reorder.ffdd1" displayName="flowstep_reorder:ffdd1">
+    <implementation.generic type="ffdictionary" />
+  </asset>
+  <asset name="WED8933.FL1" displayName="WED8933:FL1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="lockForEditState.lockForEditStateF" displayName="lockForEditState:lockForEditStateF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:lockForEditState.lockForEditStateD</dependsOn>
+  </asset>
+  <asset name="lockForEditState.lockForEditStateD" displayName="lockForEditState:lockForEditStateD">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docdimension.docdimensionfsvc" displayName="docdimension:docdimensionfsvc">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docdimension.dt1</dependsOn>
+  </asset>
+  <asset name="docdimension.dt2" displayName="docdimension:dt2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docdimension.dt1" displayName="docdimension:dt1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="NumJMS.installPackageNumJmsTest" displayName="NumJMS:installPackageNumJmsTest">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="protobuf.changeToDefaultToUM" displayName="protobuf:changeToDefaultToUM">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="protobuf.changeToDefaultToBroker" displayName="protobuf:changeToDefaultToBroker">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="OutboundCallback.installpackage823" displayName="OutboundCallback:installpackage823">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="OutboundCallback.installpackage960" displayName="OutboundCallback:installpackage960">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="OutboundCallback.installpackage951" displayName="OutboundCallback:installpackage951">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="globalVariables.addKeys" displayName="globalVariables:addKeys">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="globalVariables.globalVariables" displayName="globalVariables:globalVariables">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="globalVariables.pipelineCanvasNodeValueCheck" displayName="globalVariables:pipelineCanvasNodeValueCheck">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="globalVariables.removeKeys" displayName="globalVariables:removeKeys">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="hardcodedList.hardcodedListDoc" displayName="hardcodedList:hardcodedListDoc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="hardcodedList.hardcodedListFlowSvc" displayName="hardcodedList:hardcodedListFlowSvc">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:hardcodedList.hardcodedListDoc</dependsOn>
+  </asset>
+  <asset name="UniversalName.invokePubListAll" displayName="UniversalName:invokePubListAll">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="GlobalVariables.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="GlobalVariables.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="GlobalVariables.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="GlobalVariables.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="GlobalVariables.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="GlobalVariables.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="GlobalVariables.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="GlobalVariables.code.source.XJ.YJ.java" displayName="code/source/XJ/YJ.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.code.source.RunInBrowser.java" displayName="code/source/RunInBrowser.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.code.source.flowstep_reorder.java" displayName="code/source/flowstep_reorder.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.code.source.css1.c" displayName="code/source/css1.c">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.code.source.css1.mak" displayName="code/source/css1.mak">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="GlobalVariables.code.classes.XJ.YJ.class" displayName="code/classes/XJ/YJ.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.code.classes.RunInBrowser.class" displayName="code/classes/RunInBrowser.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.code.classes.flowstep_reorder.class" displayName="code/classes/flowstep_reorder.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="GlobalVariables.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="GlobalVariables.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="GlobalVariables.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
