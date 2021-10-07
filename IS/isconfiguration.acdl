@@ -1,0 +1,31 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.15.0.0">
+  <implementation.generic type="isconfiguration" />
+  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
+    <value>none</value>
+  </property>
+  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
+    <value>none</value>
+  </property>
+  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
+    <value>none</value>
+  </property>
+  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
+    <value>none</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>true</value>
+  </property>
+  <buildInfo name="BuildVersion" value="10.15.0.0.-1224258010" />
+  <buildInfo name="BuildTimestamp" value="2021-10-07T15:17:58" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
+    <implementation.generic type="isumalias" />
+    <property name="CLIENTPREFIX" displayName="Client Prefix">
+      <value>J_jRQtEolDEurgAVIwwwADXaZQs_</value>
+    </property>
+    <property name="um_rname" displayName="Realm URL">
+      <value>nsp://localhost:9000</value>
+    </property>
+  </asset>
+</asset_composite>
+
