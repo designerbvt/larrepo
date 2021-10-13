@@ -1,0 +1,920 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="ESBUIPackage" runtimeVersion="10.15.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.15.0.0.184704381" />
+  <buildInfo name="BuildTimestamp" value="2021-10-13T12:45:27" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.ESBUIPackage" displayName="ESBUIPackage">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="provider.PFirstWSD713_.docTypes.Hello_PortType_sayHello_Input" displayName="provider.PFirstWSD713_.docTypes:Hello_PortType_sayHello_Input">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="provider.PFirstWSD713_.docTypes.Hello_PortType_sayHello_Output" displayName="provider.PFirstWSD713_.docTypes:Hello_PortType_sayHello_Output">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="provider.PFirstWSD713_.services.sayHello" displayName="provider.PFirstWSD713_.services:sayHello">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:provider.PFirstWSD713_.docTypes.Hello_PortType_sayHello_Input</dependsOn>
+    <dependsOn>IS:provider.PFirstWSD713_.docTypes.Hello_PortType_sayHello_Output</dependsOn>
+  </asset>
+  <asset name="provider.PFirstWSD712_.services.sayHello" displayName="provider.PFirstWSD712_.services:sayHello">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:provider.PFirstWSD712_.docTypes.Hello_PortType_sayHello_Input</dependsOn>
+    <dependsOn>IS:provider.PFirstWSD712_.docTypes.Hello_PortType_sayHello_Output</dependsOn>
+  </asset>
+  <asset name="provider.PFirstWSD712_.docTypes.Hello_PortType_sayHello_Input" displayName="provider.PFirstWSD712_.docTypes:Hello_PortType_sayHello_Input">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="provider.PFirstWSD712_.docTypes.Hello_PortType_sayHello_Output" displayName="provider.PFirstWSD712_.docTypes:Hello_PortType_sayHello_Output">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="provider.PFirstWSD801_.docTypes.Hello_PortType_sayHello_Input" displayName="provider.PFirstWSD801_.docTypes:Hello_PortType_sayHello_Input">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="provider.PFirstWSD801_.docTypes.Hello_PortType_sayHello_Output" displayName="provider.PFirstWSD801_.docTypes:Hello_PortType_sayHello_Output">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="provider.PFirstWSD801_.services.sayHello" displayName="provider.PFirstWSD801_.services:sayHello">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:provider.PFirstWSD801_.docTypes.Hello_PortType_sayHello_Input</dependsOn>
+    <dependsOn>IS:provider.PFirstWSD801_.docTypes.Hello_PortType_sayHello_Output</dependsOn>
+  </asset>
+  <asset name="provider.PFirstWSD713" displayName="provider:PFirstWSD713">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:provider.PFirstWSD713_.services.sayHello</dependsOn>
+  </asset>
+  <asset name="provider.PFirstWSD712" displayName="provider:PFirstWSD712">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:provider.PFirstWSD712_.services.sayHello</dependsOn>
+  </asset>
+  <asset name="provider.PWSD713" displayName="provider:PWSD713">
+    <implementation.generic type="iswsdprovider" />
+  </asset>
+  <asset name="provider.PWSD712" displayName="provider:PWSD712">
+    <implementation.generic type="iswsdprovider" />
+  </asset>
+  <asset name="provider.PFirstWSD801" displayName="provider:PFirstWSD801">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:provider.PFirstWSD801_.services.sayHello</dependsOn>
+  </asset>
+  <asset name="provider.PWSD801" displayName="provider:PWSD801">
+    <implementation.generic type="iswsdprovider" />
+  </asset>
+  <asset name="ESBUIFolder.FlatFileDictionaries.Dictionary" displayName="ESBUIFolder.FlatFileDictionaries:Dictionary">
+    <implementation.generic type="ffdictionary" />
+  </asset>
+  <asset name="ESBUIFolder.adapterServices.generateConnectionInput" displayName="ESBUIFolder.adapterServices:generateConnectionInput">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:ESBUIPackage.code.source.ESBUIFolder.adapterServices.java</dependsOn>
+    <dependsOn>IS:ESBUIPackage.code.classes.ESBUIFolder.adapterServices.class</dependsOn>
+    <dependsOn>IS:ESBUIFolder.adapterServices.loadConnectionProperties</dependsOn>
+  </asset>
+  <asset name="ESBUIFolder.adapterServices.enable" displayName="ESBUIFolder.adapterServices:enable">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="ESBUIFolder.adapterServices.DeleteConnection" displayName="ESBUIFolder.adapterServices:DeleteConnection">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="ESBUIFolder.adapterServices.loadConnectionProperties" displayName="ESBUIFolder.adapterServices:loadConnectionProperties">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:ESBUIPackage.code.source.ESBUIFolder.adapterServices.java</dependsOn>
+    <dependsOn>IS:ESBUIPackage.code.classes.ESBUIFolder.adapterServices.class</dependsOn>
+    <dependsOn>IS:ESBUIFolder.adapterServices.generateConnectionInput</dependsOn>
+  </asset>
+  <asset name="ESBUIFolder.adapterServices.CreateConnection" displayName="ESBUIFolder.adapterServices:CreateConnection">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:ESBUIFolder.adapterServices.loadConnectionProperties</dependsOn>
+    <dependsOn>IS:ESBUIFolder.adapterServices.generateConnectionInput</dependsOn>
+  </asset>
+  <asset name="ESBUIFolder.adapterServices.adpnTestPublishDocument" displayName="ESBUIFolder.adapterServices:adpnTestPublishDocument">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="ESBUIFolder.javaServices.verify.jstest" displayName="ESBUIFolder.javaServices.verify:jstest">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:ESBUIPackage.code.source.ESBUIFolder.javaServices.verify.java</dependsOn>
+    <dependsOn>IS:ESBUIPackage.code.classes.ESBUIFolder.javaServices.verify.class</dependsOn>
+  </asset>
+  <asset name="ESBUIFolder.javaServices.debug.test.testjs" displayName="ESBUIFolder.javaServices.debug.test:testjs">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:ESBUIPackage.code.source.ESBUIFolder.javaServices.debug.test.java</dependsOn>
+    <dependsOn>IS:ESBUIPackage.code.classes.ESBUIFolder.javaServices.debug.test.class</dependsOn>
+    <dependsOn>IS:ESBUIFolder.javaServices.debug.test.testjs_2</dependsOn>
+    <dependsOn>IS:ESBUIFolder.javaServices.debug.test.testjs_1</dependsOn>
+  </asset>
+  <asset name="ESBUIFolder.javaServices.debug.test.testjs_2" displayName="ESBUIFolder.javaServices.debug.test:testjs_2">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:ESBUIPackage.code.source.ESBUIFolder.javaServices.debug.test.java</dependsOn>
+    <dependsOn>IS:ESBUIPackage.code.classes.ESBUIFolder.javaServices.debug.test.class</dependsOn>
+    <dependsOn>IS:ESBUIFolder.javaServices.debug.test.testjs</dependsOn>
+    <dependsOn>IS:ESBUIFolder.javaServices.debug.test.testjs_1</dependsOn>
+  </asset>
+  <asset name="ESBUIFolder.javaServices.debug.test.testjs_1" displayName="ESBUIFolder.javaServices.debug.test:testjs_1">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:ESBUIPackage.code.source.ESBUIFolder.javaServices.debug.test.java</dependsOn>
+    <dependsOn>IS:ESBUIPackage.code.classes.ESBUIFolder.javaServices.debug.test.class</dependsOn>
+    <dependsOn>IS:ESBUIFolder.javaServices.debug.test.testjs</dependsOn>
+    <dependsOn>IS:ESBUIFolder.javaServices.debug.test.testjs_2</dependsOn>
+  </asset>
+  <asset name="ESBUIFolder.FlowServices.TestRunMAP" displayName="ESBUIFolder.FlowServices:TestRunMAP">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="ESBUIFolder.FlowServices.testBigXML" displayName="ESBUIFolder.FlowServices:testBigXML">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="ESBUIFolder.Documents.Pip4D1NotifyOfMaterialRelease" displayName="ESBUIFolder.Documents:Pip4D1NotifyOfMaterialRelease">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="EDIFFSchema.X12.V4030.T850" displayName="EDIFFSchema.X12.V4030:T850">
+    <implementation.generic type="ffschema" />
+    <dependsOn>IS:EDIFFSchema.X12.V4030.Dictionary</dependsOn>
+  </asset>
+  <asset name="EDIFFSchema.X12.V4030.Dictionary" displayName="EDIFFSchema.X12.V4030:Dictionary">
+    <implementation.generic type="ffdictionary" />
+    <dependsOn>IS:EDIFFSchema.X12.V4030.Dictionary</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.schema_Opportunity_3" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:schema_Opportunity_3">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.schema_Opportunity_2" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:schema_Opportunity_2">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.schema_Opportunity" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:schema_Opportunity">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject16Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject16Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject16Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject5Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject5Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject19Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject19Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ActivityQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ActivityQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfOpportunityQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfOpportunityQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_OpportunityQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject17Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject17Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject17Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject20Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject20Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject6Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject6Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfProductRevenueQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfProductRevenueQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ProductRevenueQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject18Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject18Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject18Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfDealRegistrationQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfDealRegistrationQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_DealRegistrationQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_NoteQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_NoteQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject20Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject20Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject20Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfNoteQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfNoteQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_NoteQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject21Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject21Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject7Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject7Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_queryType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject10Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject10Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_QuoteQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_QuoteQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject19Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject19Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject19Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject21Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject21Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject21Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject22Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject22Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject8Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject8Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_SPRequestQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_SPRequestQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_LeadQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_LeadQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfLeadQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfLeadQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_LeadQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject11Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject11Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfPlanOpportunityQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfPlanOpportunityQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_PlanOpportunityQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject22Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject22Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject22Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_AttachmentQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_AttachmentQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject23Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject23Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject9Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject9Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject4Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject4Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject4Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject12Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject12Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject23Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject23Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject23Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_DealRegistrationQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_DealRegistrationQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject24Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject24Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject10Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject10Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject10Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_OpportunityQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_OpportunityQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject9Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfSPRequestQuery</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfActivityQuery</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject11Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfProductRevenueQuery</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfNoteQuery</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfDealRegistrationQuery</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject25Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject19Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfPlanOpportunityQuery</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject10Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject15Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfQuoteQuery</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject6Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject13Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject23Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject12Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject17Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject22Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject14Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject4Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject18Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject21Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject7Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject5Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfLeadQuery</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfAttachmentQuery</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfOrderQuery</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject8Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject16Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject24Query</dependsOn>
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject20Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfQuoteQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfQuoteQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_QuoteQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject5Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject5Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject5Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject13Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject13Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject24Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject24Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject24Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfSPRequestQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfSPRequestQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_SPRequestQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject25Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject25Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject11Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject11Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject11Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject6Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject6Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject6Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject14Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject14Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject25Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject25Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject25Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_OrderQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_OrderQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject12Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject12Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject12Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_PlanOpportunityQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_PlanOpportunityQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject7Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject7Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject7Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject15Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject15Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject13Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject13Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject13Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfOrderQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfOrderQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_OrderQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfAttachmentQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfAttachmentQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_AttachmentQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject8Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject8Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject8Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject16Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject16Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfActivityQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfActivityQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ActivityQuery</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject14Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject14Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject14Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject9Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject9Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject9Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject17Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject17Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ListOfCustomObject15Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ListOfCustomObject15Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject15Query</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_ProductRevenueQuery" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_ProductRevenueQuery">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject4Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject4Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_CustomObject18Query" displayName="PhilosOpportunityWSDL.Opportunity_.docTypes:docTypeRef_xsdLocal2_CustomObject18Query">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:PhilosOpportunityWSDL.Opportunity_.docTypes.docTypeRef_xsdLocal2_queryType</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD801_.docTypes.schema_CWSD801" displayName="consumer.CWSD801_.docTypes:schema_CWSD801">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="consumer.CWSD801_.docTypes.docTypeRef_tns_multiplyIntsInput" displayName="consumer.CWSD801_.docTypes:docTypeRef_tns_multiplyIntsInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="consumer.CWSD801_.docTypes.PWSD801_PortType_multiplyInts_Input" displayName="consumer.CWSD801_.docTypes:PWSD801_PortType_multiplyInts_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:consumer.CWSD801_.docTypes.docTypeRef_tns_multiplyIntsInput</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD801_.docTypes.docTypeRef_tns_multiplyIntsOutput" displayName="consumer.CWSD801_.docTypes:docTypeRef_tns_multiplyIntsOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="consumer.CWSD801_.docTypes.PWSD801_PortType_multiplyInts_Output" displayName="consumer.CWSD801_.docTypes:PWSD801_PortType_multiplyInts_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:consumer.CWSD801_.docTypes.docTypeRef_tns_multiplyIntsOutput</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD801_.connectors.PWSD801_PortType_multiplyInts" displayName="consumer.CWSD801_.connectors:PWSD801_PortType_multiplyInts">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:consumer.CWSD801_.docTypes.PWSD801_PortType_multiplyInts_Input</dependsOn>
+    <dependsOn>IS:consumer.CWSD801_.docTypes.PWSD801_PortType_multiplyInts_Output</dependsOn>
+    <dependsOn>IS:consumer.CWSD801</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD713_.docTypes.schema_CWSD713" displayName="consumer.CWSD713_.docTypes:schema_CWSD713">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="consumer.CWSD713_.docTypes.PWSD713_PortType_divideInts_Output" displayName="consumer.CWSD713_.docTypes:PWSD713_PortType_divideInts_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:consumer.CWSD713_.docTypes.docTypeRef_tns_divideIntsOutput</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD713_.docTypes.docTypeRef_tns_divideIntsOutput" displayName="consumer.CWSD713_.docTypes:docTypeRef_tns_divideIntsOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="consumer.CWSD713_.docTypes.PWSD713_PortType_divideInts_Input" displayName="consumer.CWSD713_.docTypes:PWSD713_PortType_divideInts_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:consumer.CWSD713_.docTypes.docTypeRef_tns_divideIntsInput</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD713_.docTypes.docTypeRef_tns_divideIntsInput" displayName="consumer.CWSD713_.docTypes:docTypeRef_tns_divideIntsInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="consumer.CWSD713_.connectors.PWSD713_PortType_divideInts" displayName="consumer.CWSD713_.connectors:PWSD713_PortType_divideInts">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:consumer.CWSD713_.docTypes.PWSD713_PortType_divideInts_Input</dependsOn>
+    <dependsOn>IS:consumer.CWSD713_.docTypes.PWSD713_PortType_divideInts_Output</dependsOn>
+    <dependsOn>IS:consumer.CWSD713</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD712_.docTypes.schema_CWSD712" displayName="consumer.CWSD712_.docTypes:schema_CWSD712">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="consumer.CWSD712_.docTypes.docTypeRef_tns_addIntsInput" displayName="consumer.CWSD712_.docTypes:docTypeRef_tns_addIntsInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="consumer.CWSD712_.docTypes.PWSD712_PortType_addInts_Output" displayName="consumer.CWSD712_.docTypes:PWSD712_PortType_addInts_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:consumer.CWSD712_.docTypes.docTypeRef_tns_addIntsOutput</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD712_.docTypes.PWSD712_PortType_addInts_Input" displayName="consumer.CWSD712_.docTypes:PWSD712_PortType_addInts_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:consumer.CWSD712_.docTypes.docTypeRef_tns_addIntsInput</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD712_.docTypes.docTypeRef_tns_addIntsOutput" displayName="consumer.CWSD712_.docTypes:docTypeRef_tns_addIntsOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="consumer.CWSD712_.connectors.PWSD712_PortType_addInts" displayName="consumer.CWSD712_.connectors:PWSD712_PortType_addInts">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:consumer.CWSD712_.docTypes.PWSD712_PortType_addInts_Input</dependsOn>
+    <dependsOn>IS:consumer.CWSD712_.docTypes.PWSD712_PortType_addInts_Output</dependsOn>
+    <dependsOn>IS:consumer.CWSD712</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD801" displayName="consumer:CWSD801">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:consumer.CWSD801_.docTypes.PWSD801_PortType_multiplyInts_Output</dependsOn>
+    <dependsOn>IS:consumer.CWSD801_.connectors.PWSD801_PortType_multiplyInts</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD713" displayName="consumer:CWSD713">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:consumer.CWSD713_.docTypes.PWSD713_PortType_divideInts_Output</dependsOn>
+    <dependsOn>IS:consumer.CWSD713_.connectors.PWSD713_PortType_divideInts</dependsOn>
+  </asset>
+  <asset name="consumer.CWSD712" displayName="consumer:CWSD712">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:consumer.CWSD712_.docTypes.PWSD712_PortType_addInts_Output</dependsOn>
+    <dependsOn>IS:consumer.CWSD712_.connectors.PWSD712_PortType_addInts</dependsOn>
+  </asset>
+  <asset name="JDBCAdapterConnections.OracleConnection" displayName="JDBCAdapterConnections:OracleConnection">
+    <implementation.generic type="artconnection" />
+    <property name="art.deployment.state" displayName="State After Deployment">
+      <value>disable</value>
+    </property>
+    <property name="otherProperties" displayName="Other Properties">
+      <value>driverType=thin</value>
+    </property>
+    <property name="networkProtocol" displayName="Network Protocol">
+      <value>tcp</value>
+    </property>
+    <property name="portNumber" displayName="Port Number">
+      <value>1522</value>
+    </property>
+    <property name="databaseName" displayName="Database Name">
+      <value>XE</value>
+    </property>
+    <property name="password" displayName="Password" isSecure="true">
+      <value>{AES}oBooLibYSauOl1vl1fOReg==</value>
+    </property>
+    <property name="user" displayName="User">
+      <value>LDEVTRUNK</value>
+    </property>
+    <property name="serverName" displayName="Server Name">
+      <value>dcuidata01.eur.ad.sag</value>
+    </property>
+    <property name="datasourceClass" displayName="DataSource Class">
+      <value>oracle.jdbc.pool.OracleDataSource</value>
+    </property>
+    <property name="transactionType" displayName="Transaction Type">
+      <value>NO_TRANSACTION</value>
+    </property>
+    <property name=".CMGRPROP.startupBackoffSecs" displayName="Startup Backoff Timeout (sec)">
+      <value>10</value>
+    </property>
+    <property name=".CMGRPROP.startupRetryCount" displayName="Startup Retry Count">
+      <value>0</value>
+    </property>
+    <property name=".CMGRPROP.expireTimeout" displayName="Expire Timeout (msec)">
+      <value>1000</value>
+    </property>
+    <property name=".CMGRPROP.blockingTimeout" displayName="Block Timeout (msec)">
+      <value>1000</value>
+    </property>
+    <property name=".CMGRPROP.poolIncrementSize" displayName="Pool Increment Size">
+      <value>1</value>
+    </property>
+    <property name=".CMGRPROP.maximumPoolSize" displayName="Maximum Pool Size">
+      <value>10</value>
+    </property>
+    <property name=".CMGRPROP.minimumPoolSize" displayName="Minimum Pool Size">
+      <value>1</value>
+    </property>
+    <property name=".CMGRPROP.poolable" displayName="Enable Connection Pooling">
+      <value>true</value>
+    </property>
+  </asset>
+  <asset name="FlowEditor.docs.doc5" displayName="FlowEditor.docs:doc5">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="FlowEditor.docs.doc4" displayName="FlowEditor.docs:doc4">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.docs.doc3" displayName="FlowEditor.docs:doc3">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.docs.doc1" displayName="FlowEditor.docs:doc1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="FlowEditor.docs.doc0" displayName="FlowEditor.docs:doc0">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.schema1" displayName="FlowEditor.flowTreeEditor.testdata:schema1">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.doc1" displayName="FlowEditor.flowTreeEditor.testdata:doc1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.js1" displayName="FlowEditor.flowTreeEditor.testdata:js1">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:ESBUIPackage.code.source.FlowEditor.flowTreeEditor.testdata.java</dependsOn>
+    <dependsOn>IS:ESBUIPackage.code.classes.FlowEditor.flowTreeEditor.testdata.class</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.xslt1" displayName="FlowEditor.flowTreeEditor.testdata:xslt1">
+    <implementation.generic type="isxsltservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.spec1" displayName="FlowEditor.flowTreeEditor.testdata:spec1">
+    <implementation.generic type="isspecification" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.c1" displayName="FlowEditor.flowTreeEditor.testdata:c1">
+    <implementation.generic type="iscservice" />
+    <dependsOn>IS:FlowEditor.specs.spec1</dependsOn>
+    <dependsOn>IS:ESBUIPackage.code.source.FlowEditor.flowTreeEditor.testdata.java</dependsOn>
+    <dependsOn>IS:ESBUIPackage.code.classes.FlowEditor.flowTreeEditor.testdata.class</dependsOn>
+    <dependsOn>IS:FlowEditor.flowTreeEditor.testdata.js1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.fs1" displayName="FlowEditor.flowTreeEditor.testdata:fs1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.pDoc" displayName="FlowEditor.flowTreeEditor.testdata:pDoc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.JMS1" displayName="FlowEditor.flowTreeEditor.testdata:JMS1">
+    <implementation.generic type="isjmstrigger" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.BT1" displayName="FlowEditor.flowTreeEditor.testdata:BT1">
+    <implementation.generic type="istrigger" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.flatfileDic1" displayName="FlowEditor.flowTreeEditor.testdata:flatfileDic1">
+    <implementation.generic type="ffdictionary" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.testdata.flatfile1" displayName="FlowEditor.flowTreeEditor.testdata:flatfile1">
+    <implementation.generic type="ffschema" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.dragMultipleServices" displayName="FlowEditor.flowTreeEditor:dragMultipleServices">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.emptyFlowService" displayName="FlowEditor.flowTreeEditor:emptyFlowService">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.dragServicetoFlowEditor" displayName="FlowEditor.flowTreeEditor:dragServicetoFlowEditor">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.disableContainerFlowStep" displayName="FlowEditor.flowTreeEditor:disableContainerFlowStep">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.undoRedoFlow" displayName="FlowEditor.flowTreeEditor:undoRedoFlow">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.removeFlowStep" displayName="FlowEditor.flowTreeEditor:removeFlowStep">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.enableFlowStep" displayName="FlowEditor.flowTreeEditor:enableFlowStep">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.cutPasteFlow2" displayName="FlowEditor.flowTreeEditor:cutPasteFlow2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.cutPasteFlow1" displayName="FlowEditor.flowTreeEditor:cutPasteFlow1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.copyMultipleFlowElements" displayName="FlowEditor.flowTreeEditor:copyMultipleFlowElements">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.moveFlowSteps" displayName="FlowEditor.flowTreeEditor:moveFlowSteps">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.copyPasteFlow2" displayName="FlowEditor.flowTreeEditor:copyPasteFlow2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.copyPasteFlow1" displayName="FlowEditor.flowTreeEditor:copyPasteFlow1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowTreeEditor.disableFlowStep" displayName="FlowEditor.flowTreeEditor:disableFlowStep">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.verifyDocRefUpdate" displayName="FlowEditor.flowIOEditor:verifyDocRefUpdate">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.verifyStringDisplayType" displayName="FlowEditor.flowIOEditor:verifyStringDisplayType">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.verifyUnspecifiedFieldsValidation" displayName="FlowEditor.flowIOEditor:verifyUnspecifiedFieldsValidation">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.verifyPropertyForMultipleIOvars" displayName="FlowEditor.flowIOEditor:verifyPropertyForMultipleIOvars">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.searchIOVariables" displayName="FlowEditor.flowIOEditor:searchIOVariables">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.deleteIOVariables" displayName="FlowEditor.flowIOEditor:deleteIOVariables">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.moveIOVariables" displayName="FlowEditor.flowIOEditor:moveIOVariables">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.verifyIconChangeForRequiredField" displayName="FlowEditor.flowIOEditor:verifyIconChangeForRequiredField">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.verifyIconChange" displayName="FlowEditor.flowIOEditor:verifyIconChange">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.verifyIOVarConstraints" displayName="FlowEditor.flowIOEditor:verifyIOVarConstraints">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.copyPasteIOVariables" displayName="FlowEditor.flowIOEditor:copyPasteIOVariables">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.variablePalette" displayName="FlowEditor.flowIOEditor:variablePalette">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.dragDropIOVariables" displayName="FlowEditor.flowIOEditor:dragDropIOVariables">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.cutPasteIOVariables" displayName="FlowEditor.flowIOEditor:cutPasteIOVariables">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.copyPasteFlow2" displayName="FlowEditor.flowIOEditor:copyPasteFlow2">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.copyPasteFlow1" displayName="FlowEditor.flowIOEditor:copyPasteFlow1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.renameIOVariables" displayName="FlowEditor.flowIOEditor:renameIOVariables">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.stringDisplayTypeLargeEditor" displayName="FlowEditor.flowIOEditor:stringDisplayTypeLargeEditor">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.editAndSaveFlowServiceProperties" displayName="FlowEditor.flowIOEditor:editAndSaveFlowServiceProperties">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.addVariablesToIOTab" displayName="FlowEditor.flowIOEditor:addVariablesToIOTab">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.changeVariables" displayName="FlowEditor.flowIOEditor:changeVariables">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+    <dependsOn>IS:FlowEditor.docs.doc3</dependsOn>
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.changeVariableType" displayName="FlowEditor.flowIOEditor:changeVariableType">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.changeVariablePositionByDragDrop" displayName="FlowEditor.flowIOEditor:changeVariablePositionByDragDrop">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.verifyPickListChoices" displayName="FlowEditor.flowIOEditor:verifyPickListChoices">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.iodocumentReferences" displayName="FlowEditor.flowIOEditor:iodocumentReferences">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.flowIOEditor.addDocRefByDragDrop" displayName="FlowEditor.flowIOEditor:addDocRefByDragDrop">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.pipeline.disableTransformer" displayName="FlowEditor.pipeline:disableTransformer">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.general.verifyCaching" displayName="FlowEditor.general:verifyCaching">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.general.changeVariableType" displayName="FlowEditor.general:changeVariableType">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FlowEditor.docs.doc0</dependsOn>
+  </asset>
+  <asset name="FlowEditor.general.verifyIOTabReferenceFields" displayName="FlowEditor.general:verifyIOTabReferenceFields">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.general.runFlowService" displayName="FlowEditor.general:runFlowService">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FlowEditor.specs.spec2" displayName="FlowEditor.specs:spec2">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="FlowEditor.specs.spec1" displayName="FlowEditor.specs:spec1">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:FlowEditor.docs.doc1</dependsOn>
+  </asset>
+  <asset name="DebugTable.fs12" displayName="DebugTable:fs12">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DebugTable.js123</dependsOn>
+  </asset>
+  <asset name="DebugTable.js123" displayName="DebugTable:js123">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:ESBUIPackage.code.source.DebugTable.java</dependsOn>
+    <dependsOn>IS:ESBUIPackage.code.classes.DebugTable.class</dependsOn>
+  </asset>
+  <asset name="ESBUIPackage.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ESBUIPackage.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ESBUIPackage.code.classes.DebugTable.class" displayName="code/classes/DebugTable.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.code.classes.ESBUIFolder.adapterServices.class" displayName="code/classes/ESBUIFolder/adapterServices.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.code.classes.ESBUIFolder.javaServices.debug.test.class" displayName="code/classes/ESBUIFolder/javaServices/debug/test.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.code.classes.ESBUIFolder.javaServices.verify.class" displayName="code/classes/ESBUIFolder/javaServices/verify.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.code.classes.FlowEditor.flowTreeEditor.testdata.class" displayName="code/classes/FlowEditor/flowTreeEditor/testdata.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ESBUIPackage.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ESBUIPackage.code.source.DebugTable.java" displayName="code/source/DebugTable.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.code.source.ESBUIFolder.adapterServices.java" displayName="code/source/ESBUIFolder/adapterServices.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.code.source.ESBUIFolder.javaServices.debug.test.java" displayName="code/source/ESBUIFolder/javaServices/debug/test.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.code.source.ESBUIFolder.javaServices.verify.java" displayName="code/source/ESBUIFolder/javaServices/verify.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.code.source.FlowEditor.flowTreeEditor.testdata.java" displayName="code/source/FlowEditor/flowTreeEditor/testdata.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ESBUIPackage.config.JDBCAutomation.properties" displayName="config/JDBCAutomation.properties">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ESBUIPackage.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ESBUIPackage.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ESBUIPackage.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ESBUIPackage.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ESBUIPackage.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ESBUIPackage.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+

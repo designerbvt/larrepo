@@ -16,7 +16,7 @@
     <value>true</value>
   </property>
   <buildInfo name="BuildVersion" value="10.15.0.0.184704381" />
-  <buildInfo name="BuildTimestamp" value="2021-10-13T12:25:20" />
+  <buildInfo name="BuildTimestamp" value="2021-10-13T12:45:28" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
   <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
     <implementation.generic type="isumalias" />
