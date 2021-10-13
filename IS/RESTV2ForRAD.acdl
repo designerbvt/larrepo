@@ -1,0 +1,163 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="RESTV2ForRAD" runtimeVersion="10.15.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.15.0.0.184704381" />
+  <buildInfo name="BuildTimestamp" value="2021-10-13T12:25:20" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.RESTV2ForRAD" displayName="RESTV2ForRAD">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="SwaggerRADTest.sagRes3_.docTypes.sagRes3" displayName="SwaggerRADTest.sagRes3_.docTypes:sagRes3">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwaggerRADTest.sagRes2_.docTypes.sagRes2" displayName="SwaggerRADTest.sagRes2_.docTypes:sagRes2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwaggerRADTest.sagRes1_.docTypes.sagRes1" displayName="SwaggerRADTest.sagRes1_.docTypes:sagRes1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwaggerRADTest.sagRes3" displayName="SwaggerRADTest:sagRes3">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:WED6906.flowsrvc.Flow3</dependsOn>
+  </asset>
+  <asset name="SwaggerRADTest.sagRes2" displayName="SwaggerRADTest:sagRes2">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:WED6906.flowsrvc.Flow2</dependsOn>
+  </asset>
+  <asset name="SwaggerRADTest.sagRes1" displayName="SwaggerRADTest:sagRes1">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:WED6906.flowsrvc.Flow1</dependsOn>
+  </asset>
+  <asset name="WED6906.resources.rest3_.docTypes.rest3" displayName="WED6906.resources.rest3_.docTypes:rest3">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="WED6906.resources.rest2_.docTypes.rest2" displayName="WED6906.resources.rest2_.docTypes:rest2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="WED6906.resources.rest1_.docTypes.rest1" displayName="WED6906.resources.rest1_.docTypes:rest1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="WED6906.resources.svc6" displayName="WED6906.resources:svc6">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED6906.resources.svc5" displayName="WED6906.resources:svc5">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED6906.resources.svc4" displayName="WED6906.resources:svc4">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED6906.resources.svc3" displayName="WED6906.resources:svc3">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED6906.resources.svc2" displayName="WED6906.resources:svc2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED6906.resources.svc1" displayName="WED6906.resources:svc1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED6906.resources.rest3" displayName="WED6906.resources:rest3">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:WED6906.resources.svc4</dependsOn>
+    <dependsOn>IS:WED6906.resources.svc5</dependsOn>
+    <dependsOn>IS:WED6906.resources.svc6</dependsOn>
+  </asset>
+  <asset name="WED6906.resources.rest2" displayName="WED6906.resources:rest2">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:WED6906.flowsrvc.Flow1</dependsOn>
+    <dependsOn>IS:WED6906.flowsrvc.Flow2</dependsOn>
+    <dependsOn>IS:WED6906.flowsrvc.Flow3</dependsOn>
+  </asset>
+  <asset name="WED6906.resources.rest1" displayName="WED6906.resources:rest1">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:WED6906.resources.svc1</dependsOn>
+    <dependsOn>IS:WED6906.resources.svc2</dependsOn>
+    <dependsOn>IS:WED6906.resources.svc3</dependsOn>
+  </asset>
+  <asset name="WED6906.flowsrvc.Flow3" displayName="WED6906.flowsrvc:Flow3">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED6906.flowsrvc.Flow2" displayName="WED6906.flowsrvc:Flow2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="WED6906.flowsrvc.Flow1" displayName="WED6906.flowsrvc:Flow1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="webSocketFol.FSvc_Conn" displayName="webSocketFol:FSvc_Conn">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="RESTV2ForRAD.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RESTV2ForRAD.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RESTV2ForRAD.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RESTV2ForRAD.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RESTV2ForRAD.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RESTV2ForRAD.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RESTV2ForRAD.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RESTV2ForRAD.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RESTV2ForRAD.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RESTV2ForRAD.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RESTV2ForRAD.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RESTV2ForRAD.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RESTV2ForRAD.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RESTV2ForRAD.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RESTV2ForRAD.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
