@@ -1,0 +1,190 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="JNPRMessageSubscribers" runtimeVersion="10.7.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.1407129404" />
+  <buildInfo name="BuildTimestamp" value="2021-10-19T10:46:10" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.JNPRMessageSubscribers" displayName="JNPRMessageSubscribers">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="net.juniper.services.Subscriber_template" displayName="net.juniper.services:Subscriber_template">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.utils.incrementDeliveryCount</dependsOn>
+    <dependsOn>IS:net.juniper.utils.callIO</dependsOn>
+    <dependsOn>IS:net.juniper.utils.removeMessageIdFromStore</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.errorHandler</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.JNPRSubscribeToBroadcom855Message" displayName="net.juniper.services:JNPRSubscribeToBroadcom855Message">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.utils.incrementDeliveryCount</dependsOn>
+    <dependsOn>IS:net.juniper.utils.callIO</dependsOn>
+    <dependsOn>IS:net.juniper.utils.removeMessageIdFromStore</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.errorHandler</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.JNPRSubscribeToOktaUserUpdatesFromSFDC" displayName="net.juniper.services:JNPRSubscribeToOktaUserUpdatesFromSFDC">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.utils.incrementDeliveryCount</dependsOn>
+    <dependsOn>IS:net.juniper.utils.callIO</dependsOn>
+    <dependsOn>IS:net.juniper.utils.removeMessageIdFromStore</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.errorHandler</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.JNPRSubscribeToBroadcom855Message_Monitor" displayName="net.juniper.services:JNPRSubscribeToBroadcom855Message_Monitor">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.utils.incrementDeliveryCount</dependsOn>
+    <dependsOn>IS:net.juniper.utils.callIO</dependsOn>
+    <dependsOn>IS:net.juniper.utils.removeMessageIdFromStore</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.errorHandler</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.Subscriber_template_Monitor" displayName="net.juniper.services:Subscriber_template_Monitor">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.utils.incrementDeliveryCount</dependsOn>
+    <dependsOn>IS:net.juniper.utils.callIO</dependsOn>
+    <dependsOn>IS:net.juniper.utils.removeMessageIdFromStore</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.errorHandler</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.JNPRSubscribeSfdcToSapAccountMessage_Monitor" displayName="net.juniper.services:JNPRSubscribeSfdcToSapAccountMessage_Monitor">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.utils.incrementDeliveryCount</dependsOn>
+    <dependsOn>IS:net.juniper.utils.callIO</dependsOn>
+    <dependsOn>IS:net.juniper.utils.removeMessageIdFromStore</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.errorHandler</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.JNPRSubscribeSfdcToSapAccountMessage" displayName="net.juniper.services:JNPRSubscribeSfdcToSapAccountMessage">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.utils.incrementDeliveryCount</dependsOn>
+    <dependsOn>IS:net.juniper.utils.callIO</dependsOn>
+    <dependsOn>IS:net.juniper.utils.removeMessageIdFromStore</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.errorHandler</dependsOn>
+  </asset>
+  <asset name="net.juniper.triggers.subscribeToBroadcom855Message" displayName="net.juniper.triggers:subscribeToBroadcom855Message">
+    <implementation.generic type="isjmstrigger" />
+    <dependsOn>IS:net.juniper.services.JNPRSubscribeToBroadcom855Message</dependsOn>
+    <dependsOn>IS:JMSAlias.generalCF</dependsOn>
+  </asset>
+  <asset name="net.juniper.triggers.subscribeSfdcToSapAccountMessage" displayName="net.juniper.triggers:subscribeSfdcToSapAccountMessage">
+    <implementation.generic type="isjmstrigger" />
+    <dependsOn>IS:net.juniper.services.JNPRSubscribeSfdcToSapAccountMessage</dependsOn>
+    <dependsOn>IS:JMSAlias.generalCF</dependsOn>
+  </asset>
+  <asset name="net.juniper.triggers.subscribeSfdcToSapAccountMessage_Monitor" displayName="net.juniper.triggers:subscribeSfdcToSapAccountMessage_Monitor">
+    <implementation.generic type="isjmstrigger" />
+    <dependsOn>IS:net.juniper.services.JNPRSubscribeSfdcToSapAccountMessage_Monitor</dependsOn>
+    <dependsOn>IS:JMSAlias.generalCF</dependsOn>
+  </asset>
+  <asset name="net.juniper.triggers.subscribeToOktaUserUpdatesFromSFDC" displayName="net.juniper.triggers:subscribeToOktaUserUpdatesFromSFDC">
+    <implementation.generic type="isjmstrigger" />
+    <dependsOn>IS:net.juniper.services.JNPRSubscribeToOktaUserUpdatesFromSFDC</dependsOn>
+    <dependsOn>IS:JMSAlias.generalCF</dependsOn>
+  </asset>
+  <asset name="net.juniper.triggers.subscribeToBroadcom855Message_Monitor" displayName="net.juniper.triggers:subscribeToBroadcom855Message_Monitor">
+    <implementation.generic type="isjmstrigger" />
+    <dependsOn>IS:net.juniper.services.JNPRSubscribeToBroadcom855Message_Monitor</dependsOn>
+    <dependsOn>IS:JMSAlias.generalCF</dependsOn>
+  </asset>
+  <asset name="net.juniper.utils.callIO" displayName="net.juniper.utils:callIO">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="net.juniper.utils.removeMessageIdFromStore" displayName="net.juniper.utils:removeMessageIdFromStore">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRMessageSubscribers.code.source.net.juniper.utils.java</dependsOn>
+    <dependsOn>IS:JNPRMessageSubscribers.code.classes.net.juniper.utils.class</dependsOn>
+    <dependsOn>IS:net.juniper.utils.incrementDeliveryCount</dependsOn>
+  </asset>
+  <asset name="net.juniper.utils.incrementDeliveryCount" displayName="net.juniper.utils:incrementDeliveryCount">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRMessageSubscribers.code.source.net.juniper.utils.java</dependsOn>
+    <dependsOn>IS:JNPRMessageSubscribers.code.classes.net.juniper.utils.class</dependsOn>
+    <dependsOn>IS:net.juniper.utils.removeMessageIdFromStore</dependsOn>
+  </asset>
+  <asset name="net.juniper.utils.triggerMonitor" displayName="net.juniper.utils:triggerMonitor">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.code.classes.net.juniper.utils.class" displayName="code/classes/net/juniper/utils.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.code.source.net.juniper.utils.java" displayName="code/source/net/juniper/utils.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRMessageSubscribers.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
