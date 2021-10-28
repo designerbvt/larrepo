@@ -1,0 +1,141 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="RAD_API_1" runtimeVersion="10.15.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.15.0.0.-1970528632" />
+  <buildInfo name="BuildTimestamp" value="2021-10-28T05:53:55" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.RAD_API_1" displayName="RAD_API_1">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="Resource_2._get" displayName="Resource_2:_get">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Resource_2.Doc_1</dependsOn>
+  </asset>
+  <asset name="Resource_2.Doc_1" displayName="Resource_2:Doc_1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="Resource_2._put" displayName="Resource_2:_put">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Resource_2.Doc_1</dependsOn>
+    <dependsOn>IS:RAD_API_1.code.source.Resource_2.java</dependsOn>
+    <dependsOn>IS:RAD_API_1.code.classes.Resource_2.class</dependsOn>
+  </asset>
+  <asset name="Resource_2._post" displayName="Resource_2:_post">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:connections.jdbcconn</dependsOn>
+  </asset>
+  <asset name="Resource_1._put" displayName="Resource_1:_put">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Resource_1.Doc</dependsOn>
+    <dependsOn>IS:RAD_API_1.code.source.Resource_1.java</dependsOn>
+    <dependsOn>IS:RAD_API_1.code.classes.Resource_1.class</dependsOn>
+  </asset>
+  <asset name="Resource_1.Doc" displayName="Resource_1:Doc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="Resource_1._delete" displayName="Resource_1:_delete">
+    <implementation.generic type="iscservice" />
+    <dependsOn>IS:RAD_API_1.code.source.Resource_1.java</dependsOn>
+    <dependsOn>IS:RAD_API_1.code.classes.Resource_1.class</dependsOn>
+    <dependsOn>IS:RAD_API_1.code.source._delete.mak</dependsOn>
+    <dependsOn>IS:RAD_API_1.code.source._delete.c</dependsOn>
+    <dependsOn>IS:Resource_1._put</dependsOn>
+  </asset>
+  <asset name="Resource_1._get" displayName="Resource_1:_get">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Resource_1.Doc</dependsOn>
+  </asset>
+  <asset name="RAD_API_1.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RAD_API_1.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RAD_API_1.code.classes.Resource_1.class" displayName="code/classes/Resource_1.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RAD_API_1.code.classes.Resource_2.class" displayName="code/classes/Resource_2.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RAD_API_1.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RAD_API_1.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RAD_API_1.code.source.Resource_1.java" displayName="code/source/Resource_1.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RAD_API_1.code.source.Resource_2.java" displayName="code/source/Resource_2.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RAD_API_1.code.source._delete.c" displayName="code/source/_delete.c">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RAD_API_1.code.source._delete.mak" displayName="code/source/_delete.mak">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RAD_API_1.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RAD_API_1.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RAD_API_1.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RAD_API_1.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RAD_API_1.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RAD_API_1.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="RAD_API_1.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RAD_API_1.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RAD_API_1.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RAD_API_1.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="RAD_API_1.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
