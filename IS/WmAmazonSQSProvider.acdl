@@ -1,0 +1,488 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="WmAmazonSQSProvider" runtimeVersion="10.7.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.897174933" />
+  <buildInfo name="BuildTimestamp" value="2021-10-13T18:15:38" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.WmAmazonSQSProvider" displayName="WmAmazonSQSProvider">
+    <implementation.generic type="ispackage" />
+    <dependsOn>IS:ISPackage.WmCloudStreams</dependsOn>
+  </asset>
+  <asset name="wm.cloudstreams.amazon.sqs.plm.registerProvider" displayName="wm.cloudstreams.amazon.sqs.plm:registerProvider">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.amazon.sqs.plm.unsetACLs</dependsOn>
+    <dependsOn>IS:wm.cloudstreams.amazon.sqs.plm.setACLs</dependsOn>
+    <dependsOn>IS:Acl.WmPrivate</dependsOn>
+  </asset>
+  <asset name="wm.cloudstreams.amazon.sqs.plm.setACLs" displayName="wm.cloudstreams.amazon.sqs.plm:setACLs">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:WmAmazonSQSProvider.code.classes.wm.cloudstreams.amazon.sqs.plm.class</dependsOn>
+    <dependsOn>IS:wm.cloudstreams.amazon.sqs.plm.unsetACLs</dependsOn>
+  </asset>
+  <asset name="wm.cloudstreams.amazon.sqs.plm.unregisterProvider" displayName="wm.cloudstreams.amazon.sqs.plm:unregisterProvider">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.amazon.sqs.plm.unsetACLs</dependsOn>
+  </asset>
+  <asset name="wm.cloudstreams.amazon.sqs.plm.unsetACLs" displayName="wm.cloudstreams.amazon.sqs.plm:unsetACLs">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:WmAmazonSQSProvider.code.classes.wm.cloudstreams.amazon.sqs.plm.class</dependsOn>
+    <dependsOn>IS:wm.cloudstreams.amazon.sqs.plm.setACLs</dependsOn>
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntriesType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_SendMessageBatchRequestEntriesType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntryType</dependsOn>
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_MessageAttributeNamesType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_MessageAttributeNamesType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.schema_new_documentType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:schema_new_documentType">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntryType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_ChangeMessageVisibilityBatchRequestEntryType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageAttribute" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_SendMessageAttribute">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_MessageAttributeType</dependsOn>
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntryType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_DeleteMessageBatchRequestEntryType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntryType</dependsOn>
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntryType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_SendMessageBatchRequestEntryType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_MessageAttributeType</dependsOn>
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributesType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_AttributesType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributeType</dependsOn>
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributeType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_AttributeType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_MessageAttributeType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_MessageAttributeType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ValueType</dependsOn>
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AWSAccountIdsType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_AWSAccountIdsType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributeNamesType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_AttributeNamesType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ValueType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_ValueType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ActionNamesType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_ActionNamesType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.new_documentType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:new_documentType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ActionNamesType</dependsOn>
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributeNamesType</dependsOn>
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributesType</dependsOn>
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AWSAccountIdsType</dependsOn>
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType</dependsOn>
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntriesType</dependsOn>
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_MessageAttributeNamesType</dependsOn>
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageAttribute</dependsOn>
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntriesType</dependsOn>
+  </asset>
+  <asset name="wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntriesType" displayName="wmamazon.sqs_aws4_v20121105.doctypes.parameter:docTypeRef_DeleteMessageBatchRequestEntriesType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntryType</dependsOn>
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributesType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_AttributesType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributeType</dependsOn>
+    <dependsOn>IS:Acl.WmPrivate</dependsOn>
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.schema_new_documentType" displayName="amazonSQS_v20121105.doctypes.parameter:schema_new_documentType">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributeType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_AttributeType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntriesType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_SendMessageBatchRequestEntriesType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntryType</dependsOn>
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntryType</dependsOn>
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.new_documentType" displayName="amazonSQS_v20121105.doctypes.parameter:new_documentType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_ActionNamesType</dependsOn>
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributeNamesType</dependsOn>
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributesType</dependsOn>
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_AWSAccountIdsType</dependsOn>
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType</dependsOn>
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntriesType</dependsOn>
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntriesType</dependsOn>
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntryType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_DeleteMessageBatchRequestEntryType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntriesType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_DeleteMessageBatchRequestEntriesType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:amazonSQS_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntryType</dependsOn>
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntryType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_SendMessageBatchRequestEntryType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributeNamesType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_AttributeNamesType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_AWSAccountIdsType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_AWSAccountIdsType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_ActionNamesType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_ActionNamesType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="amazonSQS_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntryType" displayName="amazonSQS_v20121105.doctypes.parameter:docTypeRef_ChangeMessageVisibilityBatchRequestEntryType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns" displayName="ns">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm" displayName="ns/wm">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams" displayName="ns/wm/cloudstreams">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105" displayName="ns/wmamazon/sqs_aws4_v20121105">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.node.idf" displayName="ns/wmamazon/sqs_aws4_v20121105/node.idf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntriesType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_SendMessageBatchRequestEntriesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntriesType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_SendMessageBatchRequestEntriesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributesType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_AttributesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributesType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_AttributesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.schema_new_documentType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/schema_new_documentType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.schema_new_documentType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/schema_new_documentType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_MessageAttributeNamesType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_MessageAttributeNamesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_MessageAttributeNamesType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_MessageAttributeNamesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributeType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_AttributeType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributeType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_AttributeType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon" displayName="ns/wmamazon">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.node.idf" displayName="ns/wmamazon/node.idf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.schema_new_documentType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/schema_new_documentType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.schema_new_documentType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/schema_new_documentType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntryType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_ChangeMessageVisibilityBatchRequestEntryType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntryType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_ChangeMessageVisibilityBatchRequestEntryType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm" displayName="ns/wm/cloudstreams/amazon/sqs/plm">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm.registerProvider" displayName="ns/wm/cloudstreams/amazon/sqs/plm/registerProvider">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm.unregisterProvider" displayName="ns/wm/cloudstreams/amazon/sqs/plm/unregisterProvider">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm.unsetACLs" displayName="ns/wm/cloudstreams/amazon/sqs/plm/unsetACLs">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm.setACLs" displayName="ns/wm/cloudstreams/amazon/sqs/plm/setACLs">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageAttribute" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_SendMessageAttribute">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageAttribute.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_SendMessageAttribute/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs" displayName="ns/wm/cloudstreams/amazon/sqs">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntriesType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_SendMessageBatchRequestEntriesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntriesType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_SendMessageBatchRequestEntriesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntryType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_DeleteMessageBatchRequestEntryType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntryType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_DeleteMessageBatchRequestEntryType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter" displayName="ns/amazonSQS_v20121105/doctypes/parameter">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_ActionNamesType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_ActionNamesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntriesType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_DeleteMessageBatchRequestEntriesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.node.idf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/node.idf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntryType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_SendMessageBatchRequestEntryType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntryType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_DeleteMessageBatchRequestEntryType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributeNamesType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_AttributeNamesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_AWSAccountIdsType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_AWSAccountIdsType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntryType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_ChangeMessageVisibilityBatchRequestEntryType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.new_documentType" displayName="ns/amazonSQS_v20121105/doctypes/parameter/new_documentType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_ChangeMessageVisibilityBatchRequestEntriesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ActionNamesType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_ActionNamesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntriesType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_DeleteMessageBatchRequestEntriesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.node.idf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/node.idf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntryType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_SendMessageBatchRequestEntryType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ValueType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_ValueType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributeNamesType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_AttributeNamesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AWSAccountIdsType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_AWSAccountIdsType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.new_documentType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/new_documentType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributesType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_AttributesType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_MessageAttributeType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_MessageAttributeType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributeType" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_AttributeType">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.new_documentType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/new_documentType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes" displayName="ns/amazonSQS_v20121105/doctypes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.node.idf" displayName="ns/amazonSQS_v20121105/doctypes/node.idf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntryType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_SendMessageBatchRequestEntryType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntryType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_DeleteMessageBatchRequestEntryType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105" displayName="ns/amazonSQS_v20121105">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm.registerProvider.node.ndf" displayName="ns/wm/cloudstreams/amazon/sqs/plm/registerProvider/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm.registerProvider.flow.xml" displayName="ns/wm/cloudstreams/amazon/sqs/plm/registerProvider/flow.xml">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributesType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_AttributesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributeType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_AttributeType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_MessageAttributeType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_MessageAttributeType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntriesType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_DeleteMessageBatchRequestEntriesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AWSAccountIdsType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_AWSAccountIdsType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm.setACLs.node.ndf" displayName="ns/wm/cloudstreams/amazon/sqs/plm/setACLs/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm.unregisterProvider.node.ndf" displayName="ns/wm/cloudstreams/amazon/sqs/plm/unregisterProvider/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm.unregisterProvider.flow.xml" displayName="ns/wm/cloudstreams/amazon/sqs/plm/unregisterProvider/flow.xml">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_AttributeNamesType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_AttributeNamesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_SendMessageBatchRequestEntryType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_SendMessageBatchRequestEntryType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_AttributeNamesType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_AttributeNamesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_AWSAccountIdsType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_AWSAccountIdsType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ValueType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_ValueType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon" displayName="ns/wm/cloudstreams/amazon">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wm.cloudstreams.amazon.sqs.plm.unsetACLs.node.ndf" displayName="ns/wm/cloudstreams/amazon/sqs/plm/unsetACLs/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_ActionNamesType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_ActionNamesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_ActionNamesType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_ActionNamesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.new_documentType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/new_documentType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.node.idf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/node.idf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.wmamazon.sqs_aws4_v20121105.doctypes.parameter.docTypeRef_DeleteMessageBatchRequestEntriesType.node.ndf" displayName="ns/wmamazon/sqs_aws4_v20121105/doctypes/parameter/docTypeRef_DeleteMessageBatchRequestEntriesType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.ns.amazonSQS_v20121105.doctypes.parameter.docTypeRef_ChangeMessageVisibilityBatchRequestEntryType.node.ndf" displayName="ns/amazonSQS_v20121105/doctypes/parameter/docTypeRef_ChangeMessageVisibilityBatchRequestEntryType/node.ndf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.connectors" displayName="connectors">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.code.classes.wm.cloudstreams.amazon.sqs.plm.class" displayName="code/classes/wm/cloudstreams/amazon/sqs/plm.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmAmazonSQSProvider.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+

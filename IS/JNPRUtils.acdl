@@ -1,0 +1,815 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="JNPRUtils" runtimeVersion="10.7.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.1614021201" />
+  <buildInfo name="BuildTimestamp" value="2021-10-08T19:02:20" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.JNPRUtils" displayName="JNPRUtils">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="net.juniper.services.getTimeMillis" displayName="net.juniper.services:getTimeMillis">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.getCallingService" displayName="net.juniper.services:getCallingService">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.endsWith" displayName="net.juniper.services:endsWith">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.gc" displayName="net.juniper.services:gc">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.getServerName" displayName="net.juniper.services:getServerName">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.createRandomNumber" displayName="net.juniper.services:createRandomNumber">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.stringToDouble" displayName="net.juniper.services:stringToDouble">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.convertStringToDate" displayName="net.juniper.services:convertStringToDate">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.ftp" displayName="net.juniper.services:ftp">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.readProperties" displayName="net.juniper.services:readProperties">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.getJNPRSystemProperties" displayName="net.juniper.services:getJNPRSystemProperties">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.documents.JNPRSystemProperties</dependsOn>
+    <dependsOn>IS:PSUtilities.properties.getSystemProperty</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.startsWith" displayName="net.juniper.services:startsWith">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.timeDiffWriter" displayName="net.juniper.services:timeDiffWriter">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.services.timeDiff</dependsOn>
+    <dependsOn>IS:PSUtilities.file.writeToFile</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.lastIndexOf" displayName="net.juniper.services:lastIndexOf">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.convertPipelineToString" displayName="net.juniper.services:convertPipelineToString">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.timeDiff" displayName="net.juniper.services:timeDiff">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:PSUtilities.math.getAbsoluteValue</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.getStackTrace" displayName="net.juniper.services:getStackTrace">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.StringToInteger" displayName="net.juniper.services:StringToInteger">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.stringArrayToList" displayName="net.juniper.services:stringArrayToList">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.getWorkingDirs" displayName="net.juniper.services:getWorkingDirs">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.eMailTemplates" displayName="net.juniper.services:eMailTemplates">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="net.juniper.services.toBigDecimal" displayName="net.juniper.services:toBigDecimal">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.createUniqueName" displayName="net.juniper.services:createUniqueName">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.convertStringToPipeline" displayName="net.juniper.services:convertStringToPipeline">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.decodeDate" displayName="net.juniper.services:decodeDate">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.getSystemInfo" displayName="net.juniper.services:getSystemInfo">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.encodeDate" displayName="net.juniper.services:encodeDate">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.contains" displayName="net.juniper.services:contains">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.getEncodingType" displayName="net.juniper.services:getEncodingType">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToTimeStamp</dependsOn>
+  </asset>
+  <asset name="net.juniper.services.stringToTimeStamp" displayName="net.juniper.services:stringToTimeStamp">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:JNPRUtils.code.source.net.juniper.services.java</dependsOn>
+    <dependsOn>IS:JNPRUtils.code.classes.net.juniper.services.class</dependsOn>
+    <dependsOn>IS:net.juniper.services.executeQuery</dependsOn>
+    <dependsOn>IS:net.juniper.services.getTimeMillis</dependsOn>
+    <dependsOn>IS:net.juniper.services.getCallingService</dependsOn>
+    <dependsOn>IS:net.juniper.services.endsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.gc</dependsOn>
+    <dependsOn>IS:net.juniper.services.getServerName</dependsOn>
+    <dependsOn>IS:net.juniper.services.createRandomNumber</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringToDouble</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.readProperties</dependsOn>
+    <dependsOn>IS:net.juniper.services.startsWith</dependsOn>
+    <dependsOn>IS:net.juniper.services.lastIndexOf</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertPipelineToString</dependsOn>
+    <dependsOn>IS:net.juniper.services.getStackTrace</dependsOn>
+    <dependsOn>IS:net.juniper.services.StringToInteger</dependsOn>
+    <dependsOn>IS:net.juniper.services.stringArrayToList</dependsOn>
+    <dependsOn>IS:net.juniper.services.getWorkingDirs</dependsOn>
+    <dependsOn>IS:net.juniper.services.toBigDecimal</dependsOn>
+    <dependsOn>IS:net.juniper.services.convertStringToPipeline</dependsOn>
+    <dependsOn>IS:net.juniper.services.decodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.getSystemInfo</dependsOn>
+    <dependsOn>IS:net.juniper.services.encodeDate</dependsOn>
+    <dependsOn>IS:net.juniper.services.contains</dependsOn>
+    <dependsOn>IS:net.juniper.services.getEncodingType</dependsOn>
+  </asset>
+  <asset name="net.juniper.documents.JNPRSystemProperties" displayName="net.juniper.documents:JNPRSystemProperties">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="JNPRUtils.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRUtils.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRUtils.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRUtils.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRUtils.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRUtils.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRUtils.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRUtils.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRUtils.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRUtils.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRUtils.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRUtils.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRUtils.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRUtils.code.classes.net.juniper.services.class" displayName="code/classes/net/juniper/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRUtils.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="JNPRUtils.code.source.net.juniper.services.java" displayName="code/source/net/juniper/services.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="JNPRUtils.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
