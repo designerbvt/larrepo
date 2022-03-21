@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="pk1" runtimeVersion="10.11.0.0">
   <implementation.generic type="ispackage" />
   <buildInfo name="BuildVersion" value="10.11.0.0.-943894792" />
-  <buildInfo name="BuildTimestamp" value="2022-03-21T10:49:06" />
+  <buildInfo name="BuildTimestamp" value="2022-03-21T13:24:47" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -37,6 +37,9 @@
     <implementation.generic type="ispackage" />
   </asset>
   <asset name="f1.fs1" displayName="f1:fs1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="f1.fs2" displayName="f1:fs2">
     <implementation.generic type="isflowservice" />
   </asset>
   <asset name="pk1.code" displayName="code">
