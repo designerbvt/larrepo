@@ -1,4 +1,4 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.15.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.11.0.0">
   <implementation.generic type="isconfiguration" />
   <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
     <value>none</value>
@@ -15,9 +15,9 @@
   <property name="restartRuntimes" displayName="restartRuntimes">
     <value>true</value>
   </property>
-  <buildInfo name="BuildVersion" value="10.15.0.0.-2110898970" />
-  <buildInfo name="BuildTimestamp" value="2022-03-10T04:49:39" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.-943894792" />
+  <buildInfo name="BuildTimestamp" value="2022-03-21T12:49:16" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
   <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE">
     <implementation.generic type="istruststorealias" />
     <property name="useSourceTruststore" displayName="Use Source Truststore">
@@ -27,7 +27,13 @@
       <value>{AES}z/+xVlzI9T/Dfo7Su4lrCQ==</value>
     </property>
     <property name="ksLocation" displayName="Location">
-      <value>../../../jvm/jvm/lib/security/cacerts</value>
+      <value>..\jvm\jvm\lib\security\cacerts</value>
+    </property>
+  </asset>
+  <asset name="GlobalVariable.a" displayName="Global Variable 'a'">
+    <implementation.generic type="isglobalvariable" />
+    <property name="value" displayName="Value">
+      <value>b</value>
     </property>
   </asset>
   <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config">

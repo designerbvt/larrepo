@@ -1,8 +1,8 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="FileToDocument" runtimeVersion="10.15.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="FileToDocument" runtimeVersion="10.11.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.15.0.0.-2110898970" />
-  <buildInfo name="BuildTimestamp" value="2022-03-10T04:49:38" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.-943894792" />
+  <buildInfo name="BuildTimestamp" value="2022-03-21T12:49:16" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
   </property>
@@ -42,9 +42,6 @@
   <asset name="services.xmlFileToDocument" displayName="services:xmlFileToDocument">
     <implementation.generic type="isflowservice" />
   </asset>
-  <asset name="FileToDocument.pub" displayName="pub">
-    <implementation.generic type="isfolder" />
-  </asset>
   <asset name="FileToDocument.code" displayName="code">
     <implementation.generic type="isfolder" />
   </asset>
@@ -76,6 +73,9 @@
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="FileToDocument.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="FileToDocument.pub" displayName="pub">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="FileToDocument.resources" displayName="resources">
