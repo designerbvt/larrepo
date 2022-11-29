@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="TransformUsingForEach" runtimeVersion="11.0.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="11.0.0.0.1784760310" />
-  <buildInfo name="BuildTimestamp" value="2022-11-28T15:07:02" />
+  <buildInfo name="BuildVersion" value="11.0.0.0.1974744637" />
+  <buildInfo name="BuildTimestamp" value="2022-11-29T05:11:41" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="11.0.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
