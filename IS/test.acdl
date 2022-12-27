@@ -1,8 +1,8 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="test" runtimeVersion="10.15.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="test" runtimeVersion="11.0.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.15.0.0.72377189" />
-  <buildInfo name="BuildTimestamp" value="2022-12-13T13:33:40" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <buildInfo name="BuildVersion" value="11.0.0.0.718322003" />
+  <buildInfo name="BuildTimestamp" value="2022-12-27T17:22:42" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="11.0.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
   </property>
@@ -36,31 +36,19 @@
   <asset name="ISPackage.test" displayName="test">
     <implementation.generic type="ispackage" />
   </asset>
-  <asset name="ptest.fs1" displayName="ptest:fs1">
+  <asset name="test.fs1" displayName="test:fs1">
     <implementation.generic type="isflowservice" />
   </asset>
-  <asset name="test.code" displayName="code">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="test.code.classes" displayName="code/classes">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="test.code.source" displayName="code/source">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="test.code.jars" displayName="code/jars">
-    <implementation.generic type="isfolder" />
-  </asset>
   <asset name="test.doc" displayName="doc">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="test.pub" displayName="pub">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="test.templates" displayName="templates">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="test.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test.lib" displayName="lib">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="test.config" displayName="config">
@@ -78,10 +66,22 @@
   <asset name="test.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
     <implementation.generic type="isfile" />
   </asset>
+  <asset name="test.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
   <asset name="test.resources" displayName="resources">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test.lib" displayName="lib">
+  <asset name="test.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test.code.source" displayName="code/source">
     <implementation.generic type="isfolder" />
   </asset>
 </asset_composite>
