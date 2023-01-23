@@ -1,46 +1,45 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<asset_composite name="isconfiguration" runtimeVersion="10.15.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <implementation.generic type="isconfiguration"/>
-    <buildInfo name="BuildTimestamp" value="2023-01-23T18:33:21"/>
-    <buildInfo name="BuildVersion" value="10.15.0.0.-926541186"/>
-    <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0"/>
-    <asset name="User.demo" displayName="demo" isDeployable="true">
-        <implementation.generic type="isuser"/>
-        <property name="allowDigestAuth" many="false" isSecure="false" displayName="Allow Digest Authentication">
-            <value>false</value>
-        </property>
-        <property name="password" many="false" isSecure="true" displayName="Password">
-            <value>{AES}PWKm5KBimSAeUvvay/lFiyNI0j9zH4zXDGqMWtM63G+36GxvBcocdiCBVYT/mXVXx3Uv8rsusZowJ/D06qZcnJLyZtK/ogiAy2G/h/mhcD4=</value>
-        </property>
-        <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
-            <value>false</value>
-        </property>
-    </asset>
-    <asset name="User.test123" displayName="test123" isDeployable="true">
-        <implementation.generic type="isuser"/>
-        <property name="allowDigestAuth" many="false" isSecure="false" displayName="Allow Digest Authentication">
-            <value>false</value>
-        </property>
-        <property name="password" many="false" isSecure="true" displayName="Password">
-            <value>{AES}XuCjOra2NbClzDrE+GxUAUO2zBmGRpq2aaefukFvQ3iJiWAxefRcv+m1q781l1lfZe1v0MZeoIUAJlGbCpDmnD9hOCTU+JBpbYBcwpxXZLU=</value>
-        </property>
-        <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
-            <value>false</value>
-        </property>
-    </asset>
-    <property name="suspendTasksDuringDeploy" many="false" isSecure="false" displayName="Suspend Tasks During Deployment">
-        <value>none</value>
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.15.0.0">
+  <implementation.generic type="isconfiguration" />
+  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
+    <value>none</value>
+  </property>
+  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
+    <value>none</value>
+  </property>
+  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
+    <value>none</value>
+  </property>
+  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
+    <value>none</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>true</value>
+  </property>
+  <buildInfo name="BuildVersion" value="10.15.0.0.-926541186" />
+  <buildInfo name="BuildTimestamp" value="2023-01-23T18:36:05" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <asset name="User.demo" displayName="demo">
+    <implementation.generic type="isuser" />
+    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
+      <value>false</value>
     </property>
-    <property name="activateTasksAfterDeploy" many="false" isSecure="false" displayName="Activate Tasks After Deployment">
-        <value>none</value>
+    <property name="password" displayName="Password" isSecure="true">
+      <value>{AES}PWKm5KBimSAeUvvay/lFiyNI0j9zH4zXDGqMWtM63G+36GxvBcocdiCBVYT/mXVXx3Uv8rsusZowJ/D06qZcnJLyZtK/ogiAy2G/h/mhcD4=</value>
     </property>
-    <property name="enablePortsAfterDeploy" many="false" isSecure="false" displayName="Enable Ports After Deployment">
-        <value>none</value>
+    <property name="restartRuntimes" displayName="restartRuntimes">
+      <value>false</value>
     </property>
-    <property name="reloadCacheManagersAfterDeployment" many="false" isSecure="false" displayName="Reload Cache Managers After Deployment">
-        <value>none</value>
+  </asset>
+  <asset name="User.test123" displayName="test123">
+    <implementation.generic type="isuser" />
+    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
+      <value>false</value>
     </property>
-    <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
-        <value>false</value>
+    <property name="password" displayName="Password" isSecure="true">
+      <value>{AES}XuCjOra2NbClzDrE+GxUAUO2zBmGRpq2aaefukFvQ3iJiWAxefRcv+m1q781l1lfZe1v0MZeoIUAJlGbCpDmnD9hOCTU+JBpbYBcwpxXZLU=</value>
     </property>
+    <property name="restartRuntimes" displayName="restartRuntimes">
+      <value>false</value>
+    </property>
+  </asset>
 </asset_composite>
