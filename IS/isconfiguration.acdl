@@ -16,7 +16,7 @@
     <value>true</value>
   </property>
   <buildInfo name="BuildVersion" value="10.15.0.0.-926541186" />
-  <buildInfo name="BuildTimestamp" value="2023-01-23T19:07:41" />
+  <buildInfo name="BuildTimestamp" value="2023-01-23T19:08:40" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
   <asset name="User.demo" displayName="demo">
     <implementation.generic type="isuser" />
