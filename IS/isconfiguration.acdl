@@ -1,168 +1,169 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.15.0.0">
-  <implementation.generic type="isconfiguration" />
-  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
-    <value>none</value>
-  </property>
-  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
-    <value>none</value>
-  </property>
-  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
-    <value>none</value>
-  </property>
-  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
-    <value>none</value>
-  </property>
-  <property name="restartRuntimes" displayName="restartRuntimes">
-    <value>true</value>
-  </property>
-  <buildInfo name="BuildVersion" value="10.15.0.0.-1256667135" />
-  <buildInfo name="BuildTimestamp" value="2023-02-27T13:52:59" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
-  <asset name="Group.ReadOnlyAdministrators" displayName="ReadOnlyAdministrators">
-    <implementation.generic type="isgroup" />
-  </asset>
-  <asset name="Group.group1" displayName="group1">
-    <implementation.generic type="isgroup" />
-  </asset>
-  <asset name="Group.group2" displayName="group2">
-    <implementation.generic type="isgroup" />
-  </asset>
-  <asset name="Acl.ReadOnlyAdministrators" displayName="ReadOnlyAdministrators">
-    <implementation.generic type="isacl" />
-    <dependsOn>IS:Group.ReadOnlyAdministrators</dependsOn>
-  </asset>
-  <asset name="Acl.demoACL1" displayName="demoACL1">
-    <implementation.generic type="isacl" />
-  </asset>
-  <asset name="User.demo" displayName="demo">
-    <implementation.generic type="isuser" />
-    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
-      <value>false</value>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="isconfiguration" runtimeVersion="10.15.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <implementation.generic type="isconfiguration"/>
+    <buildInfo name="BuildTimestamp" value="2023-02-27T13:52:59"/>
+    <buildInfo name="BuildVersion" value="10.15.0.0.-1256667135"/>
+    <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0"/>
+    <asset name="Group.ReadOnlyAdministrators" displayName="ReadOnlyAdministrators" isDeployable="true">
+        <implementation.generic type="isgroup"/>
+    </asset>
+    <asset name="Group.group1" displayName="group1" isDeployable="true">
+        <implementation.generic type="isgroup"/>
+    </asset>
+    <asset name="Group.group2" displayName="group2" isDeployable="true">
+        <implementation.generic type="isgroup"/>
+    </asset>
+    <asset name="Acl.ReadOnlyAdministrators" displayName="ReadOnlyAdministrators" isDeployable="true">
+        <implementation.generic type="isacl"/>
+        <dependsOn>IS:Group.ReadOnlyAdministrators</dependsOn>
+    </asset>
+    <asset name="Acl.demoACL1" displayName="demoACL1" isDeployable="true">
+        <implementation.generic type="isacl"/>
+    </asset>
+    <asset name="User.demo" displayName="demo" isDeployable="true">
+        <implementation.generic type="isuser"/>
+        <property name="allowDigestAuth" many="false" isSecure="false" displayName="Allow Digest Authentication">
+            <value>false</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>{AES}PWKm5KBimSAeUvvay/lFiyNI0j9zH4zXDGqMWtM63G+36GxvBcocdiCBVYT/mXVXx3Uv8rsusZowJ/D06qZcnJLyZtK/ogiAy2G/h/mhcD4=</value>
+        </property>
+        <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
+            <value>false</value>
+        </property>
+    </asset>
+    <asset name="User.test123" displayName="test123" isDeployable="true">
+        <implementation.generic type="isuser"/>
+        <property name="allowDigestAuth" many="false" isSecure="false" displayName="Allow Digest Authentication">
+            <value>false</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>{AES}XuCjOra2NbClzDrE+GxUAUO2zBmGRpq2aaefukFvQ3iJiWAxefRcv+m1q781l1lfZe1v0MZeoIUAJlGbCpDmnD9hOCTU+JBpbYBcwpxXZLU=</value>
+        </property>
+        <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
+            <value>false</value>
+        </property>
+    </asset>
+    <asset name="JNDIAlias.testUM" displayName="testUM" isDeployable="true">
+        <implementation.generic type="isjndialias"/>
+        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
+            <value>${UM_URL}</value>
+        </property>
+        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
+            <value></value>
+        </property>
+        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
+            <value>${UM_PASSWORD}</value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.UMhybrid" displayName="UMhybrid" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.testUM</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value>test</value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>admin</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>{AES}OqQXZq1cEUlctHCNRhgjTw==</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>EventFactory</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value>false</value>
+        </property>
+    </asset>
+    <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE" isDeployable="true">
+        <implementation.generic type="istruststorealias"/>
+        <property name="useSourceTruststore" many="false" isSecure="false" displayName="Use Source Truststore">
+            <value>true</value>
+        </property>
+        <property name="ksPassword" many="false" isSecure="true" displayName="Password">
+            <value>{AES}z/+xVlzI9T/Dfo7Su4lrCQ==</value>
+        </property>
+        <property name="ksLocation" many="false" isSecure="false" displayName="Location">
+            <value>../jvm/jvm/lib/security/cacerts</value>
+        </property>
+    </asset>
+    <asset name="URLAlias.health/readiness" displayName="health/readiness" isDeployable="true">
+        <implementation.generic type="isurlalias"/>
+        <dependsOn>IS:ISPackage.WmRoot</dependsOn>
+    </asset>
+    <asset name="URLAlias.health/liveness" displayName="health/liveness" isDeployable="true">
+        <implementation.generic type="isurlalias"/>
+        <dependsOn>IS:ISPackage.WmRoot</dependsOn>
+    </asset>
+    <asset name="URLAlias.health" displayName="health" isDeployable="true">
+        <implementation.generic type="isurlalias"/>
+        <dependsOn>IS:ISPackage.WmRoot</dependsOn>
+    </asset>
+    <asset name="URLAlias.metrics" displayName="metrics" isDeployable="true">
+        <implementation.generic type="isurlalias"/>
+        <dependsOn>IS:ISPackage.WmRoot</dependsOn>
+    </asset>
+    <asset name="Parsing.Configuration" displayName="Configuration" isDeployable="true">
+        <implementation.generic type="isparsing"/>
+        <property name="defaultPartitionBytes" many="false" isSecure="false" displayName="Default Partition Bytes">
+            <value>20k</value>
+        </property>
+        <property name="useCache" many="false" isSecure="false" displayName="Use Cache">
+            <value>false</value>
+        </property>
+        <property name="maximumHeapBytes" many="false" isSecure="false" displayName="Maximum Heap Bytes">
+            <value>40%</value>
+        </property>
+        <property name="maximumDocBytes" many="false" isSecure="false" displayName="Maximum Document Bytes">
+            <value>20%</value>
+        </property>
+        <property name="maximumBigMemoryBytes" many="false" isSecure="false" displayName="Maximum BigMemory Bytes">
+            <value>200m</value>
+        </property>
+        <property name="useBigMemory" many="false" isSecure="false" displayName="Use BigMemory">
+            <value>false</value>
+        </property>
+    </asset>
+    <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config" isDeployable="true">
+        <implementation.generic type="isfileaccesscontrol"/>
+        <property name="allowedWritePaths" many="false" isSecure="false" displayName="Allowed Write Paths">
+            <value></value>
+        </property>
+        <property name="allowedReadPaths" many="false" isSecure="false" displayName="Allowed Read Paths">
+            <value></value>
+        </property>
+        <property name="allowedDeletePaths" many="false" isSecure="false" displayName="Allowed Delete Paths">
+            <value></value>
+        </property>
+        <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
+            <value>true</value>
+        </property>
+    </asset>
+    <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION" isDeployable="true">
+        <implementation.generic type="isumalias"/>
+        <property name="CLIENTPREFIX" many="false" isSecure="false" displayName="Client Prefix">
+            <value>J_jRQtEolDEurgAVIwwwADXaZQs_</value>
+        </property>
+        <property name="um_rname" many="false" isSecure="false" displayName="Realm URL">
+            <value>nsp://localhost:9000</value>
+        </property>
+    </asset>
+    <property name="suspendTasksDuringDeploy" many="false" isSecure="false" displayName="Suspend Tasks During Deployment">
+        <value>none</value>
     </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}PWKm5KBimSAeUvvay/lFiyNI0j9zH4zXDGqMWtM63G+36GxvBcocdiCBVYT/mXVXx3Uv8rsusZowJ/D06qZcnJLyZtK/ogiAy2G/h/mhcD4=</value>
+    <property name="activateTasksAfterDeploy" many="false" isSecure="false" displayName="Activate Tasks After Deployment">
+        <value>none</value>
     </property>
-    <property name="restartRuntimes" displayName="restartRuntimes">
-      <value>false</value>
+    <property name="enablePortsAfterDeploy" many="false" isSecure="false" displayName="Enable Ports After Deployment">
+        <value>none</value>
     </property>
-  </asset>
-  <asset name="User.test123" displayName="test123">
-    <implementation.generic type="isuser" />
-    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
-      <value>false</value>
+    <property name="reloadCacheManagersAfterDeployment" many="false" isSecure="false" displayName="Reload Cache Managers After Deployment">
+        <value>none</value>
     </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}XuCjOra2NbClzDrE+GxUAUO2zBmGRpq2aaefukFvQ3iJiWAxefRcv+m1q781l1lfZe1v0MZeoIUAJlGbCpDmnD9hOCTU+JBpbYBcwpxXZLU=</value>
+    <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
+        <value>true</value>
     </property>
-    <property name="restartRuntimes" displayName="restartRuntimes">
-      <value>false</value>
-    </property>
-  </asset>
-  <asset name="JNDIAlias.testUM" displayName="testUM">
-    <implementation.generic type="isjndialias" />
-    <property name="providerURL" displayName="Provider URL">
-      <value>nhps://awdevtenant7.cc.aw-us.webmethodscloud-dev.com:4443//um01/Test107/1317003782/</value>
-    </property>
-    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
-      <value />
-    </property>
-    <property name="securityPrincipal" displayName="Security Principal">
-      <value>admin</value>
-    </property>
-    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
-      <value>{AES}OqQXZq1cEUlctHCNRhgjTw==</value>
-    </property>
-  </asset>
-  <asset name="JMSAlias.UMhybrid" displayName="UMhybrid">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>test</value>
-    </property>
-    <property name="user" displayName="User">
-      <value>admin</value>
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}OqQXZq1cEUlctHCNRhgjTw==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>EventFactory</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value>false</value>
-    </property>
-    <dependsOn>IS:JNDIAlias.testUM</dependsOn>
-  </asset>
-  <asset name="TruststoreAlias.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE">
-    <implementation.generic type="istruststorealias" />
-    <property name="useSourceTruststore" displayName="Use Source Truststore">
-      <value>true</value>
-    </property>
-    <property name="ksPassword" displayName="Password" isSecure="true">
-      <value>{AES}z/+xVlzI9T/Dfo7Su4lrCQ==</value>
-    </property>
-    <property name="ksLocation" displayName="Location">
-      <value>../jvm/jvm/lib/security/cacerts</value>
-    </property>
-  </asset>
-  <asset name="URLAlias.health/readiness" displayName="health/readiness">
-    <implementation.generic type="isurlalias" />
-    <dependsOn>IS:ISPackage.WmRoot</dependsOn>
-  </asset>
-  <asset name="URLAlias.health/liveness" displayName="health/liveness">
-    <implementation.generic type="isurlalias" />
-    <dependsOn>IS:ISPackage.WmRoot</dependsOn>
-  </asset>
-  <asset name="URLAlias.health" displayName="health">
-    <implementation.generic type="isurlalias" />
-    <dependsOn>IS:ISPackage.WmRoot</dependsOn>
-  </asset>
-  <asset name="URLAlias.metrics" displayName="metrics">
-    <implementation.generic type="isurlalias" />
-    <dependsOn>IS:ISPackage.WmRoot</dependsOn>
-  </asset>
-  <asset name="Parsing.Configuration" displayName="Configuration">
-    <implementation.generic type="isparsing" />
-    <property name="defaultPartitionBytes" displayName="Default Partition Bytes">
-      <value>20k</value>
-    </property>
-    <property name="useCache" displayName="Use Cache">
-      <value>false</value>
-    </property>
-    <property name="maximumHeapBytes" displayName="Maximum Heap Bytes">
-      <value>40%</value>
-    </property>
-    <property name="maximumDocBytes" displayName="Maximum Document Bytes">
-      <value>20%</value>
-    </property>
-    <property name="maximumBigMemoryBytes" displayName="Maximum BigMemory Bytes">
-      <value>200m</value>
-    </property>
-    <property name="useBigMemory" displayName="Use BigMemory">
-      <value>false</value>
-    </property>
-  </asset>
-  <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config">
-    <implementation.generic type="isfileaccesscontrol" />
-    <property name="allowedWritePaths" displayName="Allowed Write Paths">
-      <value />
-    </property>
-    <property name="allowedReadPaths" displayName="Allowed Read Paths">
-      <value />
-    </property>
-    <property name="allowedDeletePaths" displayName="Allowed Delete Paths">
-      <value />
-    </property>
-    <property name="restartRuntimes" displayName="restartRuntimes">
-      <value>true</value>
-    </property>
-  </asset>
-  <asset name="UMAlias.IS_UM_CONNECTION" displayName="IS_UM_CONNECTION">
-    <implementation.generic type="isumalias" />
-    <property name="CLIENTPREFIX" displayName="Client Prefix">
-      <value>J_jRQtEolDEurgAVIwwwADXaZQs_</value>
-    </property>
-    <property name="um_rname" displayName="Realm URL">
-      <value>nsp://localhost:9000</value>
-    </property>
-  </asset>
 </asset_composite>
