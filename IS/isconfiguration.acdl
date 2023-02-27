@@ -1,0 +1,40 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.15.0.0">
+  <implementation.generic type="isconfiguration" />
+  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
+    <value>none</value>
+  </property>
+  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
+    <value>none</value>
+  </property>
+  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
+    <value>none</value>
+  </property>
+  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
+    <value>none</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>true</value>
+  </property>
+  <buildInfo name="BuildVersion" value="10.15.0.0.1048133879" />
+  <buildInfo name="BuildTimestamp" value="2023-02-27T13:41:42" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <asset name="JMSAlias.UMhybrid" displayName="UMhybrid">
+    <implementation.generic type="isjmsalias" />
+    <property name="clientID" displayName="Connection Client ID">
+      <value>test</value>
+    </property>
+    <property name="user" displayName="User">
+      <value>admin</value>
+    </property>
+    <property name="password" displayName="Password" isSecure="true">
+      <value>{AES}OqQXZq1cEUlctHCNRhgjTw==</value>
+    </property>
+    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
+      <value>EventFactory</value>
+    </property>
+    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
+      <value>false</value>
+    </property>
+    <dependsOn>IS:JNDIAlias.testUM</dependsOn>
+  </asset>
+</asset_composite>
