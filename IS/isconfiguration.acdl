@@ -16,26 +16,19 @@
     <value>true</value>
   </property>
   <buildInfo name="BuildVersion" value="10.11.0.0.-247868570" />
-  <buildInfo name="BuildTimestamp" value="2023-03-29T16:16:17" />
+  <buildInfo name="BuildTimestamp" value="2023-03-29T16:49:57" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
-  <asset name="JMSAlias.test" displayName="test">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value>test</value>
-    </property>
-    <property name="user" displayName="User">
-      <value>Administrator</value>
+  <asset name="User.inbda" displayName="inbda">
+    <implementation.generic type="isuser" />
+    <property name="allowDigestAuth" displayName="Allow Digest Authentication">
+      <value>true</value>
     </property>
     <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}Y5IgMqjfvkgbg7p5VUZztw==</value>
+      <value>{AES}F9XU+jTarhHv+2X+kLbIjw==</value>
     </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>test</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
+    <property name="restartRuntimes" displayName="restartRuntimes">
       <value>false</value>
     </property>
-    <dependsOn>IS:JNDIAlias.DEFAULT_IS_JNDI_PROVIDER</dependsOn>
   </asset>
 </asset_composite>
 
